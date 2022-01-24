@@ -20,4 +20,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::resource('index', GureTabadulController::class);
+Route::resource('index', AdminController::class);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
