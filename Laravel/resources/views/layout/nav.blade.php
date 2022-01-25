@@ -37,7 +37,7 @@ label.logo {
 
 nav ul {
   float: right;
-  margin-right: 80px;
+  margin-right: 100px;
 }
 
 nav ul li {
