@@ -23,8 +23,6 @@ class CreateUsersTable extends Migration
             $table->integer('telefono');
             $table->string('direccion_facturacion');
             $table->bigInteger('pais_id');
-            $table->bigInteger('role_id');
-            $table->foreign('role_id')->references('id')->on('roles');
             $table->foreign('pais_id')->references('id')->on('paises');
             $table->rememberToken();
             $table->timestamps();

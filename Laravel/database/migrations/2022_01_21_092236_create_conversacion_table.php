@@ -17,8 +17,8 @@ class CreateConversacionTable extends Migration
             $table->id();
             $table->text("ContenidoMensaje");
             $table->date("FechaMensaje");
-            $table->string("email");
-            $table->foreign("email_usuario")->references("email")->on("users");
+            $table->string("user_id");
+            $table->foreign("user_id")->references("id")->on("users");
             $table->timestamps();
         });
     }
