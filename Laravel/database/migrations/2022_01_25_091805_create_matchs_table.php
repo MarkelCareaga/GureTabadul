@@ -15,6 +15,8 @@ class CreateMatchsTable extends Migration
     {
         Schema::create('matchs', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->boolean('realizado');
             $table->string("direccion");
             $table->date('Fecha_encuentro');
             $table->unsignedbigInteger('user1_id');
