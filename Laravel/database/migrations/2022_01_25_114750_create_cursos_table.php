@@ -19,6 +19,8 @@ class CreateCursosTable extends Migration
             $table->date('Fecha_ini');
             $table->date('Fecha_fin');
             $table->double('precio');
+            $table->string('capacidad');
+            $table->text('descripcion');
             $table->timestamps();
         });
     }
