@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gure Tabadul-@yield('Titulo')</title>
 </head>
-<body background=img/fondo_GureTabadul.jpg style="background-size:80%; background-repeat:no-repeat;">
+<body background=img/fondo_GureTabadul.jpg style="background-size:100%; background-image: cover;background-repeat: no-repeat">
     @include('layout.nav')
     @yield('contenido')
 </body>
