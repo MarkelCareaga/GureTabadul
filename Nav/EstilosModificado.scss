@@ -1,0 +1,53 @@
+$fuente_titulos: 'Paprika';
+$fuente_menus: 'Poppins';
+$color_menus: #161616;
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+}
+nav{
+    background-color: #BCDDD4;
+    height: 80px;
+    width: 100%;
+}
+
+label.title{
+    font-family: $fuente_titulos;
+    color: $color_menus;
+    line-height: 80px;
+    position: absolute;
+    left: 8%;
+    // padding: 0 100px;
+}
+label.logo{
+    line-height: 80px;
+    padding: 0 20px;
+    position: absolute;
+    top: 0.8%;
+    left: 1%;
+}
+nav ul{
+    float: right;
+    margin-right: 30px;
+}
+nav ul li{
+     display: inline-block;
+     line-height: 80px;
+     margin: 0 5px;
+     font-family: $fuente_menus !important;
+}
+nav ul li a{
+    color:$color_menus;
+    text-transform: uppercase;
+    border-right: 2px solid $color_menus;
+    
+
+}
