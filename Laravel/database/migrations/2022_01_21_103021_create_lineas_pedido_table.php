@@ -17,9 +17,9 @@ class CreateLineasPedidoTable extends Migration
             $table->id();
             $table->bigInteger("cantidad");
             $table->double("precio");
-            $table->bigInteger("id_pedido");
-            $table->string("id_producto");
-            $table->foreign("id_producto")->references("id")->on("producto");
+            $table->unsignedbigInteger("id_pedido");
+            $table->unsignedbigInteger("id_producto");
+            $table->foreign("id_producto")->references("id")->on("productos");
             $table->foreign("id_pedido")->references("id")->on("pedidos");
             $table->timestamps();
         });

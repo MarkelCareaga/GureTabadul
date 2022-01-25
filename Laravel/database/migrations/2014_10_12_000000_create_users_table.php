@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->date('Fecha_nac');
             $table->integer('telefono');
             $table->string('direccion_facturacion');
-            $table->bigInteger('pais_id');
+            $table->unsignedbigInteger('pais_id');
             $table->foreign('pais_id')->references('id')->on('paises');
             $table->rememberToken();
             $table->timestamps();

@@ -15,8 +15,8 @@ class CreateInteresesUsuariosTable extends Migration
     {
         Schema::create('intereses_usuarios', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
-            $table->bigInteger('interes_id');
+            $table->unsignedbigInteger('user_id');
+            $table->unsignedbigInteger('interes_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('interes_id')->references('id')->on('intereses');
             $table->timestamps();

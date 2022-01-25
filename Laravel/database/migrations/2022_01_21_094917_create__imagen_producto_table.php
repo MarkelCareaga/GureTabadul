@@ -16,8 +16,8 @@ class CreateImagenProductoTable extends Migration
         Schema::create('_imagen_producto', function (Blueprint $table) {
             $table->id();
             $table->string("ruta");
-            $table->bigInteger("producto_id");
-            $table->foreign("producto_id")->references("id")->on("producto");
+            $table->unsignedbigInteger("producto_id");
+            $table->foreign("producto_id")->references("id")->on("productos");
             $table->timestamps();
         });
     }
