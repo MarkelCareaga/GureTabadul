@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\InteresUsuario;
 
-class User extends Authenticatable
+class User extends \TCG\Voyager\Models\User
 {
     use HasFactory, Notifiable;
 
@@ -41,4 +41,5 @@ class User extends Authenticatable
     public function interes_usuarios(){
         return $this->hasMany(InteresUsuario::class);
     }
+
 }
