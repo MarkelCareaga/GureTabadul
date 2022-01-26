@@ -1,14 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< Updated upstream
-=======
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\GureTabadulController;
 use App\Http\Controllers\ServiciosController;
 use App\Http\Controllers\NosotrosController;
 use App\Http\Controllers\SponsorsController;
->>>>>>> Stashed changes
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,6 +40,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 
-Route::group(['prefix' => 'admin'], function () {
+/*Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
-});
+});*/
