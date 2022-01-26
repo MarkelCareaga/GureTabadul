@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\InteresUsuario;
+use App\Models\Pais;
 
 class User extends \TCG\Voyager\Models\User
 {
@@ -40,6 +41,9 @@ class User extends \TCG\Voyager\Models\User
     ];
     public function interes_usuarios(){
         return $this->hasMany(InteresUsuario::class);
+    }
+    public function pais(){
+        return $this->belongsTo(Pais::class);
     }
 
 }

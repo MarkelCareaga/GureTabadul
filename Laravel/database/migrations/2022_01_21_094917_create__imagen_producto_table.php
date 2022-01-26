@@ -13,7 +13,7 @@ class CreateImagenProductoTable extends Migration
      */
     public function up()
     {
-        Schema::create('_imagen_producto', function (Blueprint $table) {
+        Schema::create('_imagen_productos', function (Blueprint $table) {
             $table->id();
             $table->string("ruta");
             $table->unsignedbigInteger("producto_id");
