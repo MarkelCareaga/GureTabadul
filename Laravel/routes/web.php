@@ -1,6 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< Updated upstream
+=======
+use App\Http\Controllers\CursosController;
+use App\Http\Controllers\GureTabadulController;
+use App\Http\Controllers\ServiciosController;
+use App\Http\Controllers\NosotrosController;
+use App\Http\Controllers\SponsorsController;
+>>>>>>> Stashed changes
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,10 +25,17 @@ Route::get('/', function () {
 
 })->name('home');
 
+
+
 Auth::routes();
 
-Route::resource('index', GureTabadulController::class);
-Route::resource('index', AdminController::class);
+Route::resource('nav', GureTabadulController::class);
+/*Route::resource('index', AdminController::class);*/
+Route::resource('cursos', CursosController::class);
+Route::resource('servicios', ServiciosController::class);
+Route::resource('nosotros', NosotrosController::class);
+Route::resource('sponsors', SponsorsController::class);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
