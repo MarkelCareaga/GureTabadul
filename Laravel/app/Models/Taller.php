@@ -16,7 +16,7 @@ class Taller extends Model
         'Titulo', 'Fecha_comienzo','Fecha_final','Descripción','Precio','Capacidad',
     ];
 
-    public function pais(){
+    public function talleresUsuario(){
         return $this->hasMany(TalleresUsuario::class);
     }
     public function imagenes(){

@@ -14,6 +14,6 @@ class Skills extends Model
         'nombre',
     ];
     public function skillsUsuario(){
-        return $this->hasMany(skillsUsuario::class);
+        return $this->hasMany(SkillsUsuario::class);
     }
 }

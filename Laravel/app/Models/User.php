@@ -9,6 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use App\Models\InteresUsuario;
 use App\Models\Pais;
 use App\Models\SkillsUsuario;
+use App\Models\CursosUsuario;
+use App\Models\TalleresUsuario;
 
 class User extends \TCG\Voyager\Models\User
 {
@@ -40,11 +42,17 @@ class User extends \TCG\Voyager\Models\User
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function interes_usuarios(){
+    public function interesesUsuario(){
         return $this->hasMany(InteresUsuario::class);
     }
     public function SkillsUsuario(){
         return $this->hasMany(SkillsUsuario::class);
+    }
+    public function cursosUsuario(){
+        return $this->hasMany(CursosUsuario::class);
+    }
+    public function talleresUsuario(){
+        return $this->hasMany(TalleresUsuario::class);
     }
     public function pais(){
         return $this->belongsTo(Pais::class);

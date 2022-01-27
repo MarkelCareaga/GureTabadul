@@ -14,7 +14,7 @@ class Interes extends Model
     protected $fillable = [
         'nombre',
     ];
-    public function interes_usuario(){
+    public function interesUsuario(){
         return $this->hasMany(InteresUsuario::class);
     }
 }
