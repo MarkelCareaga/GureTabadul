@@ -9,6 +9,7 @@ use App\Models\User;
 
 class SkillsUsuario extends Model
 {
+    protected $table = 'skills_usuario';
     use HasFactory;
 
     public function skill(){
