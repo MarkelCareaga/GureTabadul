@@ -10,7 +10,8 @@ class ImagenesTaller extends Model
 {
     use HasFactory;
     protected $table = 'imagenes_talleres';
-    public function producto(){
+
+    public function taller(){
         return $this->belongsTo(Taller::class);
     }
 }

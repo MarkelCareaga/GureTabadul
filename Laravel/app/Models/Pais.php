@@ -10,6 +10,7 @@ class Pais extends Model
 {
     use HasFactory;
     protected $table = 'paises';
+
     public function usuarios(){
         return $this->hasMany(User::class);
     }
