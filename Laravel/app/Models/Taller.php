@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\TalleresUsuario;
+use App\Models\ImagenesTaller;
 
 class Taller extends Model
 {
@@ -14,5 +16,11 @@ class Taller extends Model
         'Titulo', 'Fecha_comienzo','Fecha_final','Descripción','Precio','Capacidad',
     ];
 
+    public function pais(){
+        return $this->hasMany(TalleresUsuario::class);
+    }
+    public function imagenes(){
+        return $this->hasMany(ImagenesTaller::class);
+    }
 
 }

@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\InteresUsuario;
 use App\Models\Pais;
+use App\Models\SkillsUsuario;
 
 class User extends \TCG\Voyager\Models\User
 {
@@ -41,6 +42,9 @@ class User extends \TCG\Voyager\Models\User
     ];
     public function interes_usuarios(){
         return $this->hasMany(InteresUsuario::class);
+    }
+    public function SkillsUsuario(){
+        return $this->hasMany(SkillsUsuario::class);
     }
     public function pais(){
         return $this->belongsTo(Pais::class);
