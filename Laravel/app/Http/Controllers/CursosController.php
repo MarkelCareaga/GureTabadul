@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Curso;
 
 class CursosController extends Controller
 {
@@ -14,7 +15,9 @@ class CursosController extends Controller
      */
     public function index()
     {
-        return view('secciones.cursos');
+        $cursos= Curso::all();
+
+        return view('secciones.cursos',['cursosDisponibles'=> $cursos]);
     }
 
     /**
@@ -35,7 +38,52 @@ class CursosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Recibir datos
+        $datosNuevoCurso=$request->all();
+        //Validar datos
+        $rules= array(
+            'nombre' => 'required|string|min:8|max:255',
+            'Fecha_ini'=> 'required|date_format:d/m/Y|after:tomorrow',
+            'Fecha_final' => 'required|date_format:d/m/Y|after:Fecha_ini',
+            'precio'=> 'required',
+            'capacidad'=> 'required|string|min:1|max:255',
+            'descripción'=> 'required|string|max:510',
+        );
+        $validador= Validator::make($datosNuevoCurso,$rules,$messages);
+        if ($validador->fails()) {
+            $errors=$validador->messages();
+            $errors->add('mierror','Ha ocurrido un error a la hora de crear el nuevo curso. Por favor revise los datos introducidos y intentelo de nuevo');
+            \Session::flash('tipoMensaje','danger');
+            \Session::flash('mensaje','No se cumplen las validaciones,compruebe los datos introducidos');
+
+            //Volver con los errores
+
+            return \Redirect::back()->withInput()->withErrors($validador);
+        
+        }else{
+                    //Generar nuevo Curso
+                    $nuevoCurso=new Curso();
+                    $nuevoCurso->nombre=$datosNuevoCurso["nombre"];
+                    $nuevoCurso->fecha_ini=$datosNuevoCurso["fecha_ini"];
+                    $nuevoCurso->fecha_fin=$datosNuevoCurso["fecha_fin"];
+                    $nuevoCurso->precio=$datosNuevoCurso["precio"];
+                    $nuevoCurso->capacidad=$datosNuevoCurso["capacidad"];
+                    $nuevoCurso->descripción=$datosNuevoCurso["descripción"];
+        }try {
+            //Guardar curso en la BD
+            $nuevoCurso->save();
+            //Mensaje de OK 
+
+            \Session::flash('tipoMensaje','succes');
+            \Session::flash('mensaje','Curso creado correctamente. Puedes verlo ya en la página');
+        } catch (\Throwable $th) {
+            //Mensaje de error
+
+            \Session::flash('tipoMensaje','danger');
+            \Session::flash('mensaje','Error al crear el curso');
+
+        }
+        return \Redirect::back();
     }
 
     /**
@@ -46,7 +94,14 @@ class CursosController extends Controller
      */
     public function show($id)
     {
-        //
+        $cursos=Curso::find($id);
+        if (is_null($cursos)) {
+            echo "No existe el curso seleccionado";
+        } else {
+            //Mostramos el curso
+            return view('cursos.show',['cursoSelecciona'=>$cursos]);
+        }
+        
     }
 
     /**
@@ -57,7 +112,7 @@ class CursosController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -78,8 +133,11 @@ class CursosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Curso $cursos)
     {
-        //
+        $cursos->delete();
+        \Session::flash('tipoMensaje','info');
+        \Session::flash('mensaje','Curso eliminado correctamente');
+        return \Redirect::back();    
     }
 }
