@@ -15,9 +15,14 @@ class CursosController extends Controller
      */
     public function index()
     {
+<<<<<<< Updated upstream
         $cursos= Curso::all();
 
         return view('secciones.cursos',['cursosDisponibles'=> $cursos]);
+=======
+        
+        return view('secciones.cursos');
+>>>>>>> Stashed changes
     }
 
     /**
