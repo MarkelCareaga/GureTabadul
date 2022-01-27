@@ -12,7 +12,7 @@ class TalleresUsuario extends Model
     use HasFactory;
 
     public function taller(){
-        return $this->belongsTo(taller::class);
+        return $this->belongsTo(Taller::class);
     }
 
     public function usuario(){
