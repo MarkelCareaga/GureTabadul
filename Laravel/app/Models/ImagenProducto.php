@@ -9,6 +9,7 @@ use App\Models\Producto;
 class ImagenProducto extends Model
 {
     use HasFactory;
+    protected $table = '_imagen_productos';
 
     public function producto(){
         return $this->belongsTo(Producto::class);

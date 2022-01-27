@@ -9,6 +9,7 @@ use App\Models\InteresUsuario;
 class Interes extends Model
 {
     use HasFactory;
+    protected $table = 'intereses';
 
     protected $fillable = [
         'nombre',
