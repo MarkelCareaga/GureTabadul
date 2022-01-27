@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\ImagenProducto;
+use App\Models\LineasPedido;
+
 class Producto extends Model
 {
     use HasFactory;
