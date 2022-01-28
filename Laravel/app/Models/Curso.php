@@ -10,7 +10,7 @@ class Curso extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name', 'email', 'password',
+        'nombre', 'Fecha_ini', 'Fecha_fin','precio','capacidad','descripcion',
     ];
 
     public function cursosUsuario(){

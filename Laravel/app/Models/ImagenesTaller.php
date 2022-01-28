@@ -11,6 +11,10 @@ class ImagenesTaller extends Model
     use HasFactory;
     protected $table = 'imagenes_talleres';
 
+    protected $fillable = [
+        'ruta','id_taller',
+    ];
+
     public function taller(){
         return $this->belongsTo(Taller::class);
     }
