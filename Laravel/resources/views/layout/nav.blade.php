@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul style="margin-left:60%;" class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link" aria-current="page" href="{{route('inicio.index')}}">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('servicios.index')}}">Servicios</a>
@@ -26,7 +26,7 @@
           <a class="nav-link" aria-current="page" href="{{route('sponsors.index')}}">Sponsors</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#"><i class="fas fa-user-circle fa-1x"></i></a>
+          <a class="nav-link" aria-current="page" href="{{route('login.index')}}">Login</a>
         </li>
       </ul>
       

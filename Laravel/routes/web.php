@@ -6,6 +6,8 @@ use App\Http\Controllers\GureTabadulController;
 use App\Http\Controllers\ServiciosController;
 use App\Http\Controllers\NosotrosController;
 use App\Http\Controllers\SponsorsController;
+use App\Http\Controllers\InicioController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +35,8 @@ Route::resource('cursos', CursosController::class);
 Route::resource('servicios', ServiciosController::class);
 Route::resource('nosotros', NosotrosController::class);
 Route::resource('sponsors', SponsorsController::class);
+Route::resource('inicio', InicioController::class);
+Route::resource('login', LoginController::class);
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
