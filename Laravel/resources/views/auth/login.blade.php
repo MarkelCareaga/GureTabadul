@@ -1,7 +1,8 @@
 <style>
     body,
 		html {
-			margin: 0;
+			margin-left: 20%;
+			margin-top: 10%;
 			padding: 0;
 			height: 100%;
 			background: #60a3bc !important;
@@ -32,6 +33,7 @@
 			background: #60a3bc;
 			padding: 10px;
 			text-align: center;
+			margin-left: 20%;
 		}
 		.brand_logo {
 			height: 150px;
@@ -68,6 +70,22 @@
 		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 			background-color: #c0392b !important;
 		}
+		input.form-control.input_user{
+			margin-left: 23%;
+		}
+		input.form-control.input_pass{
+			margin-left: 23%;
+		}
+		input#customControlInline.custom-control-input{
+			margin-left: 23%;
+		}
+		label.custom-control-label{
+			margin-left: -1%;
+		}
+		div.d-flex.justify-content-center.links{
+			margin-left: 23%;
+		}
+		
 </style>
 
 
