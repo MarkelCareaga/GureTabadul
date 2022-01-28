@@ -26,7 +26,7 @@
           <a class="nav-link" aria-current="page" href="{{route('sponsors.index')}}">Sponsors</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{route('login.index')}}">Login</a>
+          <a class="nav-link" aria-current="page" href="{{route('login.index')}}"><i class="fas fa-user-circle"></i></a>
         </li>
       </ul>
       
