@@ -7,6 +7,8 @@ use App\Http\Controllers\ServiciosController;
 use App\Http\Controllers\NosotrosController;
 use App\Http\Controllers\SponsorsController;
 use App\Http\Controllers\InicioController;
+use App\Http\Controllers\LoginController;
+
 
 
 /*
