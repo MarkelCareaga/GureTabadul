@@ -14,7 +14,7 @@ class InteresUsuario extends Model
     protected $table = 'intereses_usuarios';
 
     protected $fillable = [
-        'id','user_id', 'id_taller',
+        ''user_id', 'interes_id',
     ];
 
     public function usuario(){
