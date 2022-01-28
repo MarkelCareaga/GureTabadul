@@ -8,8 +8,9 @@ use App\Models\InteresUsuario;
 
 class Interes extends Model
 {
-    use HasFactory;
     protected $table = 'intereses';
+    use HasFactory;
+
 
     protected $fillable = [
         'nombre',

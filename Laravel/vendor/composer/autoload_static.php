@@ -574,6 +574,7 @@ class ComposerStaticInit39c35199cc524a2686f30758654edfc2
         'App\\Http\\Controllers\\CursosController' => __DIR__ . '/../..' . '/app/Http/Controllers/CursosController.php',
         'App\\Http\\Controllers\\GureTabadulController' => __DIR__ . '/../..' . '/app/Http/Controllers/GureTabadulController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\MatchController' => __DIR__ . '/../..' . '/app/Http/Controllers/MatchController.php',
         'App\\Http\\Controllers\\NosotrosController' => __DIR__ . '/../..' . '/app/Http/Controllers/NosotrosController.php',
         'App\\Http\\Controllers\\ServiciosController' => __DIR__ . '/../..' . '/app/Http/Controllers/ServiciosController.php',
         'App\\Http\\Controllers\\SponsorsController' => __DIR__ . '/../..' . '/app/Http/Controllers/SponsorsController.php',

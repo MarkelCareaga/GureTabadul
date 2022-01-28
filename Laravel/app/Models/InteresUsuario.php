@@ -11,8 +11,10 @@ class InteresUsuario extends Model
 {
     use HasFactory;
 
+    protected $table = 'intereses_usuarios';
+
     protected $fillable = [
-        'user_id', 'id_taller',
+        'id','user_id', 'id_taller',
     ];
 
     public function usuario(){
