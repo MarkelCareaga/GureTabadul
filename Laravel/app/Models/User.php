@@ -55,9 +55,9 @@ class User extends \TCG\Voyager\Models\User
     public function talleres(){
         return $this->belongsToMany(Taller::class,'talleres_usuarios','id_taller', 'user_id');
     }
-    public function matchs(){
+    /*public function matchs(){
         return $this->hasMany(Match::class,'matchs','user1_id', 'id');
-    }
+    }*/
 
 
 
