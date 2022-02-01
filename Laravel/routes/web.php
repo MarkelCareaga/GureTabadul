@@ -8,6 +8,7 @@ use App\Http\Controllers\NosotrosController;
 use App\Http\Controllers\SponsorsController;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TallerController;
 
 
 
@@ -39,9 +40,9 @@ Route::resource('nosotros', NosotrosController::class);
 Route::resource('sponsors', SponsorsController::class);
 Route::resource('inicio', InicioController::class);
 Route::resource('login', LoginController::class);
+Route::resource('taller', TallerController::class);
 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 

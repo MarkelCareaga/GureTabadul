@@ -8,10 +8,8 @@ use App\Models\User;
 
 class Match extends Model
 {
-    use HasFactory;
     protected $table = 'matchs';
-
-
+    use HasFactory;
 
 
 }
