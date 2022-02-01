@@ -13,9 +13,7 @@ class InteresUsuario extends Model
 
     protected $table = 'intereses_usuarios';
 
-    protected $fillable = [
-        'user_id', 'interes_id',
-    ];
+
 
     public function usuario(){
         return $this->belongsTo(User::class);

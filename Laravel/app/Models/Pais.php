@@ -11,9 +11,7 @@ class Pais extends Model
     use HasFactory;
     protected $table = 'paises';
 
-    protected $fillable = [
-        'nombre',
-    ];
+
 
     public function usuarios(){
         return $this->hasMany(User::class);

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\InteresUsuario;
+use App\Models\User;
 
 class Interes extends Model
 {
@@ -15,7 +15,8 @@ class Interes extends Model
     protected $fillable = [
         'nombre',
     ];
-    public function interesUsuario(){
-        return $this->hasMany(InteresUsuario::class);
+
+    public function usuarios(){
+        return $this->belongsToMany(User::class,'intereses_usuarios','user_id', 'interes_id');
     }
 }

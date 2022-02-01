@@ -6,11 +6,12 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Models\InteresUsuario;
+use App\Models\Interes;
 use App\Models\Pais;
-use App\Models\SkillsUsuario;
-use App\Models\CursosUsuario;
-use App\Models\TalleresUsuario;
+use App\Models\Skills;
+use App\Models\Curso;
+use App\Models\Taller;
+use App\Models\Match;
 
 class User extends \TCG\Voyager\Models\User
 {
@@ -42,20 +43,22 @@ class User extends \TCG\Voyager\Models\User
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function interesesUsuario(){
-        return $this->hasMany(InteresUsuario::class);
+    public function intereses(){
+        return $this->belongsToMany(Interes::class,'intereses_usuarios','user_id', 'interes_id');
     }
-    public function SkillsUsuario(){
-        return $this->hasMany(SkillsUsuario::class);
+    public function Skills(){
+        return $this->belongsToMany(Skills::class,'skills_usuario','user_id', 'skills_id');
     }
-    public function cursosUsuario(){
-        return $this->hasMany(CursosUsuario::class);
+    public function cursos(){
+        return $this->belongsToMany(Curso::class,'cursos_usuarios','user_id', 'curso_id');
     }
-    public function talleresUsuario(){
-        return $this->hasMany(TalleresUsuario::class);
+    public function talleres(){
+        return $this->belongsToMany(Taller::class,'talleres_usuarios','id_taller', 'user_id');
     }
-    public function pais(){
-        return $this->belongsTo(Pais::class);
+    public function matchs(){
+        return $this->hasMany(Match::class,'matchs','user1_id', 'id');
     }
+
+
 
 }

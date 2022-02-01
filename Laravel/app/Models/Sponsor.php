@@ -7,11 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sponsor extends Model
 {
-    protected $table = 'sponsor';
+
 
     use HasFactory;
-    protected $fillable = [
-        'name', 'descripcion', 'ruta_img_sponsor',
-    ];
+    protected $table = 'sponsor';
+    // protected $fillable = [
+    //     'name', 'descripcion', 'ruta_img_sponsor',
+    // ];
 
 }

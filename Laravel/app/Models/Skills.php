@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\SkillsUsuario;
+use App\Models\User;
 
 class Skills extends Model
 {
@@ -13,7 +13,8 @@ class Skills extends Model
     protected $fillable = [
         'nombre',
     ];
-    public function skillsUsuario(){
-        return $this->hasMany(SkillsUsuario::class);
+
+    public function usuarios(){
+        return $this->belongsToMany(User::class,'skills_usuario','user_id', 'skills_id');
     }
 }
