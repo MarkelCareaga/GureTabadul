@@ -9,6 +9,9 @@ use App\Http\Controllers\SponsorsController;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TallerController;
+use App\Http\Controllers\RegistroController;
+use App\Http\Controllers\PerfilController;
+
 
 
 
@@ -41,6 +44,8 @@ Route::resource('sponsors', SponsorsController::class);
 Route::resource('inicio', InicioController::class);
 Route::resource('login', LoginController::class);
 Route::resource('taller', TallerController::class);
+Route::resource('registro', RegistroController::class);
+Route::resource('perfil', PerfilController::class);
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

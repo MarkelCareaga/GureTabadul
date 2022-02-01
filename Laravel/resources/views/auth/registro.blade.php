@@ -9,7 +9,7 @@
 			background: #BCDDD4 !important;
 		}
 		.user_card {
-			height: 400px;
+			height: 501px;
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;
@@ -43,7 +43,7 @@
 			border: 2px solid rgb(3, 3, 3);
 		}
 		.form_container {
-			margin-top: 100px;
+			margin-top: 87px;
 		}
 		.login_btn {
 			width: 51%;
@@ -86,7 +86,7 @@
 			margin-left: 23%;
 			height: 35px;
 			padding-left: 3%;
-			margin-top: 6%;
+			
 			
 		}
 		input#customControlInline.custom-control-input{
@@ -129,17 +129,35 @@
             </div>
             <div class="d-flex justify-content-center form_container">
                 <form>
+					<div class="input-group mb-2">
+                        <div class="input-group-append">
+                            
+                        </div>
+                        <input type="text" name="" class="form-control input_pass" value="" placeholder="Nombre">
+                    </div>
                     <div class="input-group mb-3">
                         <div class="input-group-append">
                             
                         </div>
-                        <input type="text" name="" class="form-control input_user" value="" placeholder="usuario">
+                        <input type="text" name="" class="form-control input_user" value="" placeholder="Correo">
                     </div>
                     <div class="input-group mb-2">
                         <div class="input-group-append">
                             
                         </div>
-                        <input type="password" name="" class="form-control input_pass" value="" placeholder="contraseña">
+                        <input type="password" name="" class="form-control input_pass" value="" placeholder="Contraseña">
+                    </div>
+					<div class="input-group mb-2">
+                        <div class="input-group-append">
+                            
+                        </div>
+                        <input type="text" name="" class="form-control input_pass" value="" placeholder="Pais">
+                    </div>
+					<div class="input-group mb-2">
+                        <div class="input-group-append">
+                            
+                        </div>
+                        <input type="text" name="" class="form-control input_pass" value="" placeholder="Fecha nacimiento">
                     </div>
                     <div class="form-group">
                         <div class="custom-control custom-checkbox">
@@ -154,9 +172,7 @@
             </div>
     
             <div class="mt-4">
-                <div class="d-flex justify-content-center links">
-                    No tienes una cuenta? <a href="{{route('registro.index')}}" class="ml-2">Registrate</a>
-                </div>
+                
                 <div class="d-flex justify-content-center links">
                     <a href="#">Has olvidado tu contraseña?</a>
                 </div>
@@ -165,3 +181,4 @@
     </div>
 </div>
 @endsection
+
