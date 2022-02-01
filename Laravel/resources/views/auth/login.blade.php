@@ -5,14 +5,14 @@
 			margin-top: 10%;
 			padding: 0;
 			height: 100%;
-			background: #60a3bc !important;
+			background: #BCDDD4 !important;
 		}
 		.user_card {
 			height: 400px;
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #f39c12;
+			background: #3AA877;
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -30,7 +30,7 @@
 			width: 170px;
 			top: -75px;
 			border-radius: 50%;
-			background: #60a3bc;
+			background: #BCDDD4;
 			padding: 10px;
 			text-align: center;
 			margin-left: 20%;
@@ -39,15 +39,20 @@
 			height: 150px;
 			width: 150px;
 			border-radius: 50%;
-			border: 2px solid white;
+			border: 2px solid rgb(3, 3, 3);
 		}
 		.form_container {
 			margin-top: 100px;
 		}
 		.login_btn {
-			width: 100%;
+			width: 39%;
 			background: #c0392b !important;
 			color: white !important;
+			height: 33px;
+			margin-left: 28%;
+			margin-top: 3%;
+			font-family: 'Poppins';
+			text-decoration: bold;
 		}
 		.login_btn:focus {
 			box-shadow: none !important;
@@ -72,9 +77,16 @@
 		}
 		input.form-control.input_user{
 			margin-left: 23%;
+			height: 35px;
+			padding-left: 3%;
+			
 		}
 		input.form-control.input_pass{
 			margin-left: 23%;
+			height: 35px;
+			padding-left: 3%;
+			margin-top: 6%;
+			
 		}
 		input#customControlInline.custom-control-input{
 			margin-left: 23%;
@@ -85,8 +97,24 @@
 		div.d-flex.justify-content-center.links{
 			margin-left: 23%;
 		}
-		
+		div.custom-control.custom-checkbox{
+			margin-top: 5%;
+		}
+		div.input-group-append{
+			width: 4%;
+		}
+		div.input-group-append{
+			width: 4%;
+			margin-left: 10%;
+			
+		}
+		button.btn.login_btn{
+			border-radius: 20%;
+		}
+
 </style>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
 
 <div class="container h-100">
@@ -94,20 +122,20 @@
         <div class="user_card">
             <div class="d-flex justify-content-center">
                 <div class="brand_logo_container">
-                    <img src="https://cdn.freebiesupply.com/logos/large/2x/pinterest-circle-logo-png-transparent.png" class="brand_logo" alt="Logo">
+                    <img src="../../Nav/img/LogoTabadul64PX.jpg" class="brand_logo" alt="Logo">
                 </div>
             </div>
             <div class="d-flex justify-content-center form_container">
                 <form>
                     <div class="input-group mb-3">
                         <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            
                         </div>
                         <input type="text" name="" class="form-control input_user" value="" placeholder="username">
                     </div>
                     <div class="input-group mb-2">
                         <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            
                         </div>
                         <input type="password" name="" class="form-control input_pass" value="" placeholder="password">
                     </div>
