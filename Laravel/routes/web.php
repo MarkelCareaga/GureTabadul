@@ -9,7 +9,11 @@ use App\Http\Controllers\SponsorsController;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TallerController;
+<<<<<<< Updated upstream
 
+=======
+use App\Http\Controllers\Auth\RegisterController;
+>>>>>>> Stashed changes
 use App\Http\Controllers\PerfilController;
 
 
@@ -41,8 +45,12 @@ Route::resource('servicios', ServiciosController::class);
 Route::resource('nosotros', NosotrosController::class);
 Route::resource('sponsors', SponsorsController::class);
 Route::resource('inicio', InicioController::class);
-Route::resource('login', LoginController::class);
+
 Route::resource('taller', TallerController::class);
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 Route::resource('perfil', PerfilController::class);
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

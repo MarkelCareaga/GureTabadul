@@ -21,7 +21,7 @@
           <a class="nav-link" aria-current="page" href="#">Tienda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{route('login.index')}}">Login</a>
+          <a class="nav-link" aria-current="page" href="{{route('login')}}">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{{route('perfil.index')}}">Ver perfil</a>

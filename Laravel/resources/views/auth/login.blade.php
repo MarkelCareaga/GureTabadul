@@ -1,167 +1,74 @@
-@extends ('layout.masterpage')
-@section ('contenido')
-<style>
-    body,
-		html {
-			
-			padding: 0;
-			height: 100%;
-			background: #BCDDD4 !important;
-		}
-		.user_card {
-			height: 400px;
-			width: 350px;
-			margin-top: auto;
-			margin-bottom: auto;
-			background: #3AA877;
-			position: relative;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			padding: 10px;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			border-radius: 5px;
+@extends('layout.masterpage')
 
-		}
-		.brand_logo_container {
-			position: absolute;
-			height: 170px;
-			width: 170px;
-			top: -75px;
-			border-radius: 50%;
-			background: #BCDDD4;
-			padding: 10px;
-			text-align: center;
-			
-		}
-		.brand_logo {
-			height: 150px;
-			width: 150px;
-			border-radius: 50%;
-			border: 2px solid rgb(3, 3, 3);
-		}
-		.form_container {
-			margin-top: 100px;
-		}
-		.login_btn {
-			width: 51%;
-			background: #c0392b !important;
-			color: white !important;
-			height: 33px;
-			margin-left: -3%;
-			margin-top: 3%;
-			font-family: 'Poppins';
-			text-decoration: bold;
-		}
-		.login_btn:focus {
-			box-shadow: none !important;
-			outline: 0px !important;
-		}
-		.login_container {
-			padding: 0 2rem;
-		}
-		.input-group-text {
-			background: #c0392b !important;
-			color: white !important;
-			border: 0 !important;
-			border-radius: 0.25rem 0 0 0.25rem !important;
-		}
-		.input_user,
-		.input_pass:focus {
-			box-shadow: none !important;
-			outline: 0px !important;
-		}
-		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-			background-color: #c0392b !important;
-		}
-		input.form-control.input_user{
-			margin-left: 23%;
-			height: 35px;
-			padding-left: 3%;
-			
-		}
-		input.form-control.input_pass{
-			margin-left: 23%;
-			height: 35px;
-			padding-left: 3%;
-			margin-top: 6%;
-			
-		}
-		input#customControlInline.custom-control-input{
-			margin-left: 23%;
-		}
-		label.custom-control-label{
-			margin-left: -1%;
-		}
-		div.d-flex.justify-content-center.links{
-			margin-left: 5%;
-		}
-		div.custom-control.custom-checkbox{
-			margin-top: 5%;
-		}
-		div.input-group-append{
-			width: 4%;
-		}
-		div.input-group-append{
-			width: 4%;
-			margin-left: 0%;
-			
-		}
-		button.btn.login_btn{
-			border-radius: 40%;
-			padding: 2%;
-		}
+@section('contenido')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Login') }}</div>
 
-</style>
+                <div class="card-body">
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo') }}</label>
 
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-<div class="container h-100">
-    <div class="d-flex justify-content-center h-100">
-        <div class="user_card">
-            <div class="d-flex justify-content-center">
-                <div class="brand_logo_container">
-                    <img src="../../Nav/img/LogoTabadul64PX.jpg" class="brand_logo" alt="Logo">
-                </div>
-            </div>
-            <div class="d-flex justify-content-center form_container">
-                <form>
-                    <div class="input-group mb-3">
-                        <div class="input-group-append">
-                            
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
-                        <input type="text" name="" class="form-control input_user" value="" placeholder="usuario">
-                    </div>
-                    <div class="input-group mb-2">
-                        <div class="input-group-append">
-                            
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
-                        <input type="password" name="" class="form-control input_pass" value="" placeholder="contraseña">
-                    </div>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customControlInline">
-                            <label class="custom-control-label" for="customControlInline">Recuerdame</label>
+
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                        <div class="d-flex justify-content-center mt-3 login_container">
-                <button type="button" name="button" class="btn login_btn">Entrar</button>
-            </div>
-                </form>
-            </div>
-    
-            <div class="mt-4">
-                <div class="d-flex justify-content-center links">
-                    No tienes una cuenta? <a href="{{route('registro.index')}}" class="ml-2">Registrate</a>
-                </div>
-                <div class="d-flex justify-content-center links">
-                    <a href="#">Has olvidado tu contraseña?</a>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Login') }}
+                                </button>
+
+                                @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+

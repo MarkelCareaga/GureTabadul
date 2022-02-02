@@ -73,6 +73,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        \Session::flash('tipoMensaje','info');
+        \Session::flash('mensaje','Te has registrado correctamente');
+        //obtener el rol que corresponde al usuario normal
+        $rol='usuario';
+        
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -80,5 +85,8 @@ class RegisterController extends Controller
             'pais' => $data['pais'],
             'Fecha_nac'=> $data['Fecha_nac'],
         ]);
+        $user = User::create(request(['name','email','password','pais','Fecha_nac']));
+        auth()->login($user);
+        return redirect()->to('/');
     }
 }
