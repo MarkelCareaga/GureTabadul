@@ -8,6 +8,7 @@
 <h3>{{$taller->Título}}</h3>
 </a>
 </div>
+
 @endforeach
 
 @endsection
