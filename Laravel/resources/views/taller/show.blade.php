@@ -8,3 +8,4 @@
 <p>{{$taller->Precio}}</p>
 <p>{{$taller->Capacidad}}</p>
 @endsection
+

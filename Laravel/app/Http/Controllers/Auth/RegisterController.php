@@ -53,7 +53,7 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-       
+
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -62,7 +62,7 @@ class RegisterController extends Controller
             'Fecha_nac' => ['required','date_format:"d-m-Y"'],
 
         ]);
-        
+
     }
 
     /**
@@ -77,7 +77,7 @@ class RegisterController extends Controller
         \Session::flash('mensaje','Te has registrado correctamente');
         //obtener el rol que corresponde al usuario normal
         $rol='usuario';
-        
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
