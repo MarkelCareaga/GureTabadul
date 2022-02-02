@@ -53,7 +53,7 @@ class TallerController extends Controller
        else
        {
         //Devolvemos la vista
-        return view('secciones.show',['taller'=> $taller]);
+        return view('taller.show',['taller'=> $taller]);
        }
     }
 
