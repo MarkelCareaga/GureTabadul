@@ -10,15 +10,16 @@
         <li class="nav-item active">
           <a class="nav-link" aria-current="page" href="{{route('inicio.index')}}">Inicio</a>
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{{route('cursos.index')}}">Cursos</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{route('taller.index')}}">taller</a>
+          </li>
+        <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Tienda</a>
         </li>
-        
-        
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{{route('login.index')}}">Login</a>
         </li>
@@ -26,8 +27,8 @@
           <a class="nav-link" aria-current="page" href="{{route('perfil.index')}}">Ver perfil</a>
         </li>
       </ul>
-      
+
     </div>
   </div>
 </nav>
-    
+

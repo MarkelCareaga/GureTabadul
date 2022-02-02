@@ -18,9 +18,9 @@ class CursosController extends Controller
 
         $cursos= Curso::all();
 
-        return view('secciones.cursos',['cursosDisponibles'=> $cursos]);
+        return view('secciones.cursos',['cursos'=> $cursos]);
 
-        
+
 
 
     }
@@ -64,7 +64,7 @@ class CursosController extends Controller
             //Volver con los errores
 
             return \Redirect::back()->withInput()->withErrors($validador);
-        
+
         }else{
                     //Generar nuevo Curso
                     $nuevoCurso=new Curso();
@@ -77,7 +77,7 @@ class CursosController extends Controller
         }try {
             //Guardar curso en la BD
             $nuevoCurso->save();
-            //Mensaje de OK 
+            //Mensaje de OK
 
             \Session::flash('tipoMensaje','succes');
             \Session::flash('mensaje','Curso creado correctamente. Puedes verlo ya en la página');
@@ -106,7 +106,7 @@ class CursosController extends Controller
             //Mostramos el curso
             return view('cursos.show',['cursoSelecciona'=>$cursos]);
         }
-        
+
     }
 
     /**
@@ -117,7 +117,7 @@ class CursosController extends Controller
      */
     public function edit($id)
     {
-        
+
     }
 
     /**
@@ -143,6 +143,6 @@ class CursosController extends Controller
         $cursos->delete();
         \Session::flash('tipoMensaje','info');
         \Session::flash('mensaje','Curso eliminado correctamente');
-        return \Redirect::back();    
+        return \Redirect::back();
     }
 }

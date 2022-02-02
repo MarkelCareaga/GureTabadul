@@ -10,17 +10,10 @@
 @foreach ($cursos as $curso)
 <div class="cursos"><a href="{{route('cursos.show')}}">
 <img src={{$curso->imagenes->first()->ruta}}>
-<h1>$curso->nombre</h1>
+<h1>{{$curso->nombre}}</h1>
 </a></div>
 @endforeach
 
-@foreach($talleres as $taller)
-<div class="talleres">
-<a href="{{route('taller.show')}}">
-<img src={{$taller->imagenes->first()->ruta}}>
-<h1>$taller->Título</h1>
-</a>
-</div>
-@endforeach
+
 
 @endsection

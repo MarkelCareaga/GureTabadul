@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Taller;
 
 class TallerController extends Controller
 {
@@ -13,7 +14,8 @@ class TallerController extends Controller
      */
     public function index()
     {
-        //
+        $talleres=Taller::all();
+        return view('secciones.Talleres',['talleres'=>$talleres]);
     }
 
     /**
@@ -45,7 +47,14 @@ class TallerController extends Controller
      */
     public function show($id)
     {
-        //
+        $taller=Taller::find($id);
+        if (is_null($taller))
+        echo "No existe el taller solicitado";
+       else
+       {
+        //Devolvemos la vista
+        return view('secciones.show',['taller'=> $taller]);
+       }
     }
 
     /**

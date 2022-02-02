@@ -9,7 +9,7 @@ use App\Http\Controllers\SponsorsController;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TallerController;
-use App\Http\Controllers\RegistroController;
+
 use App\Http\Controllers\PerfilController;
 
 
@@ -36,7 +36,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::resource('nav', GureTabadulController::class);
-/*Route::resource('index', AdminController::class);*/
 Route::resource('cursos', CursosController::class);
 Route::resource('servicios', ServiciosController::class);
 Route::resource('nosotros', NosotrosController::class);
@@ -44,7 +43,6 @@ Route::resource('sponsors', SponsorsController::class);
 Route::resource('inicio', InicioController::class);
 Route::resource('login', LoginController::class);
 Route::resource('taller', TallerController::class);
-Route::resource('registro', RegistroController::class);
 Route::resource('perfil', PerfilController::class);
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
