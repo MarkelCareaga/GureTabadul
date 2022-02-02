@@ -14,7 +14,9 @@ class PerfilController extends Controller
      */
     public function index()
     {
-        return view('secciones.perfil');
+        $usuario=Auth::user();
+
+        return view('secciones.perfil',['usuario'=>$usuario]);
     }
 
     /**
@@ -24,7 +26,7 @@ class PerfilController extends Controller
      */
     public function create()
     {
-        
+
     }
 
     /**

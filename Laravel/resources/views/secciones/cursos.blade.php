@@ -16,7 +16,7 @@
 
 @foreach($talleres as $taller)
 <div class="talleres">
-<a href="{{taller.show}}">
+<a href="{{route('taller.show')}}">
 <img src={{$taller->imagenes->first()->ruta}}>
 <h1>$taller->Título</h1>
 </a>

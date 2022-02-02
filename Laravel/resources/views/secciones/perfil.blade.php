@@ -6,7 +6,7 @@
     margin-top:20px;
     color: #1a202c;
     text-align: left;
-    background-color: #e2e8f0;    
+    background-color: #e2e8f0;
 }
 .main-body {
     padding: 15px;
@@ -66,11 +66,11 @@ div.card-body{
 
 <div class="container">
   <div class="main-body">
-  
+
         <!-- Breadcrumb -->
-        
+
         <!-- /Breadcrumb -->
-  
+
         <div class="row gutters-sm">
           <div class="col-md-4 mb-3">
             <div class="card">
@@ -78,15 +78,13 @@ div.card-body{
                 <div class="d-flex flex-column align-items-center text-center">
                   <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                   <div class="mt-3">
-                    <h4>John Doe</h4>
-                    <p class="text-secondary mb-1">Panadero</p>
-                    <p class="text-muted font-size-sm">Bilbao</p>
-                    
+                    <h4>{{$usuario->Nombre}}</h4>
+
                   </div>
                 </div>
               </div>
             </div>
-            
+
           </div>
           <div class="col-md-8">
             <div class="card mb-3">
@@ -105,7 +103,7 @@ div.card-body{
                     <h6 class="mb-0">Correo</h6>
                   </div>
                   <div class="col-sm-9 text-secondary">
-                    ekacormen@gmail.com
+                    {{$usuario->email}}
                   </div>
                 </div>
                 <hr>
@@ -120,10 +118,10 @@ div.card-body{
                 <hr>
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Pais</h6>
+                    <h6 class="mb-0">{{$usuario->pais}}</h6>
                   </div>
                   <div class="col-sm-9 text-secondary">
-                    España
+                    {{España}}
                   </div>
                 </div>
                 <hr>
@@ -135,14 +133,14 @@ div.card-body{
                     22/04/2002
                   </div>
                 </div>
-                
+
                 <hr>
-                
+
               </div>
             </div>
 
-            
-              
+
+
               </div>
             </div>
 
