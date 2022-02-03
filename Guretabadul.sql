@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `cursos` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.cursos: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.cursos: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `cursos` DISABLE KEYS */;
 REPLACE INTO `cursos` (`id`, `nombre`, `Fecha_ini`, `Fecha_fin`, `precio`, `capacidad`, `descripcion`, `created_at`, `updated_at`) VALUES
 	(1, 'PRUEBA CURSO', '2022-01-31', '2022-02-18', 12.52, '5', 'fddfasdvssdsdfzdfddffdgdfddfs', '2022-02-02 12:06:02', '2022-02-02 12:06:02');
@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `data_rows` (
   CONSTRAINT `data_rows_data_type_id_foreign` FOREIGN KEY (`data_type_id`) REFERENCES `data_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.data_rows: ~85 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.data_rows: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `data_rows` DISABLE KEYS */;
 REPLACE INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, `required`, `browse`, `read`, `edit`, `add`, `delete`, `details`, `order`) VALUES
 	(1, 1, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, '{}', 1),
@@ -145,7 +145,7 @@ REPLACE INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`,
 	(48, 10, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
 	(54, 12, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 	(55, 12, 'ruta', 'image', 'Ruta', 1, 1, 1, 1, 1, 1, '{}', 3),
-	(56, 12, 'id_taller', 'text', 'Id Taller', 1, 1, 1, 1, 1, 1, '{}', 2),
+	(56, 12, 'id_taller', 'select_dropdown', 'Id Taller', 1, 1, 1, 1, 1, 1, '{}', 2),
 	(57, 12, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
 	(58, 12, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
 	(59, 17, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
@@ -204,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `data_types` (
   UNIQUE KEY `data_types_slug_unique` (`slug`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.data_types: ~13 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.data_types: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `data_types` DISABLE KEYS */;
 REPLACE INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `display_name_plural`, `icon`, `model_name`, `policy_name`, `controller`, `description`, `generate_permissions`, `server_side`, `details`, `created_at`, `updated_at`) VALUES
 	(1, 'users', 'users', 'Usuario', 'Usuarios', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"desc","default_search_key":null,"scope":null}', '2022-01-27 11:44:24', '2022-02-01 07:38:42'),
@@ -214,7 +214,7 @@ REPLACE INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displ
 	(5, 'cursos', 'cursos', 'Curso', 'Cursos', 'voyager-study', 'App\\Models\\Curso', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2022-01-27 11:48:16', '2022-02-02 12:05:27'),
 	(9, 'skills', 'skills', 'Skill', 'Skills', 'voyager-wand', 'App\\Models\\Skills', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2022-01-27 11:49:39', '2022-02-01 12:45:59'),
 	(10, 'cursos_usuarios', 'cursos-usuarios', 'Cursos Usuario', 'Cursos Usuarios', NULL, 'App\\Models\\CursosUsuario', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2022-01-27 11:49:52', '2022-02-01 07:28:11'),
-	(12, 'imagenes_talleres', 'imagenes-talleres', 'Imagenes Taller', 'Imagenes Talleres', NULL, 'App\\Models\\ImagenesTaller', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2022-01-27 11:50:21', '2022-02-02 08:53:53'),
+	(12, 'imagenes_talleres', 'imagenes-talleres', 'Imagenes Taller', 'Imagenes Talleres', NULL, 'App\\Models\\ImagenesTaller', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2022-01-27 11:50:21', '2022-02-03 12:39:53'),
 	(16, 'matchs', 'matchs', 'Match', 'Matches', 'voyager-bubble-hear', 'App\\Models\\Match', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2022-01-27 11:53:15', '2022-01-28 07:42:41'),
 	(17, 'sponsor', 'sponsor', 'Sponsor', 'Sponsors', 'voyager-dollar', 'App\\Models\\Sponsor', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2022-01-27 11:53:38', '2022-01-28 07:39:13'),
 	(18, 'intereses', 'intereses', 'Interes', 'Intereses', 'voyager-search', 'App\\Models\\Interes', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2022-01-27 11:54:13', '2022-02-01 12:46:20'),
@@ -251,7 +251,7 @@ CREATE TABLE IF NOT EXISTS `imagenes_cursos` (
   CONSTRAINT `imagenes_cursos_curso_id_foreign` FOREIGN KEY (`curso_id`) REFERENCES `cursos` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.imagenes_cursos: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.imagenes_cursos: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `imagenes_cursos` DISABLE KEYS */;
 REPLACE INTO `imagenes_cursos` (`id`, `ruta`, `curso_id`, `created_at`, `updated_at`) VALUES
 	(1, 'imagenes-cursos\\February2022\\kgbmIkbT9vRJvJTKCoFj.jpg', 1, '2022-02-02 12:09:49', '2022-02-02 12:09:49');
@@ -269,7 +269,7 @@ CREATE TABLE IF NOT EXISTS `imagenes_talleres` (
   CONSTRAINT `imagenes_talleres_id_taller_foreign` FOREIGN KEY (`id_taller`) REFERENCES `talleres` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.imagenes_talleres: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.imagenes_talleres: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `imagenes_talleres` DISABLE KEYS */;
 REPLACE INTO `imagenes_talleres` (`id`, `ruta`, `id_taller`, `created_at`, `updated_at`) VALUES
 	(1, 'imagenes-talleres\\February2022\\wOarjQWr5nlEvYCFzG5Q.jpg', 1, '2022-02-02 09:54:00', '2022-02-02 08:55:14');
@@ -338,7 +338,7 @@ CREATE TABLE IF NOT EXISTS `menus` (
   UNIQUE KEY `menus_name_unique` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.menus: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.menus: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `menus` DISABLE KEYS */;
 REPLACE INTO `menus` (`id`, `name`, `created_at`, `updated_at`) VALUES
 	(1, 'admin', '2022-01-27 11:44:27', '2022-01-27 11:44:27');
@@ -364,7 +364,7 @@ CREATE TABLE IF NOT EXISTS `menu_items` (
   CONSTRAINT `menu_items_menu_id_foreign` FOREIGN KEY (`menu_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.menu_items: ~23 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.menu_items: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `menu_items` DISABLE KEYS */;
 REPLACE INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
 	(1, 1, 'Tablero', '', '_self', 'voyager-boat', NULL, NULL, 1, '2022-01-27 11:44:27', '2022-01-27 11:44:27', 'voyager.dashboard', NULL),
@@ -376,20 +376,20 @@ REPLACE INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_clas
 	(7, 1, 'Base de Datos', '', '_self', 'voyager-data', NULL, 5, 2, '2022-01-27 11:44:27', '2022-01-28 09:03:47', 'voyager.database.index', NULL),
 	(8, 1, 'Compás', '', '_self', 'voyager-compass', NULL, 5, 3, '2022-01-27 11:44:27', '2022-01-28 09:03:47', 'voyager.compass.index', NULL),
 	(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2022-01-27 11:44:27', '2022-01-28 09:03:47', 'voyager.bread.index', NULL),
-	(10, 1, 'Parámetros', '', '_self', 'voyager-settings', NULL, NULL, 12, '2022-01-27 11:44:27', '2022-01-28 11:39:16', 'voyager.settings.index', NULL),
+	(10, 1, 'Parámetros', '', '_self', 'voyager-settings', NULL, NULL, 13, '2022-01-27 11:44:27', '2022-02-03 12:44:30', 'voyager.settings.index', NULL),
 	(11, 1, 'Talleres', '', '_self', NULL, '#000000', 26, 1, '2022-01-27 11:48:02', '2022-01-28 10:03:55', 'voyager.talleres.index', 'null'),
 	(12, 1, 'Cursos', '', '_self', NULL, '#000000', 25, 1, '2022-01-27 11:48:16', '2022-01-28 09:59:11', 'voyager.cursos.index', 'null'),
 	(14, 1, 'Habilidades', '', '_self', NULL, '#000000', 24, 1, '2022-01-27 11:49:39', '2022-01-28 10:00:03', 'voyager.skills.index', 'null'),
-	(15, 1, 'Cursos Usuarios', '', '_self', NULL, NULL, 25, 3, '2022-01-27 11:49:53', '2022-01-28 09:58:19', 'voyager.cursos-usuarios.index', NULL),
-	(17, 1, 'Imagenes Talleres', '', '_self', NULL, NULL, 26, 2, '2022-01-27 11:50:22', '2022-01-28 10:01:14', 'voyager.imagenes-talleres.index', NULL),
-	(18, 1, 'Matches', '', '_self', 'voyager-people', '#ff0033', NULL, 9, '2022-01-27 11:50:45', '2022-01-28 11:39:16', 'voyager.matchs.index', 'null'),
-	(19, 1, 'Sponsors', '', '_self', 'voyager-dollar', '#99c421', NULL, 10, '2022-01-27 11:53:38', '2022-01-28 11:39:16', 'voyager.sponsor.index', 'null'),
+	(15, 1, 'Cursos Usuarios', '', '_self', NULL, NULL, 25, 2, '2022-01-27 11:49:53', '2022-02-03 12:44:29', 'voyager.cursos-usuarios.index', NULL),
+	(17, 1, 'Imagenes Talleres', '', '_self', NULL, NULL, NULL, 7, '2022-01-27 11:50:22', '2022-02-03 12:44:29', 'voyager.imagenes-talleres.index', NULL),
+	(18, 1, 'Matches', '', '_self', 'voyager-people', '#ff0033', NULL, 10, '2022-01-27 11:50:45', '2022-02-03 12:44:29', 'voyager.matchs.index', 'null'),
+	(19, 1, 'Sponsors', '', '_self', 'voyager-dollar', '#99c421', NULL, 11, '2022-01-27 11:53:38', '2022-02-03 12:44:29', 'voyager.sponsor.index', 'null'),
 	(20, 1, 'Intereses', '', '_self', NULL, '#000000', 27, 1, '2022-01-27 11:54:14', '2022-01-28 10:03:12', 'voyager.intereses.index', 'null'),
-	(24, 1, 'Skills', '', '_self', 'voyager-star', '#fbff00', NULL, 8, '2022-01-28 09:50:28', '2022-01-28 11:39:16', NULL, ''),
-	(25, 1, 'Cursos', '', '_self', 'voyager-study', '#00fafb', NULL, 7, '2022-01-28 09:56:40', '2022-01-28 11:39:16', NULL, ''),
+	(24, 1, 'Skills', '', '_self', 'voyager-star', '#fbff00', NULL, 9, '2022-01-28 09:50:28', '2022-02-03 12:44:29', NULL, ''),
+	(25, 1, 'Cursos', '', '_self', 'voyager-study', '#00fafb', NULL, 8, '2022-01-28 09:56:40', '2022-02-03 12:44:29', NULL, ''),
 	(26, 1, 'Talleres', '', '_self', 'voyager-hammer', '#ff9f00', NULL, 6, '2022-01-28 10:00:54', '2022-01-28 11:39:16', NULL, ''),
-	(27, 1, 'Intereses', '', '_self', 'voyager-search', '#ffffff', NULL, 11, '2022-01-28 10:02:11', '2022-01-28 11:39:16', NULL, ''),
-	(28, 1, 'Imagenes Cursos', '', '_self', NULL, NULL, NULL, 13, '2022-02-01 12:35:16', '2022-02-01 12:35:16', 'voyager.imagenes-cursos.index', NULL);
+	(27, 1, 'Intereses', '', '_self', 'voyager-search', '#ffffff', NULL, 12, '2022-01-28 10:02:11', '2022-02-03 12:44:29', NULL, ''),
+	(28, 1, 'Imagenes Cursos', '', '_self', NULL, NULL, NULL, 14, '2022-02-01 12:35:16', '2022-02-03 12:44:30', 'voyager.imagenes-cursos.index', NULL);
 /*!40000 ALTER TABLE `menu_items` ENABLE KEYS */;
 
 -- Volcando estructura para tabla guretabadul.migrations
@@ -400,7 +400,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.migrations: ~37 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.migrations: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
 REPLACE INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(1, '2013_01_25_072032_create_paises_table', 1),
@@ -478,7 +478,7 @@ CREATE TABLE IF NOT EXISTS `permissions` (
   KEY `permissions_key_index` (`key`)
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.permissions: ~75 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.permissions: ~85 rows (aproximadamente)
 /*!40000 ALTER TABLE `permissions` DISABLE KEYS */;
 REPLACE INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`) VALUES
 	(1, 'browse_admin', NULL, '2022-01-27 11:44:28', '2022-01-27 11:44:28'),
@@ -569,7 +569,7 @@ CREATE TABLE IF NOT EXISTS `permission_role` (
   CONSTRAINT `permission_role_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.permission_role: ~75 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.permission_role: ~35 rows (aproximadamente)
 /*!40000 ALTER TABLE `permission_role` DISABLE KEYS */;
 REPLACE INTO `permission_role` (`permission_id`, `role_id`) VALUES
 	(1, 1),
@@ -660,7 +660,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
   UNIQUE KEY `roles_name_unique` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.roles: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.roles: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
 REPLACE INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) VALUES
 	(1, 'admin', 'Administrador', '2022-01-27 11:44:28', '2022-01-27 11:44:28'),
@@ -681,7 +681,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   UNIQUE KEY `settings_key_unique` (`key`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.settings: ~10 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.settings: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
 REPLACE INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`, `order`, `group`) VALUES
 	(1, 'site.title', 'Título del sitio', 'Título del sitio', '', 'text', 1, 'Site'),
@@ -754,13 +754,14 @@ CREATE TABLE IF NOT EXISTS `talleres` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.talleres: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.talleres: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `talleres` DISABLE KEYS */;
 REPLACE INTO `talleres` (`id`, `Título`, `Fecha_comienzo`, `Fecha_final`, `Descripción`, `Precio`, `Capacidad`, `created_at`, `updated_at`) VALUES
 	(1, 'Taller Prueba', '2022-02-18', '2022-03-10', 'Este es un taller ficticio', 14.56, 5, '2022-02-02 08:22:48', '2022-02-02 08:22:48'),
-	(2, 'Segundo Taller', '2022-02-01', '2022-02-27', 'DAS DFFDSFSDSDFFSDFSD', 231521, 12, '2022-02-03 07:13:31', '2022-02-03 07:13:31');
+	(2, 'Segundo Taller', '2022-02-01', '2022-02-27', 'DAS DFFDSFSDSDFFSDFSD', 231521, 12, '2022-02-03 07:13:31', '2022-02-03 07:13:31'),
+	(3, 'Tercer Taller', '2022-02-10', '2022-03-05', 'fsfddghfgngngnnnxnb', 152, 21, '2022-02-03 12:45:16', '2022-02-03 12:45:16');
 /*!40000 ALTER TABLE `talleres` ENABLE KEYS */;
 
 -- Volcando estructura para tabla guretabadul.talleres_usuarios
@@ -824,7 +825,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla guretabadul.users: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla guretabadul.users: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 REPLACE INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `Fecha_nac`, `telefono`, `direccion_facturacion`, `pais_id`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
 	(1, 1, 'jorge', 'jordioni1705@gmail.com', 'users\\January2022\\27WbwJT8aBdHHJwqmdTm.PNG', NULL, '$2y$10$erJYN9b25LnDbo5aPZ4cW.x1qaq5ziuihSETWOZ5g00HMsiiBCkfu', NULL, NULL, NULL, NULL, NULL, '{"locale":"es"}', '2022-01-27 11:47:17', '2022-01-28 09:48:08');
