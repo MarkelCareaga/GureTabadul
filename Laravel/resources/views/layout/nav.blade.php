@@ -6,7 +6,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul style="margin-left:49%;" class="navbar-nav mr-auto">
+      <ul style="margin-left:60%;" class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" aria-current="page" href="{{route('inicio.index')}}">Inicio</a>
         </li>
@@ -15,17 +15,31 @@
           <a class="nav-link" aria-current="page" href="{{route('cursos.index')}}">Cursos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{route('taller.index')}}">taller</a>
+            <a class="nav-link" aria-current="page" href="{{route('taller.index')}}">Taller</a>
           </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Tienda</a>
         </li>
+        @if(!Auth::check())
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{route('login')}}">Login</a>
+          <a class="nav-link" aria-current="page" href="{{route('login')}}">Inicio Sesion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{{route('register')}}">Registrarse</a>
+        </li>
+        @else
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="" onclick="event.preventDefault(); document.getElementById('logout').submit();">Cerrar sesion</a>
+          <!-- Solo usuarios identificados -->
+          <form id="logout" action="{{route('logout')}}" method="POST" style="display:none;">
+          @csrf
+          </form>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{{route('perfil.index')}}">Ver perfil</a>
         </li>
+        @endif
+        
       </ul>
 
     </div>

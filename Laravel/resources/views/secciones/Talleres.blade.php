@@ -2,7 +2,7 @@
 @section('Titulo','Talleres')
 @section('contenido')
 @section('estilos')
-<link rel="stylesheet" href="{{URL::asset('css/Talleres.css') }}">
+<link rel="stylesheet" href="{{URL::asset('css/talleres.css') }}">
 @endsection
 @foreach($talleres as $taller)
 <div class="talleres">
