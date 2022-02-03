@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
-use App\Models\ImagenesTaller;
+
+
 
 class Taller extends Model
 {
@@ -13,7 +13,7 @@ class Taller extends Model
     protected $table = 'talleres';
 
     protected $filliable =[
-        'Titulo', 'Fecha_comienzo','Fecha_final','Descripción','Precio','Capacidad',
+        'Título', 'Fecha_comienzo','Fecha_final','Descripción','Precio','Capacidad',
     ];
 
 
@@ -21,7 +21,7 @@ class Taller extends Model
         return $this->belongsToMany(User::class,'talleres_usuarios','id_taller', 'user_id');
     }
     public function imagenes(){
-        return $this->hasMany(ImagenesTaller::class);
+        return $this->hasMany(ImagenesTaller::class,'id_taller','id');
     }
 
 }

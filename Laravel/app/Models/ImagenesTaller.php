@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Taller;
 
 class ImagenesTaller extends Model
 {
@@ -16,6 +15,6 @@ class ImagenesTaller extends Model
     ];
 
     public function taller(){
-        return $this->belongsTo(Taller::class);
+        return $this->belongsTo(Taller::class,'id_taller','id');
     }
 }
