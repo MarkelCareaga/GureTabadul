@@ -1,10 +1,13 @@
 @extends('layout.masterpage')
 @section('Titulo','Talleres')
 @section('contenido')
+@section('estilos')
+<link rel="stylesheet" href="{{URL::asset('css/Talleres.css') }}">
+@endsection
 @foreach($talleres as $taller)
 <div class="talleres">
 <a href="./taller/{{$taller->id}}">
-<img src={{$taller->imagenes()->first()->ruta}}>
+<img src={{$taller->imagenes->first->ruta}}>
 <h3></h3>
 </a>
 </div>

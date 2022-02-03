@@ -16,8 +16,10 @@
     <!-- Links CSS | JS -->
     <link rel="stylesheet" href="css/EstilosModificado.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{URL::asset('css/style.css') }}">
+    @yield('estilos')
 </head>
-<body background=img/fondo_GureTabadul.jpg style="background-size:100%; background-image: cover;background-repeat: no-repeat">
+<body style="background-image:url({{url('img/fondo_GureTabadul.jpg')}}); background-size:100%; background-image: cover;background-repeat: no-repeat">
     @include('layout.estilos')
     @include('layout.nav')
     @yield('contenido')
