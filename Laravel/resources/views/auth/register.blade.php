@@ -66,18 +66,7 @@
 						<div class="form-group row">
                             
 
-                            <div class="col-md-6">
-                                <input id="pais" type="text" class="form-control" name="pais"  placeholder=" Pais">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            
-
-                            <div class="col-md-6">
-                                <input id="fecha_nac" type="date" class="form-control" name="Fecha_nac"  placeholder="Fecha nacimiento">
-                            </div>
-                        </div>
+                           
 
 
                         <div class="form-group row mb-0">

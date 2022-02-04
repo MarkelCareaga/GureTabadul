@@ -59,8 +59,6 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'pais' => ['required','string','max:255'],
-            'Fecha_nac' => ['required','date_format:"d-m-Y"'],
 
         ]);
 
@@ -75,19 +73,20 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         \Session::flash('tipoMensaje','info');
-        \Session::flash('mensaje','Te has registrado correctamente');
+        \Session::flash('mensaje','Ve a tu perfil y rellena los campos de pais y fecha de nacimiento');
         //obtener el rol que corresponde al usuario normal
 
-        $idPais=DB::table('paises')->where('nombre', $data['pais'])->first();
+        //$idPais=DB::table('paises')->where('nombre', $data['pais'])->first();
 
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'pais_id' => $idPais->id,
-            'Fecha_nac'=> $data['Fecha_nac'],
+            
+            // 'pais_id' =>0,
+            // 'Fecha_nac'=> null,
         ]);
-        $user = User::create(request(['name','email','password','pais_id','Fecha_nac']));
+        $user = User::create(request(['name','email','password',0,'0']));
         auth()->login($user);
         return redirect()->to('/');
     }
