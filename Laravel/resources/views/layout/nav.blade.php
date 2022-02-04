@@ -39,7 +39,7 @@
           <a class="nav-link" aria-current="page" href="{{route('perfil.index')}}">Ver perfil</a>
         </li>
         @endif
-        
+
       </ul>
 
     </div>

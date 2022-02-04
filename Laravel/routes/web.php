@@ -35,7 +35,6 @@ Route::get('/', function () {
 
 
 Auth::routes();
-
 Route::resource('nav', GureTabadulController::class);
 Route::resource('cursos', CursosController::class);
 Route::resource('servicios', ServiciosController::class);
