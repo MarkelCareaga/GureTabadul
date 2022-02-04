@@ -45,7 +45,7 @@
                             
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder=" Contraseña">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"  placeholder=" Contraseña">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -53,13 +53,21 @@
                                     </span>
                                 @enderror
                             </div>
+
+                        </div>
+                        <div class="form-group row">
+                            
+
+                            <div class="col-md-6">
+                                <input id="contrasenya" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder=" Confirmar contraseña">
+                            </div>
                         </div>
 
 						<div class="form-group row">
                             
 
                             <div class="col-md-6">
-                                <input id="pais" type="text" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder=" Pais">
+                                <input id="pais" type="text" class="form-control" name="pais"  placeholder=" Pais">
                             </div>
                         </div>
 
@@ -67,7 +75,7 @@
                             
 
                             <div class="col-md-6">
-                                <input id="fecha_nac" type="date" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Fecha nacimiento">
+                                <input id="fecha_nac" type="date" class="form-control" name="Fecha_nac"  placeholder="Fecha nacimiento">
                             </div>
                         </div>
 

@@ -24,6 +24,11 @@ input#password.form-control{
     margin-top: 5%;
     
 }
+input#contrasenya.form-control{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    margin-top: 5%;
+}
 input#pais.form-control{
     margin-top: 5%;
     font-family: "Font Awesome 5 Free"; 

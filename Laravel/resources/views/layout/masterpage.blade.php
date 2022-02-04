@@ -23,7 +23,7 @@
     @include('layout.estilos')
     @include('layout.nav')
 
-    @include('secciones.nosotros')
+    
     @yield('contenido')
 </body>
 </html>

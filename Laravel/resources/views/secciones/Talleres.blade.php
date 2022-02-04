@@ -4,12 +4,12 @@
 @section('estilos')
 <link rel="stylesheet" href="{{URL::asset('css/talleres.css') }}">
 @endsection
-
+<div class="talleres">
 @foreach($talleres as $taller)
 
 
-<div class="talleres">
-</div>
+
+
 <div class="card" style="width: 18rem;">
     <a href="./taller/{{$taller->id}}">
         <img src="storage\{{$taller->imagenes}}" class="card-img-top"  alt="">
@@ -24,7 +24,8 @@
       <a href="#" class="btn btn-primary">Apuntarse</a>
     </div>
   </div>
-<hr>
-@endforeach
 
+
+@endforeach
+</div>
 @endsection

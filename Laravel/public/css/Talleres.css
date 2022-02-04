@@ -3,3 +3,10 @@ div.card{
     margin-bottom: 2%;
     font-family: 'Poppins';
 }
+.talleres{
+    /* display: flex !important; */
+    display: flex;
+   flex-wrap: wrap;
+   
+   margin-right: -163%;
+}
