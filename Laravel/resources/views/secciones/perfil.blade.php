@@ -88,7 +88,7 @@ div.card-body{
           </div>
           <div class="col-md-8">
             <div class="card mb-3">
-              <div class="card-body">
+              <div class="card-body" >
                 <div class="row">
                   <div class="col-sm-3">
                     <h6 class="mb-0">Nombre: </h6>
@@ -112,9 +112,10 @@ div.card-body{
                 <div class="row">
                   <div class="col-sm-3">
                     <h6 class="mb-0">Pais: </h6>
+                    
                   </div>
                   <div class="col-sm-9 text-secondary">
-                    {{$usuario->pais}}
+                    <input type="text" name="pais" id="pais" disabled>
                   </div>
                 </div>
                 <hr>
@@ -123,18 +124,21 @@ div.card-body{
                     <h6 class="mb-0">Fecha nacimiento:</h6>
                   </div>
                   <div class="col-sm-9 text-secondary">
-                    {{$usuario->Fecha_nac}}
+                    <input type="text" name="fecha_nac" id="fecha_nac" disabled>
                   </div>
                 </div>
 
                 <hr>
-
+                <input type="button" name="botonEditar" value="Editar perfil" id="botonEditar" onclick="botonEditar()">
+                <input type="submit" name="botonGuardar" value="Guardar" id="botonGuardar">
               </div>
+
             </div>
 
-
+            
 
               </div>
+              
             </div>
 
 
@@ -144,4 +148,15 @@ div.card-body{
 
       </div>
   </div>
+  <script>
+    var pais=document.getElementById("pais");
+    document.getElementById("botonEditar").addEventListener("click", function(e){
+      pais.disabled=false;
+    });
+    var fechaNac=document.getElementById("fecha_nac");
+    document.getElementById("botonEditar").addEventListener("click", function(e){
+      fechaNac.disabled=false;
+    });
+    
+  </script>
   @endsection
