@@ -58,7 +58,11 @@ class User extends \TCG\Voyager\Models\User
     /*public function matchs(){
         return $this->hasMany(Match::class,'matchs','user1_id', 'id');
     }*/
-    
+
+    public function pais(){
+        return $this->belongsTo(Pais::class,'pais_id','id');
+    }
+
     public function setPasswordAttribute($password){
         $this->attributes['password'] = bcrypt($password);
     }

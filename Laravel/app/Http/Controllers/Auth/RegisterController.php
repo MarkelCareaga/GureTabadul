@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Carbon\Carbon;
-
+use App\Models\Pais;
 
 // $fecha_actual = Carbon::now();
 
@@ -76,16 +76,17 @@ class RegisterController extends Controller
         \Session::flash('tipoMensaje','info');
         \Session::flash('mensaje','Te has registrado correctamente');
         //obtener el rol que corresponde al usuario normal
-        $rol='usuario';
+
+        $idPais=DB::table('paises')->where('nombre', $data['pais'])->first();
 
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'pais' => $data['pais'],
+            'pais_id' => $idPais->id,
             'Fecha_nac'=> $data['Fecha_nac'],
         ]);
-        $user = User::create(request(['name','email','password','pais','Fecha_nac']));
+        $user = User::create(request(['name','email','password','pais_id','Fecha_nac']));
         auth()->login($user);
         return redirect()->to('/');
     }
