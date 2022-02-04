@@ -100,14 +100,12 @@ class CursosController extends Controller
     public function show($id)
     {
         $cursos=Curso::find($id);
-        if (is_null($cursos)) {
-            echo "No existe el curso seleccionado";
-        } else {
-            //Mostramos el curso
-            return view('cursos.show',['cursoSelecciona'=>$cursos]);
+     
+
+            return view('curso.show',['curso'=>$cursos]);
         }
 
-    }
+    
 
     /**
      * Show the form for editing the specified resource.

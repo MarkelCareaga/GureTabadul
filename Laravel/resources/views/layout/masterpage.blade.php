@@ -22,6 +22,8 @@
 <body style="background-image:url({{url('img/fondo_GureTabadul.jpg')}}); background-size:100%; background-image: cover;background-repeat: no-repeat">
     @include('layout.estilos')
     @include('layout.nav')
+
+    
     @yield('contenido')
 </body>
 </html>

@@ -78,7 +78,7 @@ div.card-body{
                 <div class="d-flex flex-column align-items-center text-center">
                   <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                   <div class="mt-3">
-                    <h4>{{$usuario->Nombre}}</h4>
+                    <h4>{{$usuario->name}}</h4>
 
                   </div>
                 </div>
@@ -91,10 +91,10 @@ div.card-body{
               <div class="card-body">
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Nombre</h6>
+                    <h6 class="mb-0">Nombre: </h6>
                   </div>
                   <div class="col-sm-9 text-secondary">
-                    Ekaitz
+                    {{$usuario->name}}
                   </div>
                 </div>
                 <hr>
@@ -107,30 +107,23 @@ div.card-body{
                   </div>
                 </div>
                 <hr>
+                
+                
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Contraseña</h6>
+                    <h6 class="mb-0">Pais: </h6>
                   </div>
                   <div class="col-sm-9 text-secondary">
-                    fbade9e36a3f36d3d676c1b808451dd7
+                    {{$usuario->pais}}
                   </div>
                 </div>
                 <hr>
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">{{$usuario->pais}}</h6>
+                    <h6 class="mb-0">Fecha nacimiento:</h6>
                   </div>
                   <div class="col-sm-9 text-secondary">
-                    {{España}}
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Fecha nacimiento</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    22/04/2002
+                    {{$usuario->Fecha_nac}}
                   </div>
                 </div>
 

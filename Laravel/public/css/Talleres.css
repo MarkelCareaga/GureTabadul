@@ -1,0 +1,12 @@
+div.card{
+    margin-left: 3%;
+    margin-bottom: 2%;
+    font-family: 'Poppins';
+}
+.talleres{
+    /* display: flex !important; */
+    display: flex;
+   flex-wrap: wrap;
+   
+   margin-right: -163%;
+}
