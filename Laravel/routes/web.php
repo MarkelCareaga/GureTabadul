@@ -44,7 +44,7 @@ Route::resource('inicio', InicioController::class);
 
 Route::resource('taller', TallerController::class);
 
-Route::resource('perfil', PerfilController::class);
+Route::resource('perfil', PerfilController::class)->middleware('auth');;
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

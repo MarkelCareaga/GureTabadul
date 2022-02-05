@@ -8,11 +8,11 @@
 @foreach($talleres as $taller)
 
 
-{{$taller->imagenes->first()->ruta}}
+{{-- {{$taller->imagenes->first()->ruta}}
 
-
+  $taller->id --}}
 <div class="card" style="width: 18rem;">
-    <a href="./taller/{{$taller->id}}">
+    <a href="{{route('taller.show',['taller'=>$taller])}}">
         <img src="storage/{{$taller->imagenes}}" class="card-img-top">
     </a>
     <div class="card-body">

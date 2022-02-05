@@ -14,6 +14,11 @@ class Curso extends Model
         'nombre', 'Fecha_ini', 'Fecha_fin','precio','capacidad','descripcion',
     ];
 
+    public function getRouteKeyName()
+    {
+        return 'nombre';
+    }
+
     public function usuarios(){
         return $this->belongsToMany(User::class,'cursos_usuarios','user_id', 'curso_id');
     }

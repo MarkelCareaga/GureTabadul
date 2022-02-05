@@ -97,12 +97,12 @@ class CursosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Curso $curso)
     {
-        $cursos=Curso::find($id);
+        // $cursos=Curso::find($id);
      
 
-            return view('curso.show',['curso'=>$cursos]);
+            return view('curso.show',['curso'=>$curso]);
         }
 
     
