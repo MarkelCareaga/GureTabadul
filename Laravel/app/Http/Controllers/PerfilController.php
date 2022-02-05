@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
+use App\Models\User;
+use App\Models\Pais;
 
 class PerfilController extends Controller
 {
@@ -70,9 +72,35 @@ class PerfilController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $usuario)
     {
-        //
+        $usuario=User::find($usuario);
+        
+        $data=$request->all();
+       
+
+        $pais_id=Pais:: where('nombre', $data['pais'])->first();
+        
+        
+        $usuario->name=$data['nombre'];
+        $usuario->email=$usuario->email;
+        $usuario->password=$usuario->password;
+        $usuario->Fecha_nac=$data['fecha_nac'];
+        $usuario->telefono=$data['telefono'];
+        if(!empty($pais_id)){
+            $usuario->pais_id=$pais_id->id;
+        }
+        
+
+
+        //Generar un nombre unico
+        // $nombreimagen=Str::random(30)."-".$request->file('imagen')->getClientOriginalName();
+
+        //Asociarselo el modelo
+        // $plotter->imagen=$nombreimagen;
+        $usuario->save();
+        // $request->file('imagen')->move('images/plotters',$nombreimagen);
+        return \Redirect::back();
     }
 
     /**
