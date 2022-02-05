@@ -6,9 +6,9 @@
 @endsection
 
 @foreach ($cursos as $curso)
-<div class="cursos"><a href="./cursos/{{$curso->id}}">
+<div class="cursos"><a href="{{route('cursos.show',['curso'=>$curso])}}">
 {{-- <img src={{$curso->imagenes->first()->ruta}}> --}}
-
+fdsf
 </a></div>
 <div class="card" style="width: 18rem;">
     <img src="..." class="card-img-top" alt="...">

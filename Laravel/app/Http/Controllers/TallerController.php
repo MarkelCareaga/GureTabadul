@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Taller;
 
+
 class TallerController extends Controller
 {
     /**
@@ -45,9 +46,10 @@ class TallerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Taller $taller)
     {
-        $taller=Taller::find($id);
+        
+        // $taller=Taller::find($id);
         if (is_null($taller))
         echo "No existe el taller solicitado";
        else

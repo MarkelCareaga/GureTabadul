@@ -80,7 +80,6 @@ div.card-body{
                   <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                   <div class="mt-3">
                     <h4>{{$usuario->name}}</h4>
-
                   </div>
                 </div>
               </div>
