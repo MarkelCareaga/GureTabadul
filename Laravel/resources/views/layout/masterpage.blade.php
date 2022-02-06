@@ -25,7 +25,7 @@
     @livewireStyles
     @livewireScripts
 </head>
-<body style="background-image:url({{url('img/fondo_GureTabadul.jpg')}}); background-size:100%; background-image: cover;background-repeat: no-repeat">
+<body>
     @include('layout.estilos')
     @include('layout.nav')
     @include('layout.alertas')

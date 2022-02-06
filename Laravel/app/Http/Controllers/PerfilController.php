@@ -72,23 +72,25 @@ class PerfilController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $usuario)
+    public function update(Request $request,  $id)
     {
-        $usuario=User::find($usuario);
+        
+        $user=User::find($id);
         
         $data=$request->all();
        
 
         $pais_id=Pais:: where('nombre', $data['pais'])->first();
         
+        $nombre=$data["nombre"];
         
-        $usuario->name=$data['nombre'];
-        $usuario->email=$usuario->email;
-        $usuario->password=$usuario->password;
-        $usuario->Fecha_nac=$data['fecha_nac'];
-        $usuario->telefono=$data['telefono'];
+        $user->name=$nombre;
+        $user->email=$user->email;
+        $user->password=$user->password;
+        $user->Fecha_nac=$data['fecha_nac'];
+        $user->telefono=$data['telefono'];
         if(!empty($pais_id)){
-            $usuario->pais_id=$pais_id->id;
+            $user->pais_id=$pais_id->id;
         }
         
 
@@ -98,7 +100,7 @@ class PerfilController extends Controller
 
         //Asociarselo el modelo
         // $plotter->imagen=$nombreimagen;
-        $usuario->save();
+        $user->save();
         // $request->file('imagen')->move('images/plotters',$nombreimagen);
         return \Redirect::back();
     }
