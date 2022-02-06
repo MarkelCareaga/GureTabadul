@@ -113,8 +113,31 @@ class TallerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($taller)
     {
-        //
+        $usuario=Auth::user();
+     
+        $talleresUsuario=TalleresUsuario::all();
+
+        $desapuntarse=TalleresUsuario::where('user_id',$usuario->id)->where('id_taller',$taller);
+       
+        foreach ($talleresUsuario as $tallerUsuario){
+
+            if($tallerUsuario->user_id == $usuario->id && $tallerUsuario->id_taller == $taller){
+               
+                $desapuntarse->delete();
+                \Session::flash('TipoMensaje','success');
+                \Session::flash('mensaje','Te has desapuntado correctamente');
+        
+                return \Redirect::back();
+            }
+
+        }
+
+        
+        \Session::flash('TipoMensaje','danger');
+        \Session::flash('mensaje','El usuario no esta en este taller');
+
+        return \Redirect::back();
     }
 }
