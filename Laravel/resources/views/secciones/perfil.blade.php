@@ -88,7 +88,7 @@ div.card-body{
           </div>
           <div class="col-md-8">
             <div class="card mb-3">
-              <form action="{{route("perfil.update",[$usuario])}}" method="POST" enctype="multipart/form-data">
+              <form action="{{route("perfil.update",[$usuario->id])}}" method="POST" enctype="multipart/form-data">
                 @method('PUT')
                 @csrf
                 
