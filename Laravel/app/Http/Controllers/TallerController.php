@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Taller;
-
-
+use Auth;
+use App\Models\TalleresUsuario;
 class TallerController extends Controller
 {
     /**
@@ -77,9 +77,16 @@ class TallerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($taller)
     {
-        //
+        $usuario=Auth::user();
+     
+        $apuntarse=new TalleresUsuario();
+        $apuntarse->id_taller=$taller;
+        $apuntarse->user_id=$usuario->id;
+        $apuntarse->save();
+
+
     }
 
     /**
