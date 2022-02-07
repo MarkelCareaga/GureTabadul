@@ -22,19 +22,19 @@
     <link rel="stylesheet" href="{{URL::asset('css/style.css') }}">
     @yield('estilos')
 
-    @livewireStyles
-    @livewireScripts
+    {{-- @livewireStyles
+    @livewireScripts --}}
 </head>
 <body>
     @include('layout.estilos')
     @include('layout.nav')
     @include('layout.alertas')
-    
+
     @yield('contenido')
 <div class="chatUser">
     {{-- <p>Chat</p>
     {{-- @livewire("chat")
-    @livewire("chat-lista") --}} 
+    @livewire("chat-lista") --}}
 </div>
 
 

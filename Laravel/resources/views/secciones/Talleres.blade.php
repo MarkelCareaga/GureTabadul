@@ -10,13 +10,19 @@
 <div class="card" style="width: 18rem;">
 
   <a href="{{route('taller.show',['taller'=>$taller])}}">
-    @php
-        if (isset($taller->imagenes))
+
+        @if (empty($taller->imagenes))
+            @php
           $rutaImagen=$taller->imagenes->first()->ruta;
-        else 
-          $rutaImagen="imgenes/default.jpg";
-    @endphp
-    <img src="storage/$rutaImagen" class="card-img-top">
+          echo '<img src="storage/$rutaImagen" class="card-img-top">'
+          @endphp
+        @else
+            @php
+            $rutaImagen="imgenes/default.jpg";
+          echo '<img src="storage/'.$rutaImagen.'" class="card-img-top">'
+            @endphp
+          @endif
+
 </a>
 
     <div class="card-body">
