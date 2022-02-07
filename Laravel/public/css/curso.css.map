@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,GAAG,AAAA,KAAK,CAAA;EACJ,WAAW,EAAE,EAAE;EACf,aAAa,EAAE,EAAE;EACjB,WAAW,EAAE,SAAS;EACtB,UAAU,EAAE,EAAE;CACjB;;AACD,AAAA,OAAO,CAAA;EACH,+BAA+B;EAC/B,OAAO,EAAE,IAAI;EACd,SAAS,EAAE,IAAI;CACjB",
+    "sources": [
+        "../sass/curso.scss"
+    ],
+    "names": [],
+    "file": "curso.css"
+}

@@ -1,0 +1,69 @@
+$colorFondoBody:#BCDDD4;
+$colorLetraBody:#1a202c;
+$sombraCarta1:#0000001a;
+$sombraCarta2:#0000000f;
+$fondoCarta:#3AA877;
+$bordeCarta:#00000020;
+$bsGray300:#e2e8f0;
+#botonEditar1{
+    margin-left:35%;
+    background-color: $fondoCarta;
+    border-style: none;
+}
+body{
+    margin-top:20px;
+    color:$colorLetraBody;
+    text-align: left;
+    background-color: $colorFondoBody;
+}
+.main-body {
+    padding: 15px;
+}
+.card {
+    box-shadow: 0 1px 3px 0 $sombraCarta1, 0 1px 2px 0 $sombraCarta2;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: $fondoCarta;
+    background-clip: border-box;
+    border: 0 solid $bordeCarta;
+    border-radius: .25rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+    background-color: $bsGray300;
+}
+.h-100 {
+    height: 100%!important;
+}
+.shadow-none {
+    box-shadow: none!important;
+}
+div.card-body{
+  height: 509px;
+  padding-top:89px;
+}

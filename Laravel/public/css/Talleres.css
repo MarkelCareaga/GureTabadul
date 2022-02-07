@@ -1,12 +1,16 @@
-div.card{
-    margin-left: 3%;
-    margin-bottom: 2%;
-    font-family: 'Poppins';
+div.card {
+  margin-left: 8%;
+  margin-bottom: 2%;
+  font-family: 'Poppins';
+  margin-top: 2%;
 }
-.talleres{
-    /* display: flex !important; */
-    display: flex;
-   flex-wrap: wrap;
-   
-   
+
+.talleres {
+  /* display: flex !important; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+/*# sourceMappingURL=talleres.css.map */

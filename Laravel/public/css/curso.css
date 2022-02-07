@@ -1,10 +1,16 @@
-div.card{
-    margin-left: 3%;
-    margin-bottom: 2%;
-    font-family: 'Poppins';
-    font-size: 13.25px  !important;
-    
+div.card {
+  margin-left: 8%;
+  margin-bottom: 2%;
+  font-family: 'Poppins';
+  margin-top: 2%;
 }
-div.card-body{
-    font-size: 13.25px  !important;
+
+.cursos {
+  /* display: flex !important; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+/*# sourceMappingURL=curso.css.map */

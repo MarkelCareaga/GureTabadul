@@ -1,46 +1,53 @@
-div.card-header{
-    background-color: #B91B55;
-    color: white;
-    font-size: 2em;
-    padding-left: 40%;
+div.card-header {
+  background-color: #B91B55;
+  color: white;
+  font-size: 2em;
+  padding-left: 40%;
 }
-div.card-body{
-    background-color: #43B582;
+
+div.card-body {
+  background-color: #43B582;
 }
-input#email.form-control{
-    margin-bottom: 4%;
-    margin-top: 19%;
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-    
+
+input#email.form-control {
+  margin-bottom: 4%;
+  margin-top: 19%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
-input#password.form-control{
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-    
+
+input#password.form-control {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
-div.col-md-8{
-    width: 42%;
-    margin-top: 8%;
-    height: 90px;
+
+div.col-md-8 {
+  width: 42%;
+  margin-top: 8%;
+  height: 90px;
 }
-div.col-md-6{
-    margin-left: 24%;
+
+div.col-md-6 {
+  margin-left: 24%;
 }
-input#remember.form-check-input{
-    margin-top: 13%;
+
+input#remember.form-check-input {
+  margin-top: 13%;
 }
-label.form-check-label{
-    margin-top: 11%;
+
+label.form-check-label {
+  margin-top: 11%;
 }
-.btn-primary{
-    width: 81%;
-    margin-left: -5%;
-    margin-top: -32%;
-    background-color: #B91B55 !important;
-    
+
+.btn-primary {
+  width: 81%;
+  margin-left: -5%;
+  margin-top: -32%;
+  background-color: #B91B55 !important;
 }
-a.btn.btn-link{
-    width: 141%;
-    margin-left:-32%;
+
+a.btn.btn-link {
+  width: 141%;
+  margin-left: -32%;
 }
+/*# sourceMappingURL=login.css.map */
