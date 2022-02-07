@@ -1,12 +1,17 @@
 @extends('layout.masterpage')
 @section('Titulo','Talleres')
 @section('contenido')
-<p>{{$curso->nombre}}</p>
-<p>{{$curso->Fecha_ini}}</p>
-<p>{{$curso->Fecha_fin}}</p>
-<p>{{$curso->precio}}</p>
-<p>{{$curso->capacidad}}</p>
-<p>{{$curso->descripcion}}</p>
+@section('estilos')
+<link rel="stylesheet" href="{{URL::asset('css/show_curso.css') }}">
+@endsection
+<div class="curso_detalles">
+<p id="titulo">{{$curso->nombre}}</p>
+<p id="fecha_inicio">Fecha inicio: {{$curso->Fecha_ini}}</p>
+<p id="fecha_fin">Fecha fin: {{$curso->Fecha_fin}}</p>
+<p id="descripcion">Descripcion: {{$curso->descripcion}}</p>
+<p id="precio">Precio: {{$curso->precio}}</p>
+<p id="capacidad">Capacidad: {{$curso->capacidad}}</p>
+
 
 <form method="POST" action="{{route('cursos.update',[$curso->id])}}">
     @csrf
@@ -16,6 +21,7 @@
 <form method="POST" action="{{route('cursos.destroy',[$curso->id])}}">
         @csrf
         @method('DELETE')
-        <button class="btn btn-primary"type="submit">Desapuntarse</button>
+        <button class="btn btn-secondary"type="submit">Desapuntarse</button>
 </form>
+</div>
 @endsection
