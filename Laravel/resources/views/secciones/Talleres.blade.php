@@ -7,14 +7,12 @@
 <div class="talleres">
 @foreach($talleres as $taller)
 
-
-{{-- {{$taller->imagenes->first()->ruta}}
-
-  $taller->id --}}
 <div class="card" style="width: 18rem;">
-    <a href="{{route('taller.show',['taller'=>$taller])}}">
-        <img src="storage/{{$taller->imagenes}}" class="card-img-top">
-    </a>
+
+  <a href="{{route('taller.show',['taller'=>$taller])}}">
+    <img src="storage/{{$taller->imagenes->first()->ruta}}" class="card-img-top">
+</a>
+
     <div class="card-body">
       <h5 class="card-title">{{$taller->Título}}</h5>
       <p class="card-text">Fecha comienzo: {{$taller->Fecha_comienzo}}</p>

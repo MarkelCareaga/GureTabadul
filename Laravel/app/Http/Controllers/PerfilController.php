@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\User;
 use App\Models\Pais;
+use App\Models\Interes;
+
 
 class PerfilController extends Controller
 {

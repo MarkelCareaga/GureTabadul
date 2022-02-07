@@ -93,7 +93,7 @@ class TallerController extends Controller
         foreach ($talleresUsuario as $tallerUsuario){
 
             if($tallerUsuario->user_id == $usuario->id && $tallerUsuario->id_taller == $taller){
-                \Session::flash('TipoMensaje','danger');
+                \Session::flash('tipoMensaje','danger');
                 \Session::flash('mensaje','El usuario ya esta apuntado');
 
                 return \Redirect::back();
@@ -106,7 +106,7 @@ class TallerController extends Controller
         $apuntarse->user_id=$usuario->id;
         $apuntarse->save();
 
-        \Session::flash('TipoMensaje','success');
+        \Session::flash('tipoMensaje','success');
         \Session::flash('mensaje','Apuntado con exito');
 
         return \Redirect::back();
@@ -132,7 +132,7 @@ class TallerController extends Controller
             if($tallerUsuario->user_id == $usuario->id && $tallerUsuario->id_taller == $taller){
                
                 $desapuntarse->delete();
-                \Session::flash('TipoMensaje','success');
+                \Session::flash('tipoMensaje','success');
                 \Session::flash('mensaje','Te has desapuntado correctamente');
         
                 return \Redirect::back();
@@ -141,7 +141,7 @@ class TallerController extends Controller
         }
 
         
-        \Session::flash('TipoMensaje','danger');
+        \Session::flash('tipoMensaje','danger');
         \Session::flash('mensaje','El usuario no esta en este taller');
 
         return \Redirect::back();

@@ -9,7 +9,10 @@
 
 <div class="card" style="width: 18rem;">
   <a href="{{route('cursos.show',['curso'=>$curso])}}">
-    <img src="" class="card-img-top" alt="..."></a>
+ 
+    <img src="storage/{{$curso->imagenes()->first()->ruta}}" class="card-img-top" alt="">
+
+    </a>
     <div class="card-body">
       <h5 class="card-title">{{$curso->nombre}}</h5>
       

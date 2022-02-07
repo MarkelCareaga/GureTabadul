@@ -173,8 +173,17 @@ div.card-body{
           </div>
         </div>
 
-      </div>
-  </div>
+        <div>
+          <form method="post" action="">
+            <button type="submit" name="gustos">Agregar gustos</button>
+          </form>
+          @foreach ($usuario->intereses as $interes)
+          <p>{{$interes->nombre}}</p>
+              
+          @endforeach
+        </div>
+
+      
   <script>
     var pais=document.getElementById("pais");
     document.getElementById("botonEditar").addEventListener("click", function(e){
