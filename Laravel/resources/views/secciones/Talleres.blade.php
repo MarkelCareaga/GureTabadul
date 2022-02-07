@@ -14,11 +14,11 @@
         @if (empty($taller->imagenes))
             @php
           $rutaImagen=$taller->imagenes->first()->ruta;
-          echo '<img src="storage/$rutaImagen" class="card-img-top">'
+          echo '<img src="storage/'.$rutaImagen.'" class="card-img-top">'
           @endphp
         @else
             @php
-            $rutaImagen="imgenes/default.jpg";
+            $rutaImagen="default.jpg";
           echo '<img src="storage/'.$rutaImagen.'" class="card-img-top">'
             @endphp
           @endif

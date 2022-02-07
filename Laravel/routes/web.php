@@ -11,6 +11,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\TallerController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\MatchController;
 
 
 
@@ -33,8 +34,11 @@ Route::get('/', function () {
 })->name('home');
 
 
-
+Route::get('/matches', function () {
+    return view('voyager.matches.matches');
+});
 Auth::routes();
+Route::resource('matches',MatchController::class);
 Route::resource('nav', GureTabadulController::class);
 Route::resource('cursos', CursosController::class);
 Route::resource('servicios', ServiciosController::class);

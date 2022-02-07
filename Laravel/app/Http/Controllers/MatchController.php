@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Match;
+use App\Models\User;
 
 class MatchController extends Controller
 {
@@ -15,9 +16,9 @@ class MatchController extends Controller
      */
     public function index()
     {
-        $match=Match::all();
+        $matches=Match::all();
 
-        return view('secciones.match',['match'=>$match]);
+        return view('voyager.matches.matches',['matches'=>$matches]);
     }
 
     /**
@@ -27,7 +28,9 @@ class MatchController extends Controller
      */
     public function create()
     {
-        //
+        $usuarios=User::all();
+
+        return view('voyager.matches.CrearMatch',['usuarios'=>$usuarios]);
     }
 
     /**
@@ -72,13 +75,13 @@ class MatchController extends Controller
             \Session::flash('mensaje','Match creado correctamente');
         } catch (\Throwable $th) {
             //Mensaje de error
-            
+
             \Session::flash('tipoMensaje','danger');
             \Session::flash('mensaje','Error al crear el match');
         }
         return \Redirect::back();
-        
-    }   
+
+    }
 
     /**
      * Display the specified resource.
@@ -95,7 +98,7 @@ class MatchController extends Controller
             //Mostramos el match
             return view('match.show',['matchSeleccion'=>$matchs]);
         }
-        
+
     }
 
     /**
@@ -138,7 +141,7 @@ class MatchController extends Controller
 
             return \Redirect::back()->withInput()->withErrrors();
         } else {
-            
+
             $match = Match::find($id);
             $match->nombre = $request->input('edit_nombreMatch');
             $match->direcciónMatch = $request->input('edit_direcciónMatch');
@@ -159,8 +162,8 @@ class MatchController extends Controller
         return \Redirect::back();
 
 
-        
-        
+
+
     }
 
 
