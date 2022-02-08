@@ -12,16 +12,18 @@
 button.btn.btn-secondary {
   float: left;
   clear: both;
-  margin-left: 50%;
-  margin-top: -4.1%;
+  margin-left: 46%;
+  margin-top: -4.2%;
+  width: 50px;
   background-color: #BC3A2F;
 }
 
 button.btn.btn-primary {
   clear: both;
   float: left;
-  margin-left: 35%;
+  margin-left: 40%;
   margin-top: 4%;
+  width: 50px;
 }
 
 .btn-secondary:hover {
