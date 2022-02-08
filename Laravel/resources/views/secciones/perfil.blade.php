@@ -110,13 +110,26 @@
                 </div>
                 <div id="conocimientosDiv">
                   <div>
-                    <a onclick="">Agregar conocimientos</a>
+                    
                     <div><h2>Tus conocimientos</h2></div>
                   @foreach ($usuario->skills as $skill)
                   <p>{{$skill->nombre}}</p>
                   @endforeach
                 </div>
-                
+                <div class="conocimientos">
+                  <div >
+                      <form action="{{route('skills.create',$usuario->id)}}" method="POST">
+                          @csrf
+                          @method('PUT')
+                       Agrega tu habilidad si no lo encuentras <input type="text" name="gusto">
+                       <button type="submit">Agregar</button>
+                      </form>
+                  </div>
+                  <div>
+      
+      
+                  </div>
+              </div>
             </div>
             <div id="talleresDiv">
               <div>
@@ -135,6 +148,23 @@
               @endforeach
             </div>
           </div>
+          <div id="cursosDiv">
+            <div>
+              
+              <div><h2>Mis cursos</h2></div>
+            @foreach ($usuario->cursos as $curso)
+            <div class="talleresInfo">
+              <h5 class="card-title">{{$curso->nombre}}</h5>
+              <p class="card-text">Fecha comienzo: {{$curso->Fecha_ini}}</p>
+              <p class="card-text">Fecha final: {{$curso->Fecha_fin}}</p>
+              <p class="card-text">Descripcion: {{$curso->descripcion}}</p>
+              <p class="card-text">Precio: {{$curso->precio}}</p>
+              <p class="card-text">Capacidad: {{$curso->capacidad}}</p>
+              
+            </div>
+            @endforeach
+          </div>
+        </div>
             
         </div> 
             </form>
@@ -160,20 +190,7 @@
        
 
 
-        <div class="conocimientos">
-            <div >
-                <form action="{{route('skills.create',$usuario->id)}}" method="POST">
-                    @csrf
-                    @method('PUT')
-                 Agrega tu habilidad si no lo encuentras <input type="text" name="gusto">
-                 <button type="submit">Agregar</button>
-                </form>
-            </div>
-            <div>
-
-
-            </div>
-        </div>
+        
 
 
 
@@ -222,6 +239,7 @@
     $("#interesesDiv").css('display','none');
     $('#conocimientosDiv').css('display','none');
     $('#talleresDiv').css('display','none');
+    $('#cursosDiv').css('display','none');
             }
         });
     
@@ -232,6 +250,7 @@
         $("#miPerfil").css('display','none');
         $("#conocimientosDiv").css('display','none');
         $('#talleresDiv').css('display','none');
+        $('#cursosDiv').css('display','none');
             }
         });
     
@@ -241,6 +260,7 @@
         $("#interesesDiv").css('display','none');
         $("#miPerfil").css('display','none');
         $('#talleresDiv').css('display','none');
+        $('#cursosDiv').css('display','none');
             }
         });
         $("#talleres").click(function (){
@@ -249,8 +269,19 @@
         $("#interesesDiv").css('display','none');
         $("#miPerfil").css('display','none');
         $("#conocimientosDiv").css('display','none');
+        $('#cursosDiv').css('display','none');
             }
         });
+        $("#cursos").click(function (){
+        $('#cursosDiv').css('display','block');
+        if("a:contains('Ver mis cursos')"){
+        $("#interesesDiv").css('display','none');
+        $("#miPerfil").css('display','none');
+        $("#conocimientosDiv").css('display','none');
+        $('#talleresDiv').css('display','none');
+            }
+        });
+        
     });
 
   </script>
