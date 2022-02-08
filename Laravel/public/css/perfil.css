@@ -1,7 +1,47 @@
-#botonEditar1 {
+#perfil {
   margin-left: 35%;
   background-color: #3AA877;
   border-style: none;
+}
+
+#intereses {
+  margin-left: 35%;
+  background-color: #3AA877;
+  border-style: none;
+  margin-top: 5%;
+}
+
+#conocimientos {
+  margin-left: 35%;
+  background-color: #3AA877;
+  border-style: none;
+  margin-top: 5%;
+}
+
+#talleres {
+  margin-left: 35%;
+  background-color: #3AA877;
+  border-style: none;
+  margin-top: 5%;
+}
+
+#cursos {
+  margin-left: 35%;
+  background-color: #3AA877;
+  border-style: none;
+  margin-top: 5%;
+}
+
+#interesesDiv {
+  display: none;
+}
+
+#conocimientosDiv {
+  display: none;
+}
+
+#talleresDiv {
+  display: none;
 }
 
 body {

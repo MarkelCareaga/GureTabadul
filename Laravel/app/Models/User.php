@@ -57,7 +57,7 @@ class User extends \TCG\Voyager\Models\User
         return $this->belongsToMany(Curso::class,'cursos_usuarios','user_id', 'curso_id');
     }
     public function talleres(){
-        return $this->belongsToMany(Taller::class,'talleres_usuarios','id_taller', 'user_id');
+        return $this->belongsToMany(Taller::class,'talleres_usuarios', 'user_id','id_taller');
     }
     /*public function matchs(){
         return $this->hasMany(Match::class,'matchs','user1_id', 'id');
@@ -67,11 +67,11 @@ class User extends \TCG\Voyager\Models\User
         return $this->belongsTo(Pais::class,'pais_id','id');
     }
 
-    public function matches(){
+    /*public function matches(){
 
         return $this->hasMany(Match::class);
 
-    }
+    }*/
 
     /*public function setPasswordAttribute($password){
         $this->attributes['password'] = bcrypt($password);

@@ -20,7 +20,7 @@ button.btn.btn-secondary {
 button.btn.btn-primary {
   clear: both;
   float: left;
-  margin-left: 35%;
+  margin-left: 40%;
   margin-top: 4%;
 }
 
@@ -42,7 +42,7 @@ button.btn.btn-primary {
   padding-top: 25%;
   width: 19%;
   float: left;
-  margin-left: 30%;
+  margin-left: 35%;
 }
 
 #fecha_fin {
@@ -58,16 +58,16 @@ button.btn.btn-primary {
 #descripcion {
   clear: both;
   width: 40%;
-  margin-left: 30%;
+  margin-left: 35%;
 }
 
 #precio {
   width: 15%;
-  margin-left: 30%;
+  margin-left: 35%;
 }
 
 #capacidad {
   width: 15%;
-  margin-left: 30%;
+  margin-left: 35%;
 }
 /*# sourceMappingURL=show_curso.css.map */
