@@ -1,10 +1,12 @@
+$colorFondoCarta:#43B582;
+
 div.card{
     margin-left: 6%;
     margin-bottom: 2%;
     font-family: 'Poppins';
     margin-top: 2%;
-    border-radius: 56px;
-    background-color: #B2E0C1;
+    border-radius: 45px;
+    background-color: $colorFondoCarta;
 }
 .talleres{
     /* display: flex !important; */
@@ -13,4 +15,15 @@ div.card{
 }
 .imagen{
     text-align: center;
+}
+h5.titulo{
+    margin-left: 2%;
+    font-weight: bold;
+}
+p.card-text{
+    margin-left: 3%;
+}
+div.card-body{
+    padding-top: 0%;
+    font-weight: bold;
 }

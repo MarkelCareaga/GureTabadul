@@ -1,8 +1,8 @@
 .curso_detalles {
-  background-color: #B2E0C1;
+  background-color: #43B582;
   width: 77%;
   margin: 0 auto;
-  height: 700px;
+  height: 580px;
   font-size: 1.1em;
   font-family: 'Poppins';
   border-radius: 50px;
@@ -12,8 +12,8 @@
 button.btn.btn-secondary {
   float: left;
   clear: both;
-  margin-left: 46%;
-  margin-top: -4.2%;
+  margin-left: 50%;
+  margin-top: -4%;
   width: 50px;
   background-color: #BC3A2F;
 }
@@ -21,13 +21,13 @@ button.btn.btn-secondary {
 button.btn.btn-primary {
   clear: both;
   float: left;
-  margin-left: 40%;
+  margin-left: 43%;
   margin-top: 4%;
   width: 50px;
 }
 
 .btn-secondary:hover {
-  color: #B2E0C1;
+  color: #43B582;
   background-color: #0D6EFD;
   border-color: #0D6EFD;
 }
@@ -44,7 +44,7 @@ button.btn.btn-primary {
   padding-top: 25%;
   width: 19%;
   float: left;
-  margin-left: 35%;
+  margin-left: 33%;
 }
 
 #fecha_fin {
@@ -60,16 +60,16 @@ button.btn.btn-primary {
 #descripcion {
   clear: both;
   width: 40%;
-  margin-left: 35%;
+  margin-left: 33%;
 }
 
 #precio {
   width: 15%;
-  margin-left: 35%;
+  margin-left: 33%;
 }
 
 #capacidad {
   width: 15%;
-  margin-left: 35%;
+  margin-left: 33%;
 }
 /*# sourceMappingURL=show_curso.css.map */

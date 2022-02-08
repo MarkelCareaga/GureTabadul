@@ -26,7 +26,7 @@
 </a>
 
     <div class="card-body">
-      <h5 class="card-title">{{$taller->Título}}</h5>
+      <h5 class="titulo">{{$taller->Título}}</h5>
       <p class="card-text"><i class="fas fa-calendar-check"></i>
         {{$taller->Fecha_comienzo}}</p>
       <p class="card-text"><i class="fas fa-calendar-times"></i> {{$taller->Fecha_final}}</p>

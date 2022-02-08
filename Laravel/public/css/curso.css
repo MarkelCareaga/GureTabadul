@@ -3,8 +3,8 @@ div.card {
   margin-bottom: 2%;
   font-family: 'Poppins';
   margin-top: 2%;
-  border-radius: 58px;
-  background-color: #B2E0C1;
+  border-radius: 45px;
+  background-color: #43B582;
 }
 
 .cursos {
@@ -20,10 +20,17 @@ div.card {
   text-align: center;
 }
 
-.card img{
-    border-top-left-radius: 58px;
-    border-top-right-radius: 58px;
-    width: 100%;
-    height: 150px;
+.titulo {
+  margin-left: 2%;
+  font-weight: bold;
+}
+
+.card-text {
+  margin-left: 3%;
+}
+
+.card-body {
+  padding-top: 0%;
+  font-weight: bold;
 }
 /*# sourceMappingURL=curso.css.map */
