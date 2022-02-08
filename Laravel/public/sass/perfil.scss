@@ -189,3 +189,13 @@ div.card-body{
     padding:1%;
     border-radius: 13px;
 }
+@media (max-width:375px){
+    .cursosInfo{
+        width:97%;
+        margin-bottom: 4%;
+    }
+    .talleresInfo{
+        width: 97%;
+        margin-bottom: 4%;
+    }
+}
