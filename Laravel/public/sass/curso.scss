@@ -1,10 +1,12 @@
+$colorFondoCarta:#43B582;
+
 div.card{
     margin-left: 8%;
     margin-bottom: 2%;
     font-family: 'Poppins';
     margin-top: 2%;
-    border-radius: 58px;
-    background-color: #B2E0C1;
+    border-radius: 45px;
+    background-color: $colorFondoCarta;
     
 }
 .cursos{
@@ -14,4 +16,15 @@ div.card{
 }
 .imagen{
     text-align: center;
+}
+.titulo{
+    margin-left: 2%;
+    font-weight: bold;
+}
+.card-text{
+    margin-left: 3%;
+}
+.card-body{
+    padding-top: 0%;
+    font-weight: bold;
 }

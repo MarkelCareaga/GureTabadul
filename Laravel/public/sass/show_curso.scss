@@ -1,11 +1,11 @@
-$colorFondoCursoDetalles:#B2E0C1;
+$colorFondoCursoDetalles:#43B582;
 $colorFondoBoton:#0D6EFD;
 $colorFondoBoton2:#BC3A2F;
 .curso_detalles{
     background-color: $colorFondoCursoDetalles;
     width: 77%;
     margin: 0 auto;
-    height: 700px;
+    height: 580px;
     font-size: 1.1em;
     font-family: 'Poppins';
     border-radius: 50px;
@@ -15,15 +15,15 @@ $colorFondoBoton2:#BC3A2F;
 button.btn.btn-secondary{
     float: left;
     clear: both;
-    margin-left: 46%;
-    margin-top: -4.2%;
+    margin-left: 50%;
+    margin-top: -4%;
     width: 50px;
     background-color: $colorFondoBoton2;
 }
 button.btn.btn-primary{
     clear: both;
     float: left;
-    margin-left: 40%;
+    margin-left: 43%;
     margin-top: 4%;
     width: 50px;
 }
@@ -44,7 +44,7 @@ button.btn.btn-primary{
     padding-top: 25%;
     width: 19%;
     float: left;
-    margin-left: 35%;
+    margin-left: 33%;
 }
 #fecha_fin{
     width: 42%;
@@ -56,13 +56,13 @@ button.btn.btn-primary{
 #descripcion{
     clear: both;
     width: 40%;
-    margin-left: 35%;
+    margin-left: 33%;
 }
 #precio{
     width: 15%;
-    margin-left: 35%;
+    margin-left: 33%;
 }
 #capacidad{
     width: 15%;
-    margin-left: 35%;
+    margin-left: 33%;
 }

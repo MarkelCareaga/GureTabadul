@@ -37,7 +37,7 @@
                 <div id="miPerfil">
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Nombre:</h6>
+                    <h6 class="nombre">Nombre:</h6>
                   </div>
                   <div class="col-sm-9 text-secondary">
                     <input type="text" name="nombre" id="nombre" value="{{$usuario->name}}"disabled >
@@ -46,7 +46,7 @@
                 <hr>
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Correo:</h6>
+                    <h6 class="correo">Correo:</h6>
                   </div>
                   <div class="col-sm-9 text-secondary">
                     <p>{{$usuario->email}}</p>
@@ -57,7 +57,7 @@
                 @if (!empty($usuario->pais->nombre))
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Pais: </h6>
+                    <h6 class="pais">Pais: </h6>
 
                   </div>
                   <div class="col-sm-9 text-secondary">
@@ -67,7 +67,7 @@
                 @else
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Pais: </h6>
+                    <h6 class="pais">Pais: </h6>
 
                   </div>
                   <div class="col-sm-9 text-secondary">
@@ -79,7 +79,7 @@
                 <hr>
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Fecha nacimiento:</h6>
+                    <h6 class="fecha">Fecha nacimiento:</h6>
                   </div>
                   <div class="col-sm-9 text-secondary">
                     <input type="date" name="fecha_nac" id="fecha_nac" value="{{$usuario->Fecha_nac}}" disabled>
@@ -88,7 +88,7 @@
                 <hr>
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Telefono:</h6>
+                    <h6 class="telefono">Telefono:</h6>
                   </div>
                   <div class="col-sm-9 text-secondary">
                     <input type="number" name="telefono" id="telefono"  value="{{$usuario->telefono}}" disabled>
@@ -153,7 +153,7 @@
               
               <div><h2>Mis cursos</h2></div>
             @foreach ($usuario->cursos as $curso)
-            <div class="talleresInfo">
+            <div class="cursosInfo">
               <h5 class="card-title">{{$curso->nombre}}</h5>
               <p class="card-text">Fecha comienzo: {{$curso->Fecha_ini}}</p>
               <p class="card-text">Fecha final: {{$curso->Fecha_fin}}</p>
