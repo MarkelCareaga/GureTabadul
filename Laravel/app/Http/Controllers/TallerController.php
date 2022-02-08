@@ -54,7 +54,7 @@ class TallerController extends Controller
      */
     public function show(Taller $taller)
     {
-        
+
         // $taller=Taller::find($id);
         if (is_null($taller))
         echo "No existe el taller solicitado";
@@ -86,7 +86,7 @@ class TallerController extends Controller
     public function update($taller)
     {
         $usuario=Auth::user();
-     
+
         $talleresUsuario=TalleresUsuario::all();
 
 
@@ -122,25 +122,25 @@ class TallerController extends Controller
     public function destroy($taller)
     {
         $usuario=Auth::user();
-     
+
         $talleresUsuario=TalleresUsuario::all();
 
         $desapuntarse=TalleresUsuario::where('user_id',$usuario->id)->where('id_taller',$taller);
-       
+
         foreach ($talleresUsuario as $tallerUsuario){
 
             if($tallerUsuario->user_id == $usuario->id && $tallerUsuario->id_taller == $taller){
-               
+
                 $desapuntarse->delete();
                 \Session::flash('tipoMensaje','success');
                 \Session::flash('mensaje','Te has desapuntado correctamente');
-        
+
                 return \Redirect::back();
             }
 
         }
 
-        
+
         \Session::flash('tipoMensaje','danger');
         \Session::flash('mensaje','El usuario no esta en este taller');
 

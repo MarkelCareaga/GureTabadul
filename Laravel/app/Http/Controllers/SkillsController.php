@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Skill;
+use App\Models\Skills;
 
 class SkillsController extends Controller
 {
@@ -22,21 +22,35 @@ class SkillsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request, $usuario)
+    public function create(Request $request, $id)
     {
-        $data=$request::all();
 
-        $data=$request::all();
-        $skill=new Skill();
-        $skill->nombre=$data['nombre'];
+        $skills=Skills::all();
+        $data=$request->all();
+
+        foreach($skills as $habilidad){
+
+            if($habilidad->nombre==$data['gusto']){
+                \Session::flash('tipoMensaje','danger');
+                \Session::flash('mensaje','Esa habilidad ya existe');
+                return \Redirect::back();
+            }
+
+        }
+
+
+        $skill=new Skills();
+        $skill->nombre=$data['gusto'];
         $skill->save();
 
-        $skillCreada=Skill::where('nombre',$data['nombre'])->first;
+        $skillCreada=Skills::where('nombre',$data['gusto'])->first;
         $skillUsuario=new SkillsUsuario();
-        $skillUsuario->user_id=$usuario->id;
+        $skillUsuario->user_id=$id;
         $skillUsuario->skills_id=$skillCreada->id;
-
-    }
+        \Session::flash('tipoMensaje','success');
+        \Session::flash('mensaje','Se te ha añadido la habilidad');
+        return \Redirect::back();
+        }
 
     /**
      * Store a newly created resource in storage.

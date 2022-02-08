@@ -9,6 +9,7 @@ use App\Models\User;
 class Skills extends Model
 {
     use HasFactory;
+    protected $table = 'skills';
 
     protected $fillable = [
         'nombre',
