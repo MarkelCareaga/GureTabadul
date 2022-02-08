@@ -15,15 +15,17 @@ $colorFondoBoton2:#BC3A2F;
 button.btn.btn-secondary{
     float: left;
     clear: both;
-    margin-left: 50%;
-    margin-top: -4.1%;
+    margin-left: 46%;
+    margin-top: -4.2%;
+    width: 50px;
     background-color: $colorFondoBoton2;
 }
 button.btn.btn-primary{
     clear: both;
     float: left;
-    margin-left: 35%;
+    margin-left: 40%;
     margin-top: 4%;
+    width: 50px;
 }
 .btn-secondary:hover{
     color: $colorFondoCursoDetalles;
@@ -42,7 +44,7 @@ button.btn.btn-primary{
     padding-top: 25%;
     width: 19%;
     float: left;
-    margin-left: 30%;
+    margin-left: 35%;
 }
 #fecha_fin{
     width: 42%;
@@ -54,13 +56,13 @@ button.btn.btn-primary{
 #descripcion{
     clear: both;
     width: 40%;
-    margin-left: 30%;
+    margin-left: 35%;
 }
 #precio{
     width: 15%;
-    margin-left: 30%;
+    margin-left: 35%;
 }
 #capacidad{
     width: 15%;
-    margin-left: 30%;
+    margin-left: 35%;
 }

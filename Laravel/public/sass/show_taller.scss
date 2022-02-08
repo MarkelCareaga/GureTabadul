@@ -1,5 +1,6 @@
-$colorFondoTallerDetalles:white;
+$colorFondoTallerDetalles:#B2E0C1;
 $colorFondoBoton:#0D6EFD;
+$colorFondoBoton2:#BC3A2F;
 .taller_detalles{
     background-color:$colorFondoTallerDetalles;
     width: 77%;
@@ -7,21 +8,23 @@ $colorFondoBoton:#0D6EFD;
     height: 565px;
     margin-top: 1%;
     font-size: 1em;
+    border-radius: 50px;
     
 }
 button.btn.btn-secondary{
     float: left;
-    display: flex;
-    margin-left: 2%;
-    margin-top: 2%;
-    background-color: $colorFondoBoton;
-    transition: background-color 1s;
+    clear: both;
+    margin-left: 52%;
+    margin-top: -4.2%;
+    background-color: $colorFondoBoton2;
+    width: 50px;
 }
 button.btn.btn-primary{
     clear: both;
     float: left;
-    margin-left: 35%;
+    margin-left: 42%;
     margin-top: 2%;
+    width: 50px;
 }
 .btn-secondary:hover{
     color: $colorFondoTallerDetalles;
@@ -29,9 +32,14 @@ button.btn.btn-primary{
     border-color: $colorFondoBoton;
 }
 #titulo{
-    padding-top: 0%;
-    padding-left: 45%;
-    width: 60%;
+    padding-top: 3%;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-weight: bolder;
+    font-size: 1.5rem;
+    
 }
 #fecha_inicio{
     padding-top: 25%;

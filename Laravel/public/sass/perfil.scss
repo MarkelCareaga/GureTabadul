@@ -5,11 +5,45 @@ $sombraCarta2:#0000000f;
 $fondoCarta:#3AA877;
 $bordeCarta:#00000020;
 $bsGray300:#e2e8f0;
-#botonEditar1{
+#perfil{
     margin-left:35%;
     background-color: $fondoCarta;
     border-style: none;
 }
+#intereses{
+    margin-left:35%;
+    background-color: $fondoCarta;
+    border-style: none;
+    margin-top: 5%;
+}
+#conocimientos{
+    margin-left:35%;
+    background-color: $fondoCarta;
+    border-style: none;
+    margin-top: 5%;  
+}
+#talleres{
+    margin-left:35%;
+    background-color: $fondoCarta;
+    border-style: none;
+    margin-top: 5%;
+}
+#cursos{
+    margin-left:35%;
+    background-color: $fondoCarta;
+    border-style: none;
+    margin-top: 5%;
+}
+#interesesDiv{
+    display: none;
+}
+#conocimientosDiv{
+    display: none;
+}
+#talleresDiv{
+    display: none;
+}
+
 body{
     margin-top:20px;
     color:$colorLetraBody;
