@@ -1,11 +1,15 @@
 div.card{
-    margin-left: 8%;
+    margin-left: 6%;
     margin-bottom: 2%;
     font-family: 'Poppins';
     margin-top: 2%;
+    border-radius: 56px;
 }
 .talleres{
     /* display: flex !important; */
     display: flex;
    flex-wrap: wrap;
+}
+.imagen{
+    text-align: center;
 }

@@ -3,9 +3,15 @@ div.card{
     margin-bottom: 2%;
     font-family: 'Poppins';
     margin-top: 2%;
+    border-radius: 58px;
+    background-color: #B2E0C1;
+    
 }
 .cursos{
     /* display: flex !important; */
     display: flex;
    flex-wrap: wrap;
+}
+.imagen{
+    text-align: center;
 }

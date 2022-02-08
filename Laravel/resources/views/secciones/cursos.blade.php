@@ -10,16 +10,16 @@
 <div class="card" style="width: 18rem;">
   <a href="{{route('cursos.show',['curso'=>$curso])}}">
  
-    <img src="storage/{{$curso->imagenes()->first()->ruta}}" class="card-img-top" alt="">
+    <img class="imagen" src="storage/{{$curso->imagenes()->first()->ruta}}" class="card-img-top" alt="">
 
     </a>
     <div class="card-body">
       <h5 class="card-title">{{$curso->nombre}}</h5>
-      <p class="card-text">Fecha comienzo: {{$curso->Fecha_ini}}</p>
-      <p class="card-text">Fecha final: {{$curso->Fecha_fin}}</p>
-      <p class="card-text">Descripcion: {{$curso->descripcion}}</p>
-      <p class="card-text">Precio: {{$curso->precio}}</p>
-      <p class="card-text">Capacidad: {{$curso->capacidad}}</p>
+      <p class="card-text"><i class="fas fa-calendar-check"></i>&nbsp;&nbsp;{{$curso->Fecha_ini}}</p>
+      <p class="card-text"><i class="fas fa-calendar-times"></i>&nbsp;&nbsp;{{$curso->Fecha_fin}}</p>
+      <p class="card-text"><i class="fas fa-info-circle"></i> {{$curso->descripcion}}</p>
+      <p class="card-text"><i class="fas fa-coins"></i>&nbsp;&nbsp;{{$curso->precio}}&nbsp;&nbsp;<i class="fas fa-euro-sign"></i></p>
+      <p class="card-text"><i class="fas fa-female"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{$curso->capacidad}}</p>
       
     </div>
   </div>

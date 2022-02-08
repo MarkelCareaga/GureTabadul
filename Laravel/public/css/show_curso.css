@@ -1,21 +1,20 @@
 .curso_detalles {
-  background-color: white;
+  background-color: #B2E0C1;
   width: 77%;
   margin: 0 auto;
-  height: 565px;
+  height: 700px;
   font-size: 1.1em;
+  font-family: 'Poppins';
+  border-radius: 50px;
+  font-weight: bold;
 }
 
 button.btn.btn-secondary {
   float: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 2%;
-  margin-top: 4%;
-  background-color: #0D6EFD;
-  -webkit-transition: background-color 1s;
-  transition: background-color 1s;
+  clear: both;
+  margin-left: 50%;
+  margin-top: -4.1%;
+  background-color: #BC3A2F;
 }
 
 button.btn.btn-primary {
@@ -26,15 +25,17 @@ button.btn.btn-primary {
 }
 
 .btn-secondary:hover {
-  color: white;
+  color: #B2E0C1;
   background-color: #0D6EFD;
   border-color: #0D6EFD;
 }
 
 #titulo {
-  padding-top: 0%;
-  padding-left: 45%;
-  width: 60%;
+  padding-top: 3%;
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+  font-size: 1.5rem;
 }
 
 #fecha_inicio {
