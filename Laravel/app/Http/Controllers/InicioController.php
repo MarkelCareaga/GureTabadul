@@ -18,7 +18,7 @@ class InicioController extends Controller
     {
         $sponsors=Sponsor::all();
         $servicios=Servicio::all();
-        return view('secciones.inicio',['sponsors'=>$sponsors]);
+        return view('secciones.inicio',['sponsors'=>$sponsors,'servicios'=>$servicios]);
     }
 
     /**

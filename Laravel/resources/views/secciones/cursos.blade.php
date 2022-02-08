@@ -14,7 +14,7 @@
 
     </a>
     <div class="card-body">
-      <h5 class="card-title">{{$curso->nombre}}</h5>
+      <h5 class="titulo">{{$curso->nombre}}</h5>
       <p class="card-text"><i class="fas fa-calendar-check"></i>&nbsp;&nbsp;{{$curso->Fecha_ini}}</p>
       <p class="card-text"><i class="fas fa-calendar-times"></i>&nbsp;&nbsp;{{$curso->Fecha_fin}}</p>
       <p class="card-text"><i class="fas fa-info-circle"></i> {{$curso->descripcion}}</p>

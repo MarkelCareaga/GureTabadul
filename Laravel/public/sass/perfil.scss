@@ -9,34 +9,45 @@ $sombraCarta2:#0000000f;
 $fondoCarta:#3AA877;
 $bordeCarta:#00000020;
 $bsGray300:#e2e8f0;
+$fondoBoton:#B91B55;
 #perfil{
     margin-left:35%;
     background-color: $fondoCarta;
     border-style: none;
+    font-family: 'Poppins';
+    font-weight: bold;
 }
 #intereses{
-    margin-left:35%;
+    margin-left:33%;
     background-color: $fondoCarta;
     border-style: none;
     margin-top: 5%;
+    font-family: 'Poppins';
+    font-weight: bold;
 }
 #conocimientos{
-    margin-left:35%;
+    margin-left:28%;
     background-color: $fondoCarta;
     border-style: none;
-    margin-top: 5%;  
+    margin-top: 5%; 
+    font-family: 'Poppins';
+    font-weight: bold;
 }
 #talleres{
-    margin-left:35%;
+    margin-left:31%;
     background-color: $fondoCarta;
     border-style: none;
     margin-top: 5%;
+    font-family: 'Poppins';
+    font-weight: bold;
 }
 #cursos{
-    margin-left:35%;
+    margin-left:32%;
     background-color: $fondoCarta;
     border-style: none;
     margin-top: 5%;
+    font-family: 'Poppins';
+    font-weight: bold;
 }
 #interesesDiv{
     display: none;
@@ -106,8 +117,8 @@ body{
 }
 div.card-body{
     display: flex;
-  height: 509px;
-  padding-top:89px;
+    height: 509px;
+    padding-top:89px;
 }
 .talleresInfo{
     margin-top: 2%;
@@ -118,4 +129,63 @@ div.card-body{
     margin-right: 1%;
     margin-bottom: 1%;
     flex-direction: row;
+}
+.cursosInfo{
+    margin-top: 2%;
+    padding: 1%;
+    border: 2px solid #161616;
+    width: 30%;
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    flex-direction: row;
+}
+.nombre{
+    font-family: 'Poppins';
+    font-weight: bold;
+    margin-top: 5%;
+}
+.correo{
+    font-family: 'Poppins';
+    font-weight: bold;
+    margin-top: 2%;
+}
+.pais{
+    font-family: 'Poppins';
+    font-weight: bold;
+    margin-top: 5%;
+}
+.fecha{
+    font-family: 'Poppins';
+    font-weight: bold;
+    margin-top: 4%;
+}
+.telefono{
+    font-family: 'Poppins';
+    font-weight: bold;
+    margin-top: 5%;
+}
+#botonEditar{
+    font-family: 'Poppins';
+    font-weight: bold;
+    background-color: $fondoBoton;
+    border-style: none;
+    padding:1%;
+    border-radius: 13px;
+}
+#botonGuardar{
+    font-family: 'Poppins';
+    font-weight: bold;
+    background-color: $fondoBoton;
+    border-style: none;
+    padding:1%;
+    border-radius: 13px;
+}
+#botonCancelar{
+    font-family: 'Poppins';
+    font-weight: bold;
+    background-color: $fondoBoton;
+    border-style: none;
+    padding:1%;
+    border-radius: 13px;
 }

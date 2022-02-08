@@ -28,9 +28,11 @@ use App\Http\Controllers\InteresController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/home', function () {
+/*Route::get('/home', function () {
     return view('secciones.inicio');
-})->name('home');
+    
+})->name('home');*/
+Route::get('/home', [App\Http\Controllers\InicioController::class, 'index'])->name('home');
 
 Route::get('/', [App\Http\Controllers\InicioController::class, 'index'])->name('home');
 Route::get('/matches', function () {

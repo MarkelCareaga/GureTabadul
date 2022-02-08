@@ -6,34 +6,44 @@
   margin-left: 35%;
   background-color: #3AA877;
   border-style: none;
+  font-family: 'Poppins';
+  font-weight: bold;
 }
 
 #intereses {
-  margin-left: 35%;
+  margin-left: 33%;
   background-color: #3AA877;
   border-style: none;
   margin-top: 5%;
+  font-family: 'Poppins';
+  font-weight: bold;
 }
 
 #conocimientos {
-  margin-left: 35%;
+  margin-left: 28%;
   background-color: #3AA877;
   border-style: none;
   margin-top: 5%;
+  font-family: 'Poppins';
+  font-weight: bold;
 }
 
 #talleres {
-  margin-left: 35%;
+  margin-left: 31%;
   background-color: #3AA877;
   border-style: none;
   margin-top: 5%;
+  font-family: 'Poppins';
+  font-weight: bold;
 }
 
 #cursos {
-  margin-left: 35%;
+  margin-left: 32%;
   background-color: #3AA877;
   border-style: none;
   margin-top: 5%;
+  font-family: 'Poppins';
+  font-weight: bold;
 }
 
 #interesesDiv {
@@ -140,5 +150,76 @@ div.card-body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.cursosInfo {
+  margin-top: 2%;
+  padding: 1%;
+  border: 2px solid #161616;
+  width: 30%;
+  float: left;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.nombre {
+  font-family: 'Poppins';
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+.correo {
+  font-family: 'Poppins';
+  font-weight: bold;
+  margin-top: 2%;
+}
+
+.pais {
+  font-family: 'Poppins';
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+.fecha {
+  font-family: 'Poppins';
+  font-weight: bold;
+  margin-top: 4%;
+}
+
+.telefono {
+  font-family: 'Poppins';
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+#botonEditar {
+  font-family: 'Poppins';
+  font-weight: bold;
+  background-color: #B91B55;
+  border-style: none;
+  padding: 1%;
+  border-radius: 13px;
+}
+
+#botonGuardar {
+  font-family: 'Poppins';
+  font-weight: bold;
+  background-color: #B91B55;
+  border-style: none;
+  padding: 1%;
+  border-radius: 13px;
+}
+
+#botonCancelar {
+  font-family: 'Poppins';
+  font-weight: bold;
+  background-color: #B91B55;
+  border-style: none;
+  padding: 1%;
+  border-radius: 13px;
 }
 /*# sourceMappingURL=perfil.css.map */

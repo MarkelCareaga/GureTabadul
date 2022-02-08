@@ -10,11 +10,11 @@ class ImagenesTaller extends Model
     use HasFactory;
     protected $table = 'imagenes_talleres';
 
-    protected $fillable = [
-        'ruta','id_taller',
-    ];
+    // protected $fillable = [
+    //     'ruta','taller_id',
+    // ];
 
     public function taller(){
-        return $this->belongsTo(Taller::class,'id_taller','id');
+        return $this->belongsTo(Taller::class,'taller_id','id');
     }
 }
