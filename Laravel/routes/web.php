@@ -12,6 +12,8 @@ use App\Http\Controllers\TallerController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\MatchController;
+use App\Http\Controllers\SkillsController;
+use App\Http\Controllers\InteresController;
 
 
 
@@ -43,9 +45,9 @@ Route::resource('nav', GureTabadulController::class);
 Route::resource('cursos', CursosController::class);
 Route::resource('servicios', ServiciosController::class);
 Route::resource('nosotros', NosotrosController::class);
-Route::resource('sponsors', SponsorsController::class);
 Route::resource('inicio', InicioController::class);
-
+Route::resource('skills', SkillsController::class);
+Route::resource('Interes', InteresController::class);
 Route::resource('taller', TallerController::class);
 
 Route::resource('perfil', PerfilController::class)->middleware('auth');;

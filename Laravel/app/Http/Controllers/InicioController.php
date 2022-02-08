@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Sponsor;
+use App\Models\Servicio;
 
 class InicioController extends Controller
 {
@@ -14,7 +16,9 @@ class InicioController extends Controller
      */
     public function index()
     {
-        return view('secciones.inicio');
+        $sponsors=Sponsor::all();
+        $servicios=Servicio::all();
+        return view('secciones.inicio',['sponsors'=>$sponsors]);
     }
 
     /**

@@ -113,7 +113,7 @@
         <div>
 
             <a onclick="">Agregar Intereses</a>
-            <div><h2>Tus intereses</h2></div>
+            <div><h3>Tus intereses</h3></div>
           @foreach ($usuario->intereses as $interes)
           <p>{{$interes->nombre}}</p>
           @endforeach
@@ -121,11 +121,27 @@
 
         <div>
             <a onclick="">Agregar conocimientos</a>
-            <div><h2>Tus conocimientos</h2></div>
-          @foreach ($usuario->skills as $skill)
+            <div><h3>Tus conocimientos</h3></div>
+          @foreach ($usuario->Skills as $skill)
           <p>{{$skill->nombre}}</p>
           @endforeach
         </div>
+
+        <div class="conocimientos">
+            <div >
+                <form href="{{route('skills.create',['usuario'=>$usuario])}}">
+                 <div>Agrega tu gusto si no lo encuentras <input type="text" name="gusto"></div>
+                 <div><button type="submit">Agregar</button></div>
+                </form>
+            </div>
+            <div>
+
+
+            </div>
+        </div>
+
+
+
 
 
   <script>

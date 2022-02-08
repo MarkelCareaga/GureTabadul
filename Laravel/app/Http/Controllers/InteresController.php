@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Sponsor;
 
-class SponsorsController extends Controller
+class InteresController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +13,7 @@ class SponsorsController extends Controller
      */
     public function index()
     {
-        $sponsors= Sponsor::all();
-        return view('secciones.sponsors',['sponsors'=>$sponsors]);
+        //
     }
 
     /**
