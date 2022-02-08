@@ -1,65 +1,74 @@
-div.card-header{
-    background-color: #B91B55;
-    color: white;
-    font-size: 2em;
-    padding-left: 35%;
-}
-div.card-body{
-    background-color: #43B582;
-}
-input#name.form-control{
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-}
-input#email.form-control{
-    
-    margin-top: 5%;
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-    
-}
-input#password.form-control{
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-    margin-top: 5%;
-    
-}
-input#contrasenya.form-control{
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-    margin-top: 5%;
-}
-input#pais.form-control{
-    margin-top: 5%;
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-}
-input#fecha_nac.form-control{
-    margin-top: 5%;
+div.card-header {
+  background-color: #B91B55;
+  color: white;
+  font-size: 2em;
+  padding-left: 35%;
 }
 
-div.col-md-8{
-    width: 42%;
-    margin-top: 8%;
-    height: 90px;
+div.card-body {
+  background-color: #43B582;
 }
-div.col-md-6{
-    margin-left: 24%;
+
+input#name.form-control {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
-input#remember.form-check-input{
-    margin-top: 13%;
+
+input#email.form-control {
+  margin-top: 5%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
-label.form-check-label{
-    margin-top: 11%;
+
+input#password.form-control {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-top: 5%;
 }
-button.btn.btn-primary{
-    width: 81%;
-    margin-left: 8%;
-    margin-top: 11%;
-    background-color: #B91B55;
-    
+
+input#contrasenya.form-control {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-top: 5%;
 }
-a.btn.btn-link{
-    width: 141%;
-    margin-left:-32%;
+
+input#pais.form-control {
+  margin-top: 5%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
+
+input#fecha_nac.form-control {
+  margin-top: 5%;
+}
+
+div.col-md-8 {
+  width: 42%;
+  margin-top: 8%;
+  height: 90px;
+}
+
+div.col-md-6 {
+  margin-left: 24%;
+}
+
+input#remember.form-check-input {
+  margin-top: 13%;
+}
+
+label.form-check-label {
+  margin-top: 11%;
+}
+
+button.btn.btn-primary {
+  width: 81%;
+  margin-left: 8%;
+  margin-top: 11%;
+  background-color: #B91B55;
+}
+
+a.btn.btn-link {
+  width: 141%;
+  margin-left: -32%;
+}
+/*# sourceMappingURL=registro.css.map */

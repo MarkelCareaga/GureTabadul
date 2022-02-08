@@ -1,0 +1,64 @@
+$colorFondoTallerDetalles:white;
+$colorFondoBoton:#0D6EFD;
+.taller_detalles{
+    background-color:$colorFondoTallerDetalles;
+    width: 77%;
+    margin: 0 auto;
+    height: 565px;
+    margin-top: 1%;
+    font-size: 1em;
+    
+}
+button.btn.btn-secondary{
+    float: left;
+    display: flex;
+    margin-left: 2%;
+    margin-top: 2%;
+    background-color: $colorFondoBoton;
+    transition: background-color 1s;
+}
+button.btn.btn-primary{
+    clear: both;
+    float: left;
+    margin-left: 35%;
+    margin-top: 2%;
+}
+.btn-secondary:hover{
+    color: $colorFondoTallerDetalles;
+    background-color: $colorFondoBoton;
+    border-color: $colorFondoBoton;
+}
+#titulo{
+    padding-top: 0%;
+    padding-left: 45%;
+    width: 60%;
+}
+#fecha_inicio{
+    padding-top: 25%;
+    width: 19%;
+    float: left;
+    margin-left: 30%;
+}
+#fecha_fin{
+    width: 42%;
+    float: left;
+    display: flex;
+    padding-top: 25%;
+    margin-left: 1%;
+}
+#descripcion{
+    clear: both;
+    width: 40%;
+    margin-left: 30%;
+}
+#precio{
+    width: 15%;
+    margin-left: 30%;
+}
+#capacidad{
+    width: 15%;
+    margin-left: 30%;
+}
+#texto{
+    margin-left: 30%;
+}
