@@ -59,6 +59,16 @@ img {
   font-weight: bold;
   font-size: 1.2rem;
 }
+.sponsors{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.sponsor{
+  width: auto;
+  align-content: center;
+  height: auto;
+}
 
 
 /*# sourceMappingURL=inicio.css.map */

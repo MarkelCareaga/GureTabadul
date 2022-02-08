@@ -31,14 +31,36 @@
 
     </div>
 </div>
-@foreach ($sponsors as $sponsor)
-<div class="sponsor">
-<img src="storage/{{$sponsor->ruta_img_sponsor}}">
-<p>{{$sponsor->nombre}}</p>
-<p>{{$sponsor->descripción}}</p>
+<h3 class="titulo">Colaboradores</h3>
+@foreach($sponsors as $sponsor)
+<div class="sponsors">
+    <div class="sponsor">
+    <img src="storage/{{$sponsor->ruta_img_sponsor}}">
+    <p>{{$sponsor->nombre}}</p>
+    <p>{{$sponsor->descripción}}</p>
+    </div>   
 </div>
 @endforeach
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
