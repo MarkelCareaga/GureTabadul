@@ -19,4 +19,11 @@ div.card {
 .imagen {
   text-align: center;
 }
+
+.card img{
+    border-top-left-radius: 58px;
+    border-top-right-radius: 58px;
+    width: 100%;
+    height: 150px;
+}
 /*# sourceMappingURL=curso.css.map */
