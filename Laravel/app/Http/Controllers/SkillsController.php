@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Skill;
 
 class SkillsController extends Controller
 {
@@ -23,6 +24,17 @@ class SkillsController extends Controller
      */
     public function create(Request $request, $usuario)
     {
+        $data=$request::all();
+
+        $data=$request::all();
+        $skill=new Skill();
+        $skill->nombre=$data['nombre'];
+        $skill->save();
+
+        $skillCreada=Skill::where('nombre',$data['nombre'])->first;
+        $skillUsuario=new SkillsUsuario();
+        $skillUsuario->user_id=$usuario->id;
+        $skillUsuario->skills_id=$skillCreada->id;
 
     }
 

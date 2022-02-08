@@ -31,11 +31,8 @@ use App\Http\Controllers\InteresController;
 Route::get('/home', function () {
     return view('secciones.inicio');
 })->name('home');
-Route::get('/', function () {
-    return view('secciones.inicio');
-})->name('home');
 
-
+Route::get('/', [App\Http\Controllers\InicioController::class, 'index'])->name('home');
 Route::get('/matches', function () {
     return view('voyager.matches.matches');
 });
