@@ -24,10 +24,10 @@ class Taller extends Model
     }
 
     public function usuarios(){
-        return $this->belongsToMany(User::class,'talleres_usuarios','id_taller', 'user_id');
+        return $this->belongsToMany(User::class,'talleres_usuarios','taller_id', 'user_id');
     }
     public function imagenes(){
-        return $this->hasMany(ImagenesTaller::class,'id_taller','id');
+        return $this->hasMany(ImagenesTaller::class,'taller_id','id');
     }
 
 }

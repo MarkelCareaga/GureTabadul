@@ -23,7 +23,7 @@ class User extends \TCG\Voyager\Models\User
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'role_id','name', 'email', 'password','Fecha_nac','telefono','pais_id'
     ];
 
     public function getRouteKeyName()
@@ -57,7 +57,7 @@ class User extends \TCG\Voyager\Models\User
         return $this->belongsToMany(Curso::class,'cursos_usuarios','user_id', 'curso_id');
     }
     public function talleres(){
-        return $this->belongsToMany(Taller::class,'talleres_usuarios', 'user_id','id_taller');
+        return $this->belongsToMany(Taller::class,'talleres_usuarios', 'user_id','taller_id');
     }
     /*public function matchs(){
         return $this->hasMany(Match::class,'matchs','user1_id', 'id');

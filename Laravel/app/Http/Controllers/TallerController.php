@@ -92,7 +92,7 @@ class TallerController extends Controller
 
         foreach ($talleresUsuario as $tallerUsuario){
 
-            if($tallerUsuario->user_id == $usuario->id && $tallerUsuario->id_taller == $taller){
+            if($tallerUsuario->user_id == $usuario->id && $tallerUsuario->taller_id == $taller){
                 \Session::flash('tipoMensaje','danger');
                 \Session::flash('mensaje','El usuario ya esta apuntado');
 
@@ -102,7 +102,7 @@ class TallerController extends Controller
         }
 
         $apuntarse=new TalleresUsuario();
-        $apuntarse->id_taller=$taller;
+        $apuntarse->taller_id=$taller;
         $apuntarse->user_id=$usuario->id;
         $apuntarse->save();
 
@@ -125,11 +125,11 @@ class TallerController extends Controller
 
         $talleresUsuario=TalleresUsuario::all();
 
-        $desapuntarse=TalleresUsuario::where('user_id',$usuario->id)->where('id_taller',$taller);
+        $desapuntarse=TalleresUsuario::where('user_id',$usuario->id)->where('taller_id',$taller);
 
         foreach ($talleresUsuario as $tallerUsuario){
 
-            if($tallerUsuario->user_id == $usuario->id && $tallerUsuario->id_taller == $taller){
+            if($tallerUsuario->user_id == $usuario->id && $tallerUsuario->taller_id == $taller){
 
                 $desapuntarse->delete();
                 \Session::flash('tipoMensaje','success');

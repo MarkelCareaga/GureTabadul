@@ -122,7 +122,7 @@
                           @csrf
                           @method('PUT')
                        Agrega tu habilidad si no lo encuentras <input type="text" name="gusto">
-                       <button type="submit">Agregar</button>
+                       <input type="submit" value="Agregar">
                       </form>
                   </div>
                   <div>

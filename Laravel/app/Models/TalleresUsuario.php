@@ -11,6 +11,10 @@ class TalleresUsuario extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'taller_id', 'user_id'
+    ];
+
     public function taller(){
         return $this->belongsTo(Taller::class);
     }
