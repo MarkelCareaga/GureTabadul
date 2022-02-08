@@ -32,11 +32,11 @@
 
     @yield('contenido')
     @include('layout.footer')
-<div class="chatUser">
+{{-- <div class="chatUser">
     {{-- <p>Chat</p>
     {{-- @livewire("chat")
-    @livewire("chat-lista") --}}
-</div>
+    @livewire("chat-lista") 
+</div> --}}
 
 
 </body>
