@@ -6,7 +6,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul style="margin-left:60%;" class="navbar-nav mr-auto">
+      <ul style="margin-left:55%;" class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" aria-current="page" href="{{route('inicio.index')}}">Inicio</a>
         </li>

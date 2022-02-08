@@ -1,3 +1,7 @@
+
+::-webkit-scrollbar{
+    display: none;
+}
 $colorFondoBody:#BCDDD4;
 $colorLetraBody:#1a202c;
 $sombraCarta1:#0000001a;
@@ -69,7 +73,7 @@ body{
     border-radius: .25rem;
 }
 
-.card-body {
+.card-bodyR {
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1rem;
@@ -98,6 +102,17 @@ body{
     box-shadow: none!important;
 }
 div.card-body{
+    display: flex;
   height: 509px;
   padding-top:89px;
+}
+.talleresInfo{
+    margin-top: 2%;
+    padding: 1%;
+    border: 2px solid #161616;
+    width: 30%;
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    flex-direction: row;
 }

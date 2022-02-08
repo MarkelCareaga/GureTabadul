@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 #perfil {
   margin-left: 35%;
   background-color: #3AA877;
@@ -77,7 +81,7 @@ body {
   border-radius: .25rem;
 }
 
-.card-body {
+.card-bodyR {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -113,7 +117,24 @@ body {
 }
 
 div.card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 509px;
   padding-top: 89px;
+}
+
+.talleresInfo {
+  margin-top: 2%;
+  padding: 1%;
+  border: 2px solid #161616;
+  width: 30%;
+  float: left;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 /*# sourceMappingURL=perfil.css.map */
