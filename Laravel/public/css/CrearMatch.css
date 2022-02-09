@@ -38,10 +38,12 @@
 .user1{
   border-radius: 4px;
   padding: 2%;
+  color: #161616;
 }
 .user2{
   border-radius: 4px;
   padding: 2%;
+  color: #161616;
 }
 .boton{
   width: 150px;
@@ -96,6 +98,11 @@ color: #161616;
   font-weight: bolder;
   font-size: 1.5rem;
   color: #161616;
+}
+.titulo{
+  position: absolute;
+  top: 0;
+  font-family: 'Poppins'
 }
 
 /*# sourceMappingURL=CrearMatch.css.map */

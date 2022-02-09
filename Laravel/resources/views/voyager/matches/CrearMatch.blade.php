@@ -19,6 +19,7 @@
     <form action="{{route('matches.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('POST')
+        <h2 class="titulo">Crear Match</h2>
         <div>
         <div><label class="texto">Nombre del Match: &nbsp;</label><input class="caja" type="text" name="nombre" required></div>
         <div><label class="texto">Lugar de encuentro: &nbsp;</label><input class="caja" type="text" name="direccion" required></div>
