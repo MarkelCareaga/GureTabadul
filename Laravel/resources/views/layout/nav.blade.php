@@ -19,7 +19,7 @@
             <a class="nav-link" aria-current="page" href="{{route('taller.index')}}">Taller</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Tienda</a>
+          <a class="nav-link" aria-current="page" href="#">Euskera</a>
         </li>
         @if(!Auth::check())
         <li class="nav-item">

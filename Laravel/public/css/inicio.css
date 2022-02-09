@@ -119,10 +119,11 @@ img {
           flex-direction: row;
   width: 50%;
   margin-left: 25%;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
   font-family: 'Font Awesome 5 Free';
   font-weight: bold;
   font-size: 1.2rem;
+  text-align: justify;
 }
 
 .sponsors {
@@ -150,5 +151,11 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+.texto {
+  font-family: 'Poppins';
+  font-weight: bold;
+  margin-left: 2%;
 }
 /*# sourceMappingURL=inicio.css.map */
