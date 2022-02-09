@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Skills;
+use App\Models\SkillsUsuario;
 
 class SkillsController extends Controller
 {
@@ -22,35 +23,10 @@ class SkillsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request, $id)
+    public function create()
     {
 
-        $skills=Skills::all();
-        $data=$request->all();
-        dd($data);
 
-        foreach($skills as $habilidad){
-
-            if($habilidad->nombre==$data['gusto']){
-                \Session::flash('tipoMensaje','danger');
-                \Session::flash('mensaje','Esa habilidad ya existe');
-                return \Redirect::back();
-            }
-
-        }
-
-
-        $skill=new Skills();
-        $skill->nombre=$data['gusto'];
-        $skill->save();
-
-        $skillCreada=Skills::where('nombre',$data['gusto'])->first;
-        $skillUsuario=new SkillsUsuario();
-        $skillUsuario->user_id=$id;
-        $skillUsuario->skills_id=$skillCreada->id;
-        \Session::flash('tipoMensaje','success');
-        \Session::flash('mensaje','Se te ha añadido la habilidad');
-        return \Redirect::back();
         }
 
     /**
@@ -96,6 +72,44 @@ class SkillsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $skills=Skills::all();
+        $data=$request->all();
+
+
+        foreach($skills as $habilidad){
+
+            if($habilidad->nombre==$data['gusto']){
+
+                $skillCreada=Skills::where('nombre',$data['gusto'])->first();
+                $skillUsuario=new SkillsUsuario();
+                $skillUsuario->user_id=$id;
+                $skillUsuario->skills_id=$skillCreada->id;
+                $skillUsuario->save();
+                \Session::flash('tipoMensaje','success');
+                \Session::flash('mensaje','Se te ha añadido la habilidad');
+                return \Redirect::back();
+                return \Redirect::back();
+            }
+
+
+
+        }
+
+
+        $skill=new Skills();
+        $skill->nombre=$data['gusto'];
+        $skill->save();
+
+        $skillCreada=Skills::where('nombre',$data['gusto'])->first();
+        $skillUsuario=new SkillsUsuario();
+        $skillUsuario->user_id=$id;
+        $skillUsuario->skills_id=$skillCreada->id;
+        $skillUsuario->save();
+        \Session::flash('tipoMensaje','success');
+        \Session::flash('mensaje','Se te ha añadido la habilidad');
+        return \Redirect::back();
+
+
     }
 
     /**

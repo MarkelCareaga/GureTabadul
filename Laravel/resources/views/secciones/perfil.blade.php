@@ -118,7 +118,7 @@
                 </div>
                 <div class="conocimientos">
                   <div >
-                      <form action="{{route('skills.create',$usuario->id)}}" method="POST">
+                      <form action="{{route("skills.update",$usuario->id)}}" method="POST" enctype="multipart/form-data">
                           @csrf
                           @method('PUT')
                        Agrega tus conocimientos<input type="text" name="gusto">
