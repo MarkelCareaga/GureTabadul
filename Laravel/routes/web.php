@@ -30,7 +30,7 @@ use App\Http\Controllers\InteresController;
 */
 /*Route::get('/home', function () {
     return view('secciones.inicio');
-    
+
 })->name('home');*/
 Route::get('/home', [App\Http\Controllers\InicioController::class, 'index'])->name('home');
 
@@ -46,7 +46,7 @@ Route::resource('servicios', ServiciosController::class);
 Route::resource('nosotros', NosotrosController::class);
 Route::resource('inicio', InicioController::class);
 Route::resource('skills', SkillsController::class);
-Route::resource('Interes', InteresController::class);
+Route::resource('interes', InteresController::class);
 Route::resource('taller', TallerController::class);
 
 Route::resource('perfil', PerfilController::class)->middleware('auth');;

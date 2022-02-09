@@ -50,7 +50,7 @@ class User extends \TCG\Voyager\Models\User
     public function intereses(){
         return $this->belongsToMany(Interes::class,'intereses_usuarios','user_id', 'interes_id');
     }
-    public function Skills(){
+    public function skills(){
         return $this->belongsToMany(Skills::class,'skills_usuario','user_id', 'skills_id');
     }
     public function cursos(){

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Interes;
+use Auth;
+
 
 class InteresController extends Controller
 {
@@ -68,7 +71,22 @@ class InteresController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user=Auth::user();
+        $data=$request->all();
+        $interes=Interes::where('nombre',$data['interes'])->first();
+
+
+
+                if (empty($interes)){
+                    $interes=new Interes();
+                    $interes->nombre=$data['interes'];
+                    $user->intereses()->save($interes);
+                    \Session::flash('tipoMensaje','success');
+                    \Session::flash('mensaje','Se te ha añadido el conocimiento');
+                    return \Redirect::back();
+                }
+                $user->intereses()->save($interes);
+                return \Redirect::back();
     }
 
     /**

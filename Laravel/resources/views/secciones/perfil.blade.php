@@ -102,8 +102,14 @@
                 <input type="button" name="botonCancelar" value="Cancelar" id="botonCancelar" onclick="botonCancelar()" disabled>
               </div>
               <div id="interesesDiv">
-                <a onclick="">Agregar Intereses</a>
+
                 <div><h2>Tus intereses</h2></div>
+                <form action="{{route("interes.update",$usuario->id)}}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                 <div>Agrega tus intereses<input type="text" name="interes"></div>
+                 <button type="submit">Agregar</button>
+                </form>
                 @foreach ($usuario->intereses as $interes)
                 <p>{{$interes->nombre}}</p>
                 @endforeach
@@ -112,23 +118,22 @@
                   <div>
 
                     <div><h2>Tus conocimientos</h2></div>
-                  @foreach ($usuario->skills as $skill)
-                  <p>{{$skill->nombre}}</p>
-                  @endforeach
+                    <div >
+                        <form action="{{route("skills.update",$usuario->id)}}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            @method('PUT')
+                         <div>Agrega tus conocimientos<input type="text" name="gusto"></div>
+                         <button type="submit">Agregar</button>
+                        </form>
+                    </div>
+
                 </div>
                 <div class="conocimientos">
-                  <div >
-                      <form action="{{route("skills.update",$usuario->id)}}" method="POST" enctype="multipart/form-data">
-                          @csrf
-                          @method('PUT')
-                       Agrega tus conocimientos<input type="text" name="gusto">
-                       <button type="submit">Agregar</button>
-                      </form>
-                  </div>
+                    @foreach ($usuario->skills as $skill)
                   <div>
-
-
+                    <p>{{$skill->nombre}}</p>
                   </div>
+                  @endforeach
               </div>
             </div>
             <div id="talleresDiv">

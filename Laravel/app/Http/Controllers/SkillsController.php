@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Skills;
 use App\Models\SkillsUsuario;
-
+use Auth;
 class SkillsController extends Controller
 {
     /**
@@ -71,18 +71,27 @@ class SkillsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user=Auth::user();
         $data=$request->all();
         $skill=Skills::where('nombre',$data['gusto'])->first();
-        dd($skill);
-        
-        if ($skill==null){
-            $skill=new Skills();
-            $skill->nombre=$data['gusto'];
-           
-        }
-        $user->Skills->save($skill);
-        
+
+
+
+                if (empty($skill)){
+                    $skill=new Skills();
+                    $skill->nombre=$data['gusto'];
+                    $user->Skills()->save($skill);
+                    \Session::flash('tipoMensaje','success');
+                    \Session::flash('mensaje','Se te ha añadido el conocimiento');
+                    return \Redirect::back();
+                }
+                $user->skills()->save($skill);
+                return \Redirect::back();
+
+
+
+
+
         /*
         foreach($skills as $habilidad){
 
