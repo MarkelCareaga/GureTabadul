@@ -130,17 +130,23 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
   width: 100%;
+  max-width: auto;
+  flex-wrap: wrap;
+  flex-direction: flex-end;
 }
 
 .sponsor {
-  width: auto;
+  width: 30%;
   -ms-flex-line-pack: center;
       align-content: center;
   height: auto;
+  margin-left: 20px;
+  border: 2px solid #161616;
+  padding: 2%;
+  color: #161616;
+  font-family: 'Poppins';
 }
 
 .flexbox-container {
@@ -157,6 +163,10 @@ footer {
   font-family: 'Poppins';
   font-weight: bold;
   margin-left: 2%;
+}
+.cuadroImagen{
+  width: 200px;
+  height: 100px;
 }
 
 @media (max-width: 375px) {
@@ -191,5 +201,6 @@ footer {
   footer.footer.text-center {
     height: 87px;
   }
+  
 }
 /*# sourceMappingURL=inicio.css.map */
