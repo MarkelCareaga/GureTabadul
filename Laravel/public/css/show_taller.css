@@ -8,15 +8,17 @@
   border-radius: 50px;
   font-weight: bold;
   font-family: 'Poppins';
+  border: solid 3px #161616;
 }
 
 button.btn.btn-secondary {
   float: left;
   clear: both;
   margin-left: 51%;
-  margin-top: -4%;
+  margin-top: -3.25%;
   background-color: #BC3A2F;
   width: 50px;
+  border: solid 3px #161616;
 }
 
 button.btn.btn-primary {
@@ -25,16 +27,16 @@ button.btn.btn-primary {
   margin-left: 41%;
   margin-top: 2%;
   width: 50px;
+  border: solid 3px #161616;
 }
 
 .btn-secondary:hover {
-  color: #43B582;
   background-color: #0D6EFD;
   border-color: #0D6EFD;
 }
 
 #titulo {
-  padding-top: 3%;
+  padding-top: 2.5%;
   text-align: center;
   width: 100%;
   text-transform: uppercase;

@@ -1,12 +1,21 @@
+.card{
+  background-color: #BCDDD4;
+  border: none !important;
+}
 div.card-header {
   background-color: #B91B55;
-  color: white;
+  color: #161616;
+  font-family: 'Poppins';
   font-size: 2em;
   padding-left: 40%;
+  border-top-right-radius: 16px !important;
+  border-top-left-radius: 16px !important;
 }
 
 div.card-body {
-  background-color: #43B582;
+  background: rgba( 67, 181, 130, 1 );
+  border-bottom-left-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
 }
 
 input#email.form-control {
@@ -14,11 +23,13 @@ input#email.form-control {
   margin-top: 19%;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+  border: 2px solid #161616;
 }
 
 input#password.form-control {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+  border: 2px solid #161616;
 }
 
 div.col-md-8 {
@@ -42,8 +53,10 @@ label.form-check-label {
 .btn-primary {
   width: 81%;
   margin-left: -5%;
-  margin-top: -32%;
+  margin-top: -25%;
   background-color: #B91B55 !important;
+  font-family: 'Poppins';
+  border-radius: 32px;
 }
 
 a.btn.btn-link {
