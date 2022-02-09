@@ -10,9 +10,10 @@ $fondoCarta:#3AA877;
 $bordeCarta:#00000020;
 $bsGray300:#e2e8f0;
 $fondoBoton:#B91B55;
+$colorBorde:#161616;
 #perfil {
   margin-left: 35%;
-  background-color: #3AA877;
+  background-color: $fondoCarta;
   border-style: none;
   font-family: 'Poppins';
   font-weight: bold;
@@ -20,7 +21,7 @@ $fondoBoton:#B91B55;
 
 #intereses {
   margin-left: 33%;
-  background-color: #3AA877;
+  background-color: $fondoCarta;
   border-style: none;
   margin-top: 5%;
   font-family: 'Poppins';
@@ -29,7 +30,7 @@ $fondoBoton:#B91B55;
 
 #conocimientos {
   margin-left: 28%;
-  background-color: #3AA877;
+  background-color: $fondoCarta;
   border-style: none;
   margin-top: 5%;
   font-family: 'Poppins';
@@ -38,7 +39,7 @@ $fondoBoton:#B91B55;
 
 #talleres {
   margin-left: 31%;
-  background-color: #3AA877;
+  background-color: $fondoCarta;
   border-style: none;
   margin-top: 5%;
   font-family: 'Poppins';
@@ -47,7 +48,7 @@ $fondoBoton:#B91B55;
 
 #cursos {
   margin-left: 32%;
-  background-color: #3AA877;
+  background-color: $fondoCarta;
   border-style: none;
   margin-top: 5%;
   font-family: 'Poppins';
@@ -73,9 +74,9 @@ $fondoBoton:#B91B55;
 
 body {
   margin-top: 20px;
-  color: #1a202c;
+  color: $colorLetraBody;
   text-align: left;
-  background-color: #BCDDD4;
+  background-color: $colorFondoBody;
 }
 
 .main-body {
@@ -83,8 +84,8 @@ body {
 }
 
 .card {
-  -webkit-box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px 0 #0000000f;
-          box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px 0 #0000000f;
+  -webkit-box-shadow: 0 1px 3px 0 $sombraCarta1, 0 1px 2px 0 $sombraCarta2;
+          box-shadow: 0 1px 3px 0 $sombraCarta1, 0 1px 2px 0 $sombraCarta2;
 }
 
 .card {
@@ -98,7 +99,7 @@ body {
           flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #3AA877;
+  background-color: $fondoCarta;
   background-clip: border-box;
   border: 0 solid #00000020;
   border-radius: .25rem;
@@ -110,7 +111,7 @@ body {
           flex: 1 1 auto;
   min-height: 1px;
   padding: 1rem;
-  border: 2px solid #161616;
+  border: 2px solid $colorBorde;
 }
 
 .gutters-sm {
@@ -129,7 +130,7 @@ body {
 }
 
 .bg-gray-300 {
-  background-color: #e2e8f0;
+  background-color: $bsGray300;
 }
 
 .h-100 {
@@ -152,7 +153,7 @@ div.card-body {
 .talleresInfo {
   margin-top: 2%;
   padding: 1%;
-  border: 2px solid #161616;
+  border: 2px solid $colorBorde;
   width: 30%;
   float: left;
   margin-right: 1%;
@@ -167,7 +168,7 @@ div.card-body {
 .cursosInfo {
   margin-top: 2%;
   padding: 1%;
-  border: 2px solid #161616;
+  border: 2px solid $colorBorde;
   width: 30%;
   float: left;
   margin-right: 1%;
@@ -212,7 +213,7 @@ div.card-body {
 #botonEditar {
   font-family: 'Poppins';
   font-weight: bold;
-  background-color: #B91B55;
+  background-color: $fondoBoton;
   border-style: none;
   padding: 1%;
   border-radius: 13px;
@@ -221,7 +222,7 @@ div.card-body {
 #botonGuardar {
   font-family: 'Poppins';
   font-weight: bold;
-  background-color: #B91B55;
+  background-color: $fondoBoton;
   border-style: none;
   padding: 1%;
   border-radius: 13px;
@@ -230,7 +231,7 @@ div.card-body {
 #botonCancelar {
   font-family: 'Poppins';
   font-weight: bold;
-  background-color: #B91B55;
+  background-color: $fondoBoton;
   border-style: none;
   padding: 1%;
   border-radius: 13px;
@@ -244,23 +245,23 @@ div.card-body {
 
 }
 .intereses{
-  border: 2px solid #161616;
+  border: 2px solid $colorBorde;
   border-radius: 32px;
   
 }
 .lista{
-  border: 2px solid #161616;
+  border: 2px solid $colorBorde;
   width: 25%;
 }
 .boton{
   width: 51px;
-  background-color: #B91B55;
-  border: 2px solid #161616;
+  background-color: $fondoBoton;
+  border: 2px solid $colorBorde;
   border-radius: 32px;
 }
 h2{
   margin-top: 0;
-  color: #161616;
+  color: $colorBorde;
   font-family: 'Poppins';
 
 }

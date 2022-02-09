@@ -1,6 +1,7 @@
+$colorBorde:#161616;
 .button {
     font-family: Courier New;
-    color: #161616;
+    color: $colorBorde;
     font-size: 32px;
     padding: 10px;
     text-decoration: none;

@@ -14,16 +14,11 @@ div.card {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      
+  flex-wrap: wrap;
 }
 
 .imagen {
   text-align: center;
-  width: 100%;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  height: 200px;
 }
 
 .titulo {

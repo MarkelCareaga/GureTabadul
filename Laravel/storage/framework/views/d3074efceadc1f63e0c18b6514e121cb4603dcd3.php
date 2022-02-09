@@ -33,16 +33,20 @@
     </div>
 </div>
 <h3 class="titulo">Colaboradores</h3>
-<?php $__currentLoopData = $sponsors; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sponsor): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 <div class="sponsors">
+    <?php $__currentLoopData = $sponsors; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sponsor): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <div class="sponsor">
-    <img src="storage/<?php echo e($sponsor->ruta_img_sponsor); ?>">
+        <div class="cuadroImagen">
+    <img class="sponsorFoto" src="storage/<?php echo e($sponsor->ruta_img_sponsor); ?>">
+        </div>
     <p><?php echo e($sponsor->nombre); ?></p>
     <p><?php echo e($sponsor->descripción); ?></p>
     </div>   
+
+
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </div>
 <?php echo $__env->make('layout.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
 

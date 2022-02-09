@@ -1,13 +1,15 @@
 $colorFondoTituloLogin:#B91B55;
 $colorLetrasTituloLogin:white;
 $colorFondoCarta:#43B582;
+$colorFondoCarta2:#BCDDD4;
+$colorBorde:#161616;
 .card{
-    background-color: #BCDDD4;
+    background-color: $colorFondoCarta2;
     border: none !important;
   }
   div.card-header {
-    background-color: #B91B55;
-    color: #161616;
+    background-color: $colorFondoTituloLogin;
+    color: $colorBorde;
     font-family: 'Poppins';
     font-size: 2em;
     padding-left: 40%;
@@ -57,7 +59,7 @@ $colorFondoCarta:#43B582;
     width: 81%;
     margin-left: -5%;
     margin-top: -25%;
-    background-color: #B91B55 !important;
+    background-color: $colorFondoTituloLogin !important;
     font-family: 'Poppins';
     border-radius: 32px;
   }

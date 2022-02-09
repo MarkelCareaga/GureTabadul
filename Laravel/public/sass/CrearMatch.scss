@@ -1,3 +1,5 @@
+$colorBorde:#161616;
+$colorBoton:#55db5c;
 *{
     margin: 0%;
     padding: 0%;
@@ -12,7 +14,7 @@
     display: none;
   }
   .texto{
-    color: #161616;
+    color: $colorBorde;
     font-family: 'Poppins';
     font-weight: bold;
     font-size: 1.3rem;
@@ -38,12 +40,12 @@
   .user1{
     border-radius: 4px;
     padding: 2%;
-    color: #161616;
+    color: $colorBorde;
   }
   .user2{
     border-radius: 4px;
     padding: 2%;
-    color: #161616;
+    color: $colorBorde;
   }
   .boton{
     width: 150px;
@@ -56,11 +58,11 @@
     font-family: 'Poppins';
     font-size: 1.5rem;
     font-weight:bolder;
-    color: #161616;
+    color: $colorBorde;
   }
   .boton:hover{
-    color: #55db5c;
-    border: 2.5px solid #55db5c;
+    color: $colorBoton;
+    border: 2.5px solid $colorBoton;
   }
   .caja{
     border-radius: 4px;
@@ -72,12 +74,12 @@
     flex: row;
   }
   .usuarios1{
-  border: 2px solid #161616;
-  color: #161616;
+  border: 2px solid $colorBorde;
+  color: $colorBorde;
   }
   .usuarios2{
-    border: 2px solid #161616;
-    color: #161616;
+    border: 2px solid $colorBorde;
+    color: $colorBorde;
     }
   .textoInfo{
     font-size: 1rem;
@@ -88,7 +90,7 @@
     position: absolute;
     left: 200;
     bottom: 118;
-    color: #161616;
+    color: $colorBorde;
   }
   .textoUsuario{
     font-family: 'Poppins';
@@ -97,7 +99,7 @@
     top: 270;
     font-weight: bolder;
     font-size: 1.5rem;
-    color: #161616;
+    color: $colorBorde;
   }
   .titulo{
     position: absolute;

@@ -1,8 +1,7 @@
-*{
+* {
   margin: 0%;
   padding: 0%;
 }
-
 
 .usuarios1 {
   display: none;
@@ -11,41 +10,55 @@
 .usuarios2 {
   display: none;
 }
-.texto{
+
+.texto {
   color: #161616;
   font-family: 'Poppins';
   font-weight: bold;
   font-size: 1.3rem;
-  
 }
-.cajaPrincipal{
+
+.cajaPrincipal {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   float: left;
   margin-left: 2%;
   height: 550px;
   border-radius: 32px;
   padding: 4%;
-  background: rgba( 0, 255, 0, 0.35 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 14px );
-  -webkit-backdrop-filter: blur( 14px );
+  background: rgba(0, 255, 0, 0.35);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-radius: 10px;
   border: 3px solid rgba(160, 16, 88, 0.4);
 }
-.user1{
+
+.user1 {
   border-radius: 4px;
   padding: 2%;
   color: #161616;
 }
-.user2{
+
+.user2 {
   border-radius: 4px;
   padding: 2%;
   color: #161616;
 }
-.boton{
+
+.boton {
   width: 150px;
   height: 50px;
   display: inline;
@@ -55,31 +68,41 @@
   margin-top: 3%;
   font-family: 'Poppins';
   font-size: 1.5rem;
-  font-weight:bolder;
+  font-weight: bolder;
   color: #161616;
 }
-.boton:hover{
+
+.boton:hover {
   color: #55db5c;
   border: 2.5px solid #55db5c;
 }
-.caja{
+
+.caja {
   border-radius: 4px;
 }
-.datos{
+
+.datos {
   width: 100px;
   height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: row;
+  -webkit-box-flex: row;
+      -ms-flex: row;
+          flex: row;
 }
-.usuarios1{
-border: 2px solid #161616;
-color: #161616;
-}
-.usuarios2{
+
+.usuarios1 {
   border: 2px solid #161616;
   color: #161616;
-  }
-.textoInfo{
+}
+
+.usuarios2 {
+  border: 2px solid #161616;
+  color: #161616;
+}
+
+.textoInfo {
   font-size: 1rem;
   font-family: 'Poppins';
   font-weight: 400;
@@ -90,7 +113,8 @@ color: #161616;
   bottom: 118;
   color: #161616;
 }
-.textoUsuario{
+
+.textoUsuario {
   font-family: 'Poppins';
   position: absolute;
   right: 155;
@@ -99,10 +123,10 @@ color: #161616;
   font-size: 1.5rem;
   color: #161616;
 }
-.titulo{
+
+.titulo {
   position: absolute;
   top: 0;
   font-family: 'Poppins';
 }
-
 /*# sourceMappingURL=CrearMatch.css.map */

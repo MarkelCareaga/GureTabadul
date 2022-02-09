@@ -1,8 +1,9 @@
 $colorFondoTallerDetalles:#43B582;
 $colorFondoBoton:#0D6EFD;
 $colorFondoBoton2:#BC3A2F;
+$colorBorde:#161616;
 .taller_detalles {
-    background-color: #43B582;
+    background-color: $colorFondoTallerDetalles;
     width: 77%;
     margin: 0 auto;
     height: 565px;
@@ -11,7 +12,7 @@ $colorFondoBoton2:#BC3A2F;
     border-radius: 50px;
     font-weight: bold;
     font-family: 'Poppins';
-    border: solid 3px #161616;
+    border: solid 3px $colorBorde;
   }
   
   button.btn.btn-secondary {
@@ -19,9 +20,9 @@ $colorFondoBoton2:#BC3A2F;
     clear: both;
     margin-left: 51%;
     margin-top: -3.25%;
-    background-color: #BC3A2F;
+    background-color: $colorFondoBoton2;
     width: 50px;
-    border: solid 3px #161616;
+    border: solid 3px $colorBorde;
   }
   
   button.btn.btn-primary {
@@ -30,12 +31,12 @@ $colorFondoBoton2:#BC3A2F;
     margin-left: 41%;
     margin-top: 2%;
     width: 50px;
-    border: solid 3px #161616;
+    border: solid 3px $colorBorde;
   }
   
   .btn-secondary:hover {
-    background-color: #0D6EFD;
-    border-color: #0D6EFD;
+    background-color: $colorFondoBoton;
+    border-color: $colorFondoBoton;
   }
   
   #titulo {

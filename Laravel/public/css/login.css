@@ -1,7 +1,8 @@
-.card{
+.card {
   background-color: #BCDDD4;
   border: none !important;
 }
+
 div.card-header {
   background-color: #B91B55;
   color: #161616;
@@ -13,7 +14,7 @@ div.card-header {
 }
 
 div.card-body {
-  background: rgba( 67, 181, 130, 1 );
+  background: #43b582;
   border-bottom-left-radius: 16px !important;
   border-bottom-right-radius: 16px !important;
 }
