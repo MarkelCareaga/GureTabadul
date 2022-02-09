@@ -41,45 +41,22 @@ class MatchController extends Controller
      */
     public function store(Request $request)
     {
-        $datosNuevoMatch=$request->all();
+        $datos=$request->all();
 
-        //Validar match
-        $rules=array(
-            'nombre' => 'required|string|min:8|max:255',
-            'dirección' =>'required|alpha_num|',
-            'fecha_encuentro'=> 'required|date_formar:d/m/Y|after:tomorrow',
-            'user1_id' => 'required|unique',
-            'user2_id' => 'required|unique',
-        );
-        $validador = Validatos::make($datosNuevoMatch,$rules,$messages);
-        if ($validador->fails()) {
-            $errors=$validador->messages();
-            $errors->add('mierror','Ha ocurrido un error a la hora de crear el match ');
-            \Session::flash('TipoMensaje','danger');
-            \Session::flash('mensaje',' No se cumplen las validaciones, compruebe los campos y vuelva a intentarlo');
-            //Volver con los errores
-
-            return \Redirect::back()->withInput()->withErrors();
-        } else {
-            //Generar nuevo Match y guardarlo en la BD
+       
             $nuevoMatch=new Match();
-            $nuevoMatch->nombre=$datosNuevoMatch["nombreMatch"];
-            $nuevoMatch->dirección=$datosNuevoMatch["direcciónMatch"];
-            $nuevoMatch->fecha_encuentro=$datosNuevoMatch["fecha_match"];
-            $nuevoMatch->user1_id=$datosNuevoMatch["usuario1"];
-            $nuevoMatch->user2_id=$datosNuevoMatch["usuario2"];
+            $nuevoMatch->nombre=$datos["nombre"];
+            $nuevoMatch->direccion=$datos["direccion"];
+            $nuevoMatch->Fecha_encuentro=$datos["fecha"];
+            $nuevoMatch->user1_id=$datos['usuario1'];
+            $nuevoMatch->user2_id=$datos['usuario2'];
 
-        }try {
+ 
             $nuevoMatch->save();
-            \Session::flash('tipoMensaje','succes');
+            \Session::flash('tipoMensaje','success');
             \Session::flash('mensaje','Match creado correctamente');
-        } catch (\Throwable $th) {
-            //Mensaje de error
-
-            \Session::flash('tipoMensaje','danger');
-            \Session::flash('mensaje','Error al crear el match');
-        }
-        return \Redirect::back();
+     
+            return \Redirect::back();
 
     }
 
@@ -91,13 +68,7 @@ class MatchController extends Controller
      */
     public function show($id)
     {
-        $match=Match::find($id);
-        if (is_null($matchs)) {
-            echo "No existe el match seleccionado";
-        } else {
-            //Mostramos el match
-            return view('match.show',['matchSeleccion'=>$matchs]);
-        }
+
 
     }
 
@@ -109,8 +80,7 @@ class MatchController extends Controller
      */
     public function edit($id)
     {
-       $macth=Match::find($id);
-       return view('match.edit',compact('match'));
+       
     }
 
     /**

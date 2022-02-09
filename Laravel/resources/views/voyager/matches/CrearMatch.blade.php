@@ -10,47 +10,51 @@
     <link rel="stylesheet" href="{{URL::asset('css/CrearMatch.css') }}">
 </head>
 <body>
-
-</body>
-</html>
-<form action="" method="POST">
-    <div><input type="text" name="nombre"></div>
-    <div><input type="text" name="direccion"></div>
-    <div><input type="date" name="fecha"></div>
-
-    <button type="submit">Crear Match</button>
-
-    <select name="usuario1" id="primerSelect">
+    @include('layout.alertas')
+    <form action="{{route('matches.store')}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('POST')
+        <div><input type="text" name="nombre"></div>
+        <div><input type="text" name="direccion"></div>
+        <div><input type="date" name="fecha"></div>
+    
+        <button type="submit">Crear Match</button>
+    
+        <select name="usuario1" id="primerSelect">
+            @foreach ($usuarios as $user)
+            <option value="{{$user->id}}">{{$user->email}}</option>
+            @endforeach
+        </select>
+    
+        <select name="usuario2" id="segundoSelect">
+            @foreach ($usuarios as $user)
+            <option value="{{$user->id}}">{{$user->email}}</option>
+            @endforeach
+        </select>
+        </form>
         @foreach ($usuarios as $user)
-        <option value="{{$user->id}}">{{$user->email}}</option>
+            <div class="usuarios1" id="{{$user->email}}">
+                <div>{{$user->email}}</div>
+                <div>{{$user->name}}</div>
+                <div>{{$user->telefono}}</div>
+                <div>{{$user->Fecha_nac}}</div>
+            </div>
+    
+    
         @endforeach
-    </select>
-
-    <select name="usuario2" id="segundoSelect">
         @foreach ($usuarios as $user)
-        <option value="{{$user->id}}">{{$user->email}}</option>
-        @endforeach
-    </select>
-    </form>
-    @foreach ($usuarios as $user)
-        <div class="usuarios1" id="{{$user->email}}">
+        <div class="usuarios2" id="{{$user->email}}">
             <div>{{$user->email}}</div>
             <div>{{$user->name}}</div>
             <div>{{$user->telefono}}</div>
             <div>{{$user->Fecha_nac}}</div>
         </div>
+    
+        @endforeach
+    
 
-
-    @endforeach
-    @foreach ($usuarios as $user)
-    <div class="usuarios2" id="{{$user->email}}">
-        <div>{{$user->email}}</div>
-        <div>{{$user->name}}</div>
-        <div>{{$user->telefono}}</div>
-        <div>{{$user->Fecha_nac}}</div>
-    </div>
-
-    @endforeach
+</body>
+</html>
 
     <script>
         var valorSelect1=document.getElementById('primerSelect');

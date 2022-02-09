@@ -82,7 +82,7 @@ class InteresController extends Controller
                     $interes->nombre=$data['interes'];
                     $user->intereses()->save($interes);
                     \Session::flash('tipoMensaje','success');
-                    \Session::flash('mensaje','Se te ha añadido el conocimiento');
+                    \Session::flash('mensaje','Se te ha añadido el interes');
                     return \Redirect::back();
                 }
                 $user->intereses()->save($interes);

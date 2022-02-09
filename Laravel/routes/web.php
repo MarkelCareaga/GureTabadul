@@ -14,7 +14,7 @@ use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\MatchController;
 use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\InteresController;
-
+use App\Http\Controllers\IdiomaController;
 
 
 
