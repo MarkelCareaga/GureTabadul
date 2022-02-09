@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul style="margin-left:55%;" class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="{{route('inicio.index')}}">Inicio</a>
+          <a class="nav-link" aria-current="page" href="{{route('inicio.index')}}">{{ __('traducciones.inicio') }}</a>
         </li>
 
         <li class="nav-item">
