@@ -1,50 +1,69 @@
 $colorFondoTituloLogin:#B91B55;
 $colorLetrasTituloLogin:white;
 $colorFondoCarta:#43B582;
-div.card-header{
-    background-color: $colorFondoTituloLogin;
-    color: $colorLetrasTituloLogin;
+.card{
+    background-color: #BCDDD4;
+    border: none !important;
+  }
+  div.card-header {
+    background-color: #B91B55;
+    color: #161616;
+    font-family: 'Poppins';
     font-size: 2em;
     padding-left: 40%;
-
-}
-div.card-body{
-    background-color: $colorFondoCarta;
-}
-input#email.form-control{
+    border-top-right-radius: 16px !important;
+    border-top-left-radius: 16px !important;
+  }
+  
+  div.card-body {
+    background: rgba( 67, 181, 130, 1 );
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+  }
+  
+  input#email.form-control {
     margin-bottom: 4%;
     margin-top: 19%;
-    font-family: "Font Awesome 5 Free"; 
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    
-}
-input#password.form-control{
-    font-family: "Font Awesome 5 Free"; 
+    border: 2px solid #161616;
+  }
+  
+  input#password.form-control {
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    
-}
-div.col-md-8{
+    border: 2px solid #161616;
+  }
+  
+  div.col-md-8 {
     width: 42%;
     margin-top: 8%;
     height: 90px;
-}
-div.col-md-6{
+  }
+  
+  div.col-md-6 {
     margin-left: 24%;
-}
-input#remember.form-check-input{
+  }
+  
+  input#remember.form-check-input {
     margin-top: 13%;
-}
-label.form-check-label{
+  }
+  
+  label.form-check-label {
     margin-top: 11%;
-}
-.btn-primary{
+  }
+  
+  .btn-primary {
     width: 81%;
     margin-left: -5%;
-    margin-top: -32%;
-    background-color: $colorFondoTituloLogin !important;
-    
-}
-a.btn.btn-link{
+    margin-top: -25%;
+    background-color: #B91B55 !important;
+    font-family: 'Poppins';
+    border-radius: 32px;
+  }
+  
+  a.btn.btn-link {
     width: 141%;
-    margin-left:-32%;
-}
+    margin-left: -32%;
+  }
+  /*# sourceMappingURL=login.css.map */

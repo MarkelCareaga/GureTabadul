@@ -1,29 +1,38 @@
-$colorFondoCarta:#43B582;
 /*#43B582*/
-div.card{
-    margin-left: 6%;
-    margin-bottom: 2%;
-    font-family: 'Poppins';
-    margin-top: 2%;
-    border-radius: 45px;
-    background-color: $colorFondoCarta;
+div.card {
+  margin-left: 6%;
+  margin-bottom: 2%;
+  font-family: 'Poppins';
+  margin-top: 2%;
+  border-radius: 45px;
+  background-color: #43B582;
+  border: solid 3px #161616;
 }
-.talleres{
-    /* display: flex !important; */
-    display: flex;
-   flex-wrap: wrap;
+
+.talleres {
+  /* display: flex !important; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-.imagen{
-    text-align: center;
+
+.imagen {
+  text-align: center;
 }
-h5.titulo{
-    margin-left: 2%;
-    font-weight: bold;
+
+h5.titulo {
+  margin-left: 2%;
+  font-weight: bold;
 }
-p.card-text{
-    margin-left: 3%;
+
+p.card-text {
+  margin-left: 3%;
 }
-div.card-body{
-    padding-top: 0%;
-    font-weight: bold;
+
+div.card-body {
+  padding-top: 0%;
+  font-weight: bold;
 }
+/*# sourceMappingURL=talleres.css.map */
