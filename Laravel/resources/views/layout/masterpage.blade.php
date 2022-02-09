@@ -31,7 +31,7 @@
     @include('layout.alertas')
 
     @yield('contenido')
-    @include('layout.footer')
+    
 {{-- <div class="chatUser">
     {{-- <p>Chat</p>
     {{-- @livewire("chat")

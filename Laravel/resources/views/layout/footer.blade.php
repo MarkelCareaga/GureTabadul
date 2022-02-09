@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{URL::asset('css/footer.css')}}">
+
     {{-- <footer style="height: 200px">
         <div class="content">
         <div class="logo"><img src="{{URL::asset('img/LogoTabadul64PX.jpg')}}"></div>

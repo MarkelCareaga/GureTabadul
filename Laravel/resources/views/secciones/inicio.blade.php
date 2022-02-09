@@ -2,6 +2,7 @@
 @section('Titulo','Inicio')
 @section('estilos')
 <link rel="stylesheet" href="{{URL::asset('css/inicio.css') }}">
+<link rel="stylesheet" href="{{URL::asset('css/footer.css')}}">
 @endsection
 @section('contenido')
 <img src="{{url('img/FondoInicioGureTabadul.png')}}">
@@ -40,6 +41,7 @@
     <p>{{$sponsor->descripción}}</p>
     </div>   
 </div>
+@include('layout.footer')
 @endforeach
 
 
