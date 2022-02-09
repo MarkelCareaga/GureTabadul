@@ -72,10 +72,18 @@ class SkillsController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $skills=Skills::all();
         $data=$request->all();
-
-
+        $skill=Skills::where('nombre',$data['gusto'])->first();
+        dd($skill);
+        
+        if ($skill==null){
+            $skill=new Skills();
+            $skill->nombre=$data['gusto'];
+           
+        }
+        $user->Skills->save($skill);
+        
+        /*
         foreach($skills as $habilidad){
 
             if($habilidad->nombre==$data['gusto']){
@@ -108,7 +116,7 @@ class SkillsController extends Controller
         \Session::flash('tipoMensaje','success');
         \Session::flash('mensaje','Se te ha añadido la habilidad');
         return \Redirect::back();
-
+        */
 
     }
 
