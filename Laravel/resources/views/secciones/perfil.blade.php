@@ -94,7 +94,7 @@
                     <input type="number" name="telefono" id="telefono"  value="{{$usuario->telefono}}" disabled>
                   </div>
                 </div>
-
+                </form>
 
                 <hr>
                 <input type="button" name="botonEditar" value="Editar perfil" id="botonEditar" onclick="botonEditar()">
@@ -110,7 +110,7 @@
                 </div>
                 <div id="conocimientosDiv">
                   <div>
-                    
+
                     <div><h2>Tus conocimientos</h2></div>
                   @foreach ($usuario->skills as $skill)
                   <p>{{$skill->nombre}}</p>
@@ -126,14 +126,14 @@
                       </form>
                   </div>
                   <div>
-      
-      
+
+
                   </div>
               </div>
             </div>
             <div id="talleresDiv">
               <div>
-                
+
                 <div><h2>Mis talleres</h2></div>
               @foreach ($usuario->talleres as $taller)
               <div class="talleresInfo">
@@ -143,14 +143,14 @@
                 <p class="card-text">Descripcion: {{$taller->Descripción}}</p>
                 <p class="card-text">Precio: {{$taller->Precio}}</p>
                 <p class="card-text">Capacidad: {{$taller->Capacidad}}</p>
-                
+
               </div>
               @endforeach
             </div>
           </div>
           <div id="cursosDiv">
             <div>
-              
+
               <div><h2>Mis cursos</h2></div>
             @foreach ($usuario->cursos as $curso)
             <div class="cursosInfo">
@@ -160,14 +160,14 @@
               <p class="card-text">Descripcion: {{$curso->descripcion}}</p>
               <p class="card-text">Precio: {{$curso->precio}}</p>
               <p class="card-text">Capacidad: {{$curso->capacidad}}</p>
-              
+
             </div>
             @endforeach
           </div>
         </div>
-            
-        </div> 
-            </form>
+
+        </div>
+
             </div>
 
 
@@ -184,13 +184,13 @@
         <div>
 
 
-            
-            
-
-       
 
 
-        
+
+
+
+
+
 
 
 
@@ -229,7 +229,7 @@
     function botonGuardar(){
 
     }
-    
+
     $(document).ready(function(){
     $("#perfil").click(function (){
 
@@ -242,7 +242,7 @@
     $('#cursosDiv').css('display','none');
             }
         });
-    
+
 
         $("#intereses").click(function (){
         $("#interesesDiv").css('display','block');
@@ -253,7 +253,7 @@
         $('#cursosDiv').css('display','none');
             }
         });
-    
+
         $("#conocimientos").click(function (){
         $('#conocimientosDiv').css('display','block');
         if("a:contains('Ver conocimientos')"){
@@ -281,7 +281,7 @@
         $('#talleresDiv').css('display','none');
             }
         });
-        
+
     });
 
   </script>
