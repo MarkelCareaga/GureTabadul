@@ -19,6 +19,9 @@ div.card {
 
 .imagen {
   text-align: center;
+  width: 100%;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
 }
 
 .titulo {
