@@ -145,6 +145,7 @@ class MatchController extends Controller
      */
     public function destroy(Match $match)
     {
+        
         $match->delete();
         \Session::flash('tipoMensaje','info');
         \Session::flash('mensaje','Match eliminado correctamente');
