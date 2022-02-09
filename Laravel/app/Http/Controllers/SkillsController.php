@@ -27,6 +27,7 @@ class SkillsController extends Controller
 
         $skills=Skills::all();
         $data=$request->all();
+        dd($data);
 
         foreach($skills as $habilidad){
 

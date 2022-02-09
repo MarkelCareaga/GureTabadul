@@ -121,8 +121,8 @@
                       <form action="{{route('skills.create',$usuario->id)}}" method="POST">
                           @csrf
                           @method('PUT')
-                       Agrega tu habilidad si no lo encuentras <input type="text" name="gusto">
-                       <input type="submit" value="Agregar">
+                       Agrega tus conocimientos<input type="text" name="gusto">
+                       <button type="submit">Agregar</button>
                       </form>
                   </div>
                   <div>
