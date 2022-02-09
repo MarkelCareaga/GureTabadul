@@ -14,6 +14,8 @@ class MatchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+   
+
     public function index()
     {
         $matches=Match::all();
