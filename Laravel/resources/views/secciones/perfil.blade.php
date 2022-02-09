@@ -124,18 +124,20 @@
                         <form action="{{route("skills.update",$usuario->id)}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
-                         <div>Agrega tus conocimientos<input type="text" name="gusto"></div>
-                         <button type="submit">Agregar</button>
+                         <div class="agrega">Agrega tus conocimientos &nbsp;<input type="text" name="gusto" class="intereses">
+                         <button class="boton" type="submit"><i class="fa-solid fa-plus"></i></button></div></div>
                         </form>
                     </div>
 
-                </div>
+                
                 <div class="conocimientos">
-                    @foreach ($usuario->skills as $skill)
-                  <div>
-                    <p>{{$skill->nombre}}</p>
-                  </div>
+                  <div> @foreach ($usuario->skills as $skill)
+                  <ul class="lista">
+                    <li>{{$skill->nombre}}</li>
+                  </ul>
                   @endforeach
+                  </div>
+                </div>
               </div>
             </div>
             <div id="talleresDiv">

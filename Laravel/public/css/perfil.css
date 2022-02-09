@@ -250,7 +250,11 @@ div.card-body {
 h2{
   margin-top: 0;
   color: #161616;
+  font-family: 'Poppins';
 
+}
+.card-bodyL{
+  border: 2px solid #4e4d4d;
 }
 
 @media (max-width: 375px) {
@@ -263,4 +267,4 @@ h2{
     margin-bottom: 4%;
   }
 }
-/*# sourceMappingURL=perfil.css.map */
+/*# sourceMappingURL=perfil.css.map */  
