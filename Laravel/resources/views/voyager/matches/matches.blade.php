@@ -1,5 +1,5 @@
-@extends('layout.masterpage')
-@section('contenido')
+@extends('voyager::master');
+@section('content')
 
 <a href="{{route('matches.create')}}">Crear Match</a>
 @foreach ($matches as $match)
