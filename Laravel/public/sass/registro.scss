@@ -1,68 +1,125 @@
 $colorFondoTituloRegistro:#B91B55;
 $colorLetrasRegistro:white;
 $colorFondoCarta:#43B582;
-div.card-header{
-    background-color: $colorFondoTituloRegistro ;
+$colorBorde:#161616;
+  .card{
+    background-color: #BCDDD4;
+    border: none !important;
+  }
+  div.card-header {
+    background-color: $colorFondoTituloRegistro;
     color: $colorLetrasRegistro;
+    font-family: 'Poppins';
     font-size: 2em;
-    padding-left: 35%;
-}
-div.card-body{
+    padding-left: 26.5%;
+    border-top-right-radius: 16px !important;
+    border-top-left-radius: 16px !important;
+  }
+  
+  div.card-body {
     background-color: $colorFondoCarta;
-}
-input#name.form-control{
-    font-family: "Font Awesome 5 Free"; 
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+  }
+  
+  input#name.form-control {
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
-}
-input#email.form-control{
-    
+    border: 2px solid $colorBorde;
+  }
+  
+  input#email.form-control {
     margin-top: 5%;
-    font-family: "Font Awesome 5 Free"; 
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    
-}
-input#password.form-control{
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-    margin-top: 5%;
-    
-}
-input#contrasenya.form-control{
-    font-family: "Font Awesome 5 Free"; 
+    border: 2px solid $colorBorde;
+  }
+  
+  input#password.form-control {
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-top: 5%;
-}
-input#pais.form-control{
-    margin-top: 5%;
-    font-family: "Font Awesome 5 Free"; 
+    border: 2px solid $colorBorde;
+  }
+  
+  input#contrasenya.form-control {
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
-}
-input#fecha_nac.form-control{
     margin-top: 5%;
-}
-
-div.col-md-8{
+    border: 2px solid $colorBorde;
+  }
+  
+  input#pais.form-control {
+    margin-top: 5%;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    border: 2px solid $colorBorde;
+  }
+  
+  input#fecha_nac.form-control {
+    margin-top: 5%;
+  }
+  
+  div.col-md-8 {
     width: 42%;
     margin-top: 8%;
     height: 90px;
-}
-div.col-md-6{
+  }
+  
+  div.col-md-6 {
     margin-left: 24%;
-}
-input#remember.form-check-input{
+  }
+  
+  input#remember.form-check-input {
     margin-top: 13%;
-}
-label.form-check-label{
+  }
+  
+  label.form-check-label {
     margin-top: 11%;
-}
-button.btn.btn-primary{
+  }
+  
+  button.btn.btn-primary {
     width: 81%;
     margin-left: 8%;
     margin-top: 11%;
     background-color: $colorFondoTituloRegistro;
-    
-}
-a.btn.btn-link{
+    border: 2px solid $colorBorde;
+    border-radius: 32px;
+  }
+  
+  a.btn.btn-link {
     width: 141%;
-    margin-left:-32%;
-}
+    margin-left: -32%;
+  }
+  @media (max-width: 375px){
+    div.card-header{
+      width: 165%;
+      padding-left: 41%;
+    }
+    div.col-md-8{
+      width: 52%;
+      margin-right: 30%;
+      margin-top: 32%;
+    }
+    div.card-body{
+      width: 165%;
+    }
+    input#email.form-control{
+      margin-left: -26%;
+    }
+    input#password.form-control{
+      margin-left: -26%;
+    }
+    button.btn.btn-primary{
+      margin-left: -10%;
+    }
+    a.btn.btn-link{
+      margin-left: 32%;
+    }
+    input#name.form-control{
+        margin-left: -26%;
+    }
+    input#contrasenya.form-control{
+        margin-left: -26%;
+    }
+  }
