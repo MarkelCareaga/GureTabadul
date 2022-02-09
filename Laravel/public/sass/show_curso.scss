@@ -1,8 +1,8 @@
 $colorFondoCursoDetalles:#43B582;
 $colorFondoBoton:#0D6EFD;
 $colorFondoBoton2:#BC3A2F;
-.curso_detalles{
-    background-color: $colorFondoCursoDetalles;
+.curso_detalles {
+    background-color: #43B582;
     width: 77%;
     margin: 0 auto;
     height: 580px;
@@ -10,59 +10,72 @@ $colorFondoBoton2:#BC3A2F;
     font-family: 'Poppins';
     border-radius: 50px;
     font-weight: bold;
-    
-}
-button.btn.btn-secondary{
+    border: solid 3px #161616;
+  }
+  
+  button.btn.btn-secondary {
     float: left;
     clear: both;
     margin-left: 50%;
-    margin-top: -4%;
+    margin-top: -3.25%;
     width: 50px;
-    background-color: $colorFondoBoton2;
-}
-button.btn.btn-primary{
+    background-color: #BC3A2F;
+    border: solid 3px #161616;
+  }
+  
+  button.btn.btn-primary {
     clear: both;
     float: left;
     margin-left: 43%;
     margin-top: 4%;
     width: 50px;
-}
-.btn-secondary:hover{
-    color: $colorFondoCursoDetalles;
-    background-color: $colorFondoBoton;
-    border-color: $colorFondoBoton;
-}
-#titulo{
+    border: solid 3px #161616;
+  }
+  
+  .btn-secondary:hover {
+    color: #43B582;
+    background-color: #0D6EFD;
+    border-color: #0D6EFD;
+  }
+  
+  #titulo {
     padding-top: 3%;
     text-align: center;
     width: 100%;
     font-weight: bolder;
     font-size: 1.5rem;
-
-}
-#fecha_inicio{
+  }
+  
+  #fecha_inicio {
     padding-top: 25%;
     width: 19%;
     float: left;
     margin-left: 33%;
-}
-#fecha_fin{
+  }
+  
+  #fecha_fin {
     width: 42%;
     float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-top: 25%;
     margin-left: 1%;
-}
-#descripcion{
+  }
+  
+  #descripcion {
     clear: both;
     width: 40%;
     margin-left: 33%;
-}
-#precio{
+  }
+  
+  #precio {
     width: 15%;
     margin-left: 33%;
-}
-#capacidad{
+  }
+  
+  #capacidad {
     width: 15%;
     margin-left: 33%;
-}
+  }
+  /*# sourceMappingURL=show_curso.css.map */
