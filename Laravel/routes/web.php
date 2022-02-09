@@ -53,6 +53,7 @@ Route::resource('perfil', PerfilController::class)->middleware('auth');;
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/idioma/{idioma}',[IdiomaController::class,'setIdioma'])->name('idioma');
 
 
 

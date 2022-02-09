@@ -1,6 +1,6 @@
 <?php
 // Definimos todas las palabras en ingles un array
-$lang = array(
+return[
   /*Inicio*/
   "titulo1" => "Zertan dihardugu?",
   "subtitulo" => "EMAKUMEEN ARTEKO KULTURA-TRUKEAK",
@@ -74,4 +74,4 @@ $lang = array(
   "nombre1"=>"Izena",
   "mensaje1"=>"Mezua",
   "enviado"=>"Bidali da",
-);
+];

@@ -1,6 +1,6 @@
 <?php
 // Definimos todas las palabras en ingles un array
-$lang = array(
+return[
   /*Inicio*/
   "titulo1" => "¿A que nos dedicamos?",
   "subtitulo" => "INTERCAMBIOS CULTURALES ENTRE MUJERES",
@@ -84,4 +84,4 @@ $lang = array(
   "match"=>"Crear Match",
 
   
-);
+];
