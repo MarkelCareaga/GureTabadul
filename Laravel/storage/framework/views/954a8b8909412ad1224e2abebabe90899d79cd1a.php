@@ -19,11 +19,11 @@
     <div class="flexbox-container">
         <?php $__currentLoopData = $matches; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $match): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <div class="cajaMatch">
-        <div><?php echo e($match->nombre); ?></div>
-        <div><?php echo e($match->direccion); ?></div>
-        <div><?php echo e($match->Fecha_encuentro); ?></div>
-        <div><?php echo e($match->usuario1->name); ?></div>
-        <div><?php echo e($match->usuario2->name); ?></div>
+        <div><i class="fa-solid fa-user"></i>&nbsp;&nbsp;<?php echo e($match->nombre); ?></div>
+        <div><i class="fa-solid fa-map-location-dot"></i>&nbsp;&nbsp;<?php echo e($match->direccion); ?></div>
+        <div><i class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp;<?php echo e($match->Fecha_encuentro); ?></div>
+        <div><i class="fa-solid fa-1"></i>&nbsp;&nbsp;<?php echo e($match->usuario1->name); ?></div>
+        <div><i class="fa-solid fa-2"></i>&nbsp;&nbsp;<?php echo e($match->usuario2->name); ?></div>
             <form action="<?php echo e(route('matches.destroy',$match)); ?>" method="POST" enctype="multipart/form-data">
                 <?php echo csrf_field(); ?>
                 <?php echo method_field('DELETE'); ?>
@@ -34,7 +34,7 @@
     </div>
     
     <div class="crear">
-        <a class="link" href="<?php echo e(route('matches.create')); ?>"><button class="button">Crear Match</button></a>
+        <a class="link" href="<?php echo e(route('matches.create')); ?>"><button class="button"><i class="fa-solid fa-circle-plus">&nbsp;&nbsp;</i>Match</button></a>
     </div>
 </div>
 </body>

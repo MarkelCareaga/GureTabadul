@@ -19,11 +19,11 @@
     <div class="flexbox-container">
         @foreach ($matches as $match)
         <div class="cajaMatch">
-        <div>{{$match->nombre}}</div>
-        <div>{{$match->direccion}}</div>
-        <div>{{$match->Fecha_encuentro}}</div>
-        <div>{{$match->usuario1->name}}</div>
-        <div>{{$match->usuario2->name}}</div>
+        <div><i class="fa-solid fa-user"></i>&nbsp;&nbsp;{{$match->nombre}}</div>
+        <div><i class="fa-solid fa-map-location-dot"></i>&nbsp;&nbsp;{{$match->direccion}}</div>
+        <div><i class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp;{{$match->Fecha_encuentro}}</div>
+        <div><i class="fa-solid fa-1"></i>&nbsp;&nbsp;{{$match->usuario1->name}}</div>
+        <div><i class="fa-solid fa-2"></i>&nbsp;&nbsp;{{$match->usuario2->name}}</div>
             <form action="{{route('matches.destroy',$match)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('DELETE')
@@ -34,7 +34,7 @@
     </div>
     
     <div class="crear">
-        <a class="link" href="{{route('matches.create')}}"><button class="button">Crear Match</button></a>
+        <a class="link" href="{{route('matches.create')}}"><button class="button"><i class="fa-solid fa-circle-plus">&nbsp;&nbsp;</i>Match</button></a>
     </div>
 </div>
 </body>
