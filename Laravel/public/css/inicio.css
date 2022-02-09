@@ -130,23 +130,17 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
-  max-width: auto;
-  flex-wrap: wrap;
-  flex-direction: flex-end;
 }
 
 .sponsor {
-  width: 30%;
+  width: auto;
   -ms-flex-line-pack: center;
       align-content: center;
   height: auto;
-  margin-left: 20px;
-  border: 2px solid #161616;
-  padding: 2%;
-  color: #161616;
-  font-family: 'Poppins';
 }
 
 .flexbox-container {
@@ -164,10 +158,6 @@ footer {
   font-weight: bold;
   margin-left: 2%;
 }
-.cuadroImagen{
-  width: 200px;
-  height: 100px;
-}
 
 @media (max-width: 375px) {
   .teeexto {
@@ -184,7 +174,8 @@ footer {
     margin-top: 6%;
   }
   .servicio3 {
-    margin-left: 45%;
+    margin-left: 44%;
+    /*holhhj*/
   }
   .servicio4 {
     margin-left: 45%;
@@ -201,6 +192,5 @@ footer {
   footer.footer.text-center {
     height: 87px;
   }
-  
 }
 /*# sourceMappingURL=inicio.css.map */
