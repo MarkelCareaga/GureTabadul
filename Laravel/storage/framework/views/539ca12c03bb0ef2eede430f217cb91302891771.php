@@ -9,17 +9,17 @@
 
 <div class="card" style="width: 18rem;">
 
-  <a class="imagen" href="<?php echo e(route('taller.show',['taller'=>$taller])); ?>">
+  <a  href="<?php echo e(route('taller.show',['taller'=>$taller])); ?>">
 
         <?php if(empty($taller->imagenes)): ?>
             <?php
           $rutaImagen=$taller->imagenes->first()->ruta;
-          echo '<img src="storage/'.$rutaImagen.'" class="card-img-top">'
+          echo '<img class="imagen" src="storage/'.$rutaImagen.'" class="card-img-top">'
           ?>
         <?php else: ?>
             <?php
             $rutaImagen="default.jpg";
-          echo '<img src="storage/'.$rutaImagen.'" class="card-img-top">'
+          echo '<img class="imagen" src="storage/'.$rutaImagen.'" class="card-img-top">'
             ?>
           <?php endif; ?>
 

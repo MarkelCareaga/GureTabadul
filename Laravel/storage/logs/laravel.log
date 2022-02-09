@@ -15369,6 +15369,7 @@ Did you mean this?
 #58 D:\\UniServerZ\\UniServerZ\\www\\GureTabadul\\Laravel\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #59 {main}
 "} 
+<<<<<<< Updated upstream
 [2022-02-09 20:17:05] local.ERROR: Call to undefined function Illuminate\Filesystem\finfo_file() {"userId":1,"exception":"[object] (Error(code: 0): Call to undefined function Illuminate\\Filesystem\\finfo_file() at C:\\Users\\marke\\Downloads\\LiveServer\\UniServerZ\\www\\GureTabadul\\Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php:444)
 [stacktrace]
 #0 C:\\Users\\marke\\Downloads\\LiveServer\\UniServerZ\\www\\GureTabadul\\Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Filesystem\\Filesystem->mimeType()
@@ -19236,4 +19237,9 @@ Did you mean this?
 #46 C:\\Users\\marke\\Downloads\\LiveServer\\UniServerZ\\www\\GureTabadul\\Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
 #47 C:\\Users\\marke\\Downloads\\LiveServer\\UniServerZ\\www\\GureTabadul\\Laravel\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
 #48 {main}
+=======
+[2022-02-09 20:31:24] local.ERROR: Maximum execution time of 30 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 30 seconds exceeded at C:\\Users\\Usuario\\OneDrive\\Escritorio\\Uniserver2.0\\UniServerZ\\www\\GureTabadul\\GureTabadul\\Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php:29)
+[stacktrace]
+#0 {main}
+>>>>>>> Stashed changes
 "} 
