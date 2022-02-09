@@ -75,7 +75,7 @@ body {
 
 .card {
   -webkit-box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px 0 #0000000f;
-          box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px 0 #0000000f;
+  box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px 0 #0000000f;
 }
 
 .card {
@@ -85,8 +85,8 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
   background-color: #3AA877;
@@ -97,8 +97,8 @@ body {
 
 .card-bodyR {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   min-height: 1px;
   padding: 1rem;
   border: 2px solid #161616;
@@ -116,7 +116,6 @@ body {
 
 .mb-3, .my-3 {
   margin-bottom: 1rem !important;
- 
 }
 
 .bg-gray-300 {
@@ -129,7 +128,7 @@ body {
 
 .shadow-none {
   -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 div.card-body {
@@ -150,8 +149,9 @@ div.card-body {
   margin-bottom: 1%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: 2%;
 }
 
 .cursosInfo {
@@ -164,8 +164,9 @@ div.card-body {
   margin-bottom: 1%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: 2%;
 }
 
 .nombre {
@@ -224,36 +225,38 @@ div.card-body {
   padding: 1%;
   border-radius: 13px;
 }
-.agrega{
+
+.agrega {
   position: relative;
-  float: right;
   font-family: 'Poppins';
   font-weight: bold;
   font-size: 1.3rem;
-
 }
-.intereses{
+
+.intereses {
   border: 2px solid #161616;
   border-radius: 32px;
-  
 }
-.lista{
+
+.lista {
   border: 2px solid #161616;
   width: 25%;
 }
-.boton{
+
+.boton {
   width: 51px;
   background-color: #B91B55;
   border: 2px solid #161616;
   border-radius: 32px;
 }
-h2{
+
+h2 {
   margin-top: 0;
   color: #161616;
   font-family: 'Poppins';
-
 }
-.card-bodyL{
+
+.card-bodyL {
   border: 2px solid #4e4d4d;
 }
 
@@ -266,5 +269,12 @@ h2{
     width: 97%;
     margin-bottom: 4%;
   }
+  ul.lista {
+    margin-top: 3%;
+    width: 38%;
+  }
+  button.boton {
+    margin-top: 2%;
+  }
 }
-/*# sourceMappingURL=perfil.css.map */  
+/*# sourceMappingURL=perfil.css.map */

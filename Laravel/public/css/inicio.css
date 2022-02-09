@@ -158,4 +158,38 @@ footer {
   font-weight: bold;
   margin-left: 2%;
 }
+
+@media (max-width: 375px) {
+  .teeexto {
+    font-size: 1em;
+    margin-left: 30%;
+  }
+  img.corazon {
+    margin-top: 4%;
+  }
+  img.libro {
+    margin-top: 7%;
+  }
+  img.igualdad {
+    margin-top: 6%;
+  }
+  .servicio3 {
+    margin-left: 45%;
+  }
+  .servicio4 {
+    margin-left: 45%;
+  }
+  img.unidad {
+    margin-top: 8%;
+  }
+  .mb-5 {
+    margin-bottom: 0%;
+  }
+  #correo {
+    display: none;
+  }
+  footer.footer.text-center {
+    height: 87px;
+  }
+}
 /*# sourceMappingURL=inicio.css.map */

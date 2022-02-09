@@ -1,6 +1,6 @@
-@php
+<?php
     Illuminate\Support\Facades\App::setLocale(session('idioma'));
-@endphp
+?>
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="../../Nav/img/LogoTabadul_32px.jpg" alt=""></a>
@@ -11,37 +11,37 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul style="margin-left:55%;" class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="{{route('inicio.index')}}">Inicio</a>
+          <a class="nav-link" aria-current="page" href="<?php echo e(route('inicio.index')); ?>">Inicio</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{route('cursos.index')}}">Cursos</a>
+          <a class="nav-link" aria-current="page" href="<?php echo e(route('cursos.index')); ?>">Cursos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{route('taller.index')}}">Taller</a>
+            <a class="nav-link" aria-current="page" href="<?php echo e(route('taller.index')); ?>">Taller</a>
           </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Euskera</a>
         </li>
-        @if(!Auth::check())
+        <?php if(!Auth::check()): ?>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{route('login')}}">Inicio Sesion</a>
+          <a class="nav-link" aria-current="page" href="<?php echo e(route('login')); ?>">Inicio Sesion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{route('register')}}">Registrarse</a>
+          <a class="nav-link" aria-current="page" href="<?php echo e(route('register')); ?>">Registrarse</a>
         </li>
-        @else
+        <?php else: ?>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="" onclick="event.preventDefault(); document.getElementById('logout').submit();">Cerrar sesion</a>
           <!-- Solo usuarios identificados -->
-          <form id="logout" action="{{route('logout')}}" method="POST" style="display:none;">
-          @csrf
+          <form id="logout" action="<?php echo e(route('logout')); ?>" method="POST" style="display:none;">
+          <?php echo csrf_field(); ?>
           </form>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{route('perfil.index')}}">Ver perfil</a>
+          <a class="nav-link" aria-current="page" href="<?php echo e(route('perfil.index')); ?>">Ver perfil</a>
         </li>
-        @endif
+        <?php endif; ?>
 
       </ul>
 
@@ -49,3 +49,4 @@
   </div>
 </nav>
 
+<?php /**PATH C:\Users\Usuario\OneDrive\Escritorio\Uniserver2.0\UniServerZ\www\GureTabadul\GureTabadul\Laravel\resources\views/layout/nav.blade.php ENDPATH**/ ?>

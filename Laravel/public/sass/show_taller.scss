@@ -84,4 +84,37 @@ $colorFondoBoton2:#BC3A2F;
   #texto {
     margin-left: 30%;
   }
+  @media (max-width: 375px){
+    p#fecha_inicio{
+      width: 45%;
+      margin-left: 2%;
+      padding-top: 43%;
+    }
+    p#fecha_fin{
+      width: 45%;
+      padding-top: 44%;
+    }
+    p#descripcion{
+      margin-left: 2%;
+      width: 82%;
+    }
+    p#precio{
+      width: 33%;
+      margin-left: 2%;
+    }
+    p#capacidad{
+      margin-left: 3%;
+    }
+    button.btn.btn-primary{
+      margin-left: 31%;
+    }
+    button.btn.btn-secondary{
+      margin-top: -14.25%;
+      margin-left: 55%;
+    }
+    .taller_detalles{
+      height:458px;
+      margin-top: 31%;
+    }
+  }
   /*# sourceMappingURL=show_taller.css.map */

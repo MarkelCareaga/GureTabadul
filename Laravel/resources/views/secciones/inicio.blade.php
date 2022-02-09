@@ -13,12 +13,12 @@
     <h4 class="subtitulo">INTERCAMBIOS CULTURALES ENTRE MUJERES</h4>
     <div class="flexbox-containerP">
     <div class="flexbox-container">
-        <div class="servicio1"><label><img class="corazon" src="{{url('img/amor.png')}}"></label><h4>Cultivar actitudes interculturales positivas.</h4></div>
-        <div class="servicio2"><label><img class="libro" src="{{url('img/libro.png')}}"></label><h4>Mejorar el autoconcepto personal, cultural y académico.</h4></div>
+        <div class="servicio1"><label><img class="corazon" src="{{url('img/amor.png')}}"></label><h4 class="teeexto">Cultivar actitudes interculturales positivas.</h4></div>
+        <div class="servicio2"><label><img class="libro" src="{{url('img/libro.png')}}"></label><h4 class="teeexto">Mejorar el autoconcepto personal, cultural y académico.</h4></div>
     </div>
     <div class="flexbox-container">
-        <div class="servicio3"><label><img class="igualdad" src="{{url('img/tomados-de-la-mano.png')}}"></label><h4>Fomentar la igualdad y el respeto mutuo.</h4></div>
-        <div class="servicio4"><label><img class="unidad" src="{{url('img/unidad.png')}}"></label><h4>Potenciar la convivencia entre mujeres de diferentes culturas.</h4></div>
+        <div class="servicio3"><label><img class="igualdad" src="{{url('img/tomados-de-la-mano.png')}}"></label><h4 class="teeexto">Fomentar la igualdad y el respeto mutuo.</h4></div>
+        <div class="servicio4"><label><img class="unidad" src="{{url('img/unidad.png')}}"></label><h4 class="teeexto">Potenciar la convivencia entre mujeres de diferentes culturas.</h4></div>
     </div>
     </div>
 </div>

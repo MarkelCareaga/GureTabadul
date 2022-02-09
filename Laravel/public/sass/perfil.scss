@@ -64,6 +64,7 @@ $fondoBoton:#B91B55;
 
 #talleresDiv {
   display: none;
+  
 }
 
 #cursosDiv {
@@ -160,6 +161,7 @@ div.card-body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-left: 2%;
 }
 
 .cursosInfo {
@@ -174,6 +176,7 @@ div.card-body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-left: 2%;
 }
 
 .nombre {
@@ -234,7 +237,7 @@ div.card-body {
 }
 .agrega{
   position: relative;
-  float: right;
+  
   font-family: 'Poppins';
   font-weight: bold;
   font-size: 1.3rem;
@@ -273,6 +276,13 @@ h2{
   .talleresInfo {
     width: 97%;
     margin-bottom: 4%;
+  }
+  ul.lista{
+    margin-top: 3%;
+    width: 38%;
+  }
+  button.boton{
+    margin-top: 2%;
   }
 }
 /*# sourceMappingURL=perfil.css.map */  
