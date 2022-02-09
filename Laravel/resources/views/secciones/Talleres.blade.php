@@ -9,17 +9,17 @@
 
 <div class="card" style="width: 18rem;">
 
-  <a class="imagen" href="{{route('taller.show',['taller'=>$taller])}}">
+  <a  href="{{route('taller.show',['taller'=>$taller])}}">
 
         @if (empty($taller->imagenes))
             @php
           $rutaImagen=$taller->imagenes->first()->ruta;
-          echo '<img src="storage/'.$rutaImagen.'" class="card-img-top">'
+          echo '<img class="imagen" src="storage/'.$rutaImagen.'" class="card-img-top">'
           @endphp
         @else
             @php
             $rutaImagen="default.jpg";
-          echo '<img src="storage/'.$rutaImagen.'" class="card-img-top">'
+          echo '<img class="imagen" src="storage/'.$rutaImagen.'" class="card-img-top">'
             @endphp
           @endif
 

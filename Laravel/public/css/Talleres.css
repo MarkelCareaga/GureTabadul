@@ -20,6 +20,10 @@ div.card {
 
 .imagen {
   text-align: center;
+  width: 100%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  height: 200px;
 }
 
 h5.titulo {
