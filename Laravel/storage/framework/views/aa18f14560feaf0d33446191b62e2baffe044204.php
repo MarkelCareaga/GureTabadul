@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul style="margin-left:55%;" class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="<?php echo e(route('inicio.index')); ?>"><?php echo e(__('traducciones.inicio')); ?></a>
+          <a class="nav-link" aria-current="page" href="<?php echo e(route('inicio.index')); ?>">Inicio</a>
         </li>
 
         <li class="nav-item">
@@ -20,9 +20,7 @@
         <li class="nav-item">
             <a class="nav-link" aria-current="page" href="<?php echo e(route('taller.index')); ?>">Taller</a>
           </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Euskera</a>
-        </li>
+       
         <?php if(!Auth::check()): ?>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="<?php echo e(route('login')); ?>">Inicio Sesion</a>
