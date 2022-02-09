@@ -16,8 +16,8 @@ class CreateImagenesTalleresTable extends Migration
         Schema::create('imagenes_talleres', function (Blueprint $table) {
             $table->id();
             $table->string("ruta");
-            $table->unsignedbigInteger("id_taller");
-            $table->foreign("id_taller")->references("id")->on("talleres");
+            $table->unsignedbigInteger("taller_id");
+            $table->foreign("taller_id")->references("id")->on("talleres");
             $table->timestamps();
         });
     }

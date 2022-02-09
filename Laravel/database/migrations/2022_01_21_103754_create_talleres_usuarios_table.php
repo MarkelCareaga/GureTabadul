@@ -15,9 +15,9 @@ class CreateTalleresUsuariosTable extends Migration
     {
         Schema::create('talleres_usuarios', function (Blueprint $table) {
             $table->id();
-            $table->unsignedbigInteger("id_taller");
+            $table->unsignedbigInteger("taller_id");
             $table->unsignedbigInteger("user_id");
-            $table->foreign("id_taller")->references("id")->on("talleres");
+            $table->foreign("taller_id")->references("id")->on("talleres");
             $table->foreign("user_id")->references("id")->on("users");
             $table->timestamps();
         });
