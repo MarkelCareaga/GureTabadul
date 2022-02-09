@@ -5,6 +5,9 @@
 <link rel="stylesheet" href="{{URL::asset('css/show_curso.css') }}">
 @endsection
 <div class="curso_detalles">
+    <div class="fotoCurso">
+        
+    </div>
 <p id="titulo">{{$curso->nombre}}</p>
 <p id="fecha_inicio"><i class="fas fa-calendar-check"></i>&nbsp;&nbsp;{{$curso->Fecha_ini}}</p>
 <p id="fecha_fin"><i class="fas fa-calendar-times"></i>&nbsp;&nbsp;{{$curso->Fecha_fin}}</p>

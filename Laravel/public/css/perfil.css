@@ -135,7 +135,7 @@ div.card-body {
   display: -ms-flexbox;
   display: flex;
   height: 509px;
-  padding-top: 89px;
+  padding-top: 100px;
 }
 
 .talleresInfo {
@@ -221,6 +221,34 @@ div.card-body {
   border-style: none;
   padding: 1%;
   border-radius: 13px;
+}
+.agrega{
+  position: relative;
+  float: right;
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 1.3rem;
+
+}
+.intereses{
+  border: 2px solid #161616;
+  border-radius: 32px;
+  
+}
+.lista{
+  border: 2px solid #161616;
+  width: 25%;
+}
+.boton{
+  width: 51px;
+  background-color: #B91B55;
+  border: 2px solid #161616;
+  border-radius: 32px;
+}
+h2{
+  margin-top: 0;
+  color: #161616;
+
 }
 
 @media (max-width: 375px) {

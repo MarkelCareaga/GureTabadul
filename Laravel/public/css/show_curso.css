@@ -7,15 +7,17 @@
   font-family: 'Poppins';
   border-radius: 50px;
   font-weight: bold;
+  border: solid 3px #161616;
 }
 
 button.btn.btn-secondary {
   float: left;
   clear: both;
   margin-left: 50%;
-  margin-top: -4%;
+  margin-top: -3.25%;
   width: 50px;
   background-color: #BC3A2F;
+  border: solid 3px #161616;
 }
 
 button.btn.btn-primary {
@@ -24,6 +26,7 @@ button.btn.btn-primary {
   margin-left: 43%;
   margin-top: 4%;
   width: 50px;
+  border: solid 3px #161616;
 }
 
 .btn-secondary:hover {

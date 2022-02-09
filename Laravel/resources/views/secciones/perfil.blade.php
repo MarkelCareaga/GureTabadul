@@ -102,17 +102,19 @@
                 <input type="button" name="botonCancelar" value="Cancelar" id="botonCancelar" onclick="botonCancelar()" disabled>
               </div>
               <div id="interesesDiv">
-
                 <div><h2>Tus intereses</h2></div>
                 <form action="{{route("interes.update",$usuario->id)}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
-                 <div>Agrega tus intereses<input type="text" name="interes"></div>
-                 <button type="submit">Agregar</button>
+                 <div class="agrega">Agrega tus intereses &nbsp;<input type="text" name="interes" class="intereses">
+                 <button class="boton" type="submit"><i class="fa-solid fa-plus"></i></button></div>
                 </form>
-                @foreach ($usuario->intereses as $interes)
-                <p>{{$interes->nombre}}</p>
+                  <div>@foreach ($usuario->intereses as $interes)
+                <ul class="lista">
+                  <li>{{$interes->nombre}}</li>
+                </ul>
                 @endforeach
+                  </div>
                 </div>
                 <div id="conocimientosDiv">
                   <div>

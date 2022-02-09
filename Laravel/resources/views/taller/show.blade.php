@@ -5,6 +5,9 @@
 @endsection
 @section('contenido')
 <div class="taller_detalles">
+    <div class="fotoTaller">
+        
+    </div>
 <p id="titulo">{{$taller->Título}}</p>
 <p id="fecha_inicio"><i class="fas fa-calendar-check"></i>&nbsp;&nbsp;{{$taller->Fecha_comienzo}}</p>
 <p id="fecha_fin"><i class="fas fa-calendar-times"></i>&nbsp;&nbsp; {{$taller->Fecha_final}}</p>

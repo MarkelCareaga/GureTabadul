@@ -5,6 +5,7 @@ div.card {
   margin-top: 2%;
   border-radius: 45px;
   background-color: #43B582;
+  border: solid 3px #161616;
 }
 
 .cursos {
@@ -14,6 +15,7 @@ div.card {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      
 }
 
 .imagen {
